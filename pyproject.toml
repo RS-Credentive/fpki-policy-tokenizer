@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "fpki-policy-tokenizer"
+version = "0.1.0"
+description = "A set of tools to tokenize FPKI Policy documents"
+authors = ["Robert Sherwood <88669393+rsherwood-gsa@users.noreply.github.com>"]
+license = "GPL 3.0"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
