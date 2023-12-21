@@ -799,8 +799,7 @@ Co-chair, Federal Public Key Infrastructure Policy Authority
 
 [Appendix D: Glossary 111](#appendix-d-glossary)
 
-Introduction
-============
+# Introduction
 
 This certificate policy (CP) includes the following distinct certificate policies:
 
@@ -858,8 +857,7 @@ The root Certification Authority (CA) associated with the Common Policy Framewor
 
 This CP follows the RFC 3647 framework.
 
-Overview
---------
+## Overview
 
 ### Certificate Policy (CP)
 
@@ -881,8 +879,7 @@ Federal Government agency CAs may perform cross-certification with either the Fe
 
 Interoperability may also be achieved through other means, such as trust lists.
 
-Document Name and Identification
---------------------------------
+## Document Name and Identification
 
 This is the X.509 Certificate Policy for the U.S. Federal PKI Common Policy Framework.
 
@@ -966,8 +963,7 @@ The requirements associated with id-fpki-common-pivi-cardAuth are identical to i
 
 The requirements associated with id-fpki-common-pivi-contentSigning and are identical to id-fpki-common-piv-contentSigning, except where specifically noted in the text.
 
-PKI Participants
-----------------
+## PKI Participants
 
 The following are roles relevant to the administration and operation of CAs under this policy:
 
@@ -1095,8 +1091,7 @@ The CAs and RAs operating under this CP may require the services of other securi
 
 Participating agencies that do not operate a PKI directly must identify one or more Agency Points of Contact (POC) as liaisons to the issuing PKI and the FPKIPA.
 
-Certificate Usage
------------------
+## Certificate Usage
 
 ### Appropriate Certificate Uses
 
@@ -1114,8 +1109,7 @@ Certificates that assert id-fpki-common-cardAuth or id-fpki-common-pivi-cardAuth
 
 Certificates intended for code signing are not permitted under this policy.
 
-Policy Administration
----------------------
+## Policy Administration
 
 ### Organization Administering the Document
 
@@ -1135,21 +1129,17 @@ CAs issuing under this CP are required to meet all requirements. The FPKIPA will
 
 The FPKIPA makes the determination that a CPS complies with this policy. The CA and RA must operate under an approved CPS. RA practices are documented in the CPS or an associated Registration Practices Statement (RPS). In each case, the determination process must include an independent compliance auditor's results and recommendations. See Section 8 for further details.
 
-Definitions and Acronyms
-------------------------
+## Definitions and Acronyms
 
 See Appendix B and Appendix C.
 
-Publication and Repository Responsibilities
-===========================================
+# Publication and Repository Responsibilities
 
-Repositories
-------------
+## Repositories
 
 The publicly accessible repository system must be designed and implemented so as to provide 99% availability overall and limit scheduled down-time to 0.5% annually.
 
-Publication of Certification Information
-----------------------------------------
+## Publication of Certification Information
 
 ### Publication of Certificates and Certificate Status
 
@@ -1183,15 +1173,13 @@ The CPS and annual PKI Compliance Audit Letter for the Federal Common Policy CA 
 
 Other CAs operating under this policy should make available a redacted CPS and annual PKI Compliance Audit Letter in their organization's public repository.
 
-Time or Frequency of Publication
---------------------------------
+## Time or Frequency of Publication
 
 This CP and any subsequent changes must be made publicly available within thirty (30) days of approval.
 
 Publication requirements for CRLs are provided in Sections 4.9.7 and 4.9.12.
 
-Access Controls on Repositories
--------------------------------
+## Access Controls on Repositories
 
 Repositories hosting CA certificates, CRLs, and pre-generated OCSP responses (if implemented) must be publicly accessible. Information not intended for modification or public dissemination must be protected.
 
@@ -1199,11 +1187,9 @@ Each CPS must detail what information in the repository is exempt from automatic
 
 Posted certificates, CRLs, and pre-generated OCSP responses may be replicated in additional repositories for performance enhancement.
 
-Identification and Authentication
-=================================
+# Identification and Authentication
 
-Naming
-------
+## Naming
 
 ### Types of Names
 
@@ -1365,8 +1351,7 @@ The CPS must identify the method for the assignment of subject names.
 
 CAs operating under this policy must not issue a certificate knowing that it infringes the trademark of another. The FPKIPA must resolve disputes involving names and trademarks.
 
-Initial Identity Validation
----------------------------
+## Initial Identity Validation
 
 ### Method to Prove Possession of Private Key
 
@@ -1528,8 +1513,7 @@ In accordance with Section 3.2.3.2, all requests for device certificates in the 
 
 The FPKIPA must determine the interoperability criteria for CAs operating under this policy.
 
-Identification and Authentication for Re-Key Requests
------------------------------------------------------
+## Identification and Authentication for Re-Key Requests
 
 ### Identification and Authentication for Routine Re-key
 
@@ -1553,13 +1537,11 @@ For Device Subscribers, identity may be established through the use of the devic
 
 In the event of certificate revocation, issuance of a new certificate must require that the Applicant go through the initial registration process per Section 3.2 above, unless identity can be verified through the use of biometrics on file through the chain of trust defined in \[FIPS 201\].
 
-Identification and Authentication for Revocation Request
---------------------------------------------------------
+## Identification and Authentication for Revocation Request
 
 Revocation requests must be authenticated. Note that revocation requests may be digitally signed using a certificate\'s private key, regardless of whether or not the private key has been compromised.
 
-Identification and Authentication for Key Recovery Requests
------------------------------------------------------------
+## Identification and Authentication for Key Recovery Requests
 
 ### Third-Party Requestor Authentication
 
@@ -1591,11 +1573,9 @@ The KRO must authenticate to the KRA using a public key certificate issued by th
 
 The DDS must authenticate to the KED directly using a public key certificate issued by the associated PKI. The assurance level of the certificate must be the same as or greater than that of the highest assurance level encryption certificates issued by the associated PKI.
 
-Certificate Life-Cycle Operational Requirements
-===============================================
+# Certificate Life-Cycle Operational Requirements
 
-Certificate Application
------------------------
+## Certificate Application
 
 The Certificate application process must provide sufficient information to:
 
@@ -1630,8 +1610,7 @@ Out-of-band communications must protect the confidentiality and integrity of the
 
 Subscribers are responsible for providing accurate information on their certificate applications.
 
-Certificate Application Processing
-----------------------------------
+## Certificate Application Processing
 
 Information in certificate applications must be verified as accurate before certificates are issued. Each CPS must specify procedures to verify information in certificate applications.
 
@@ -1653,8 +1632,7 @@ Public key parameters generation and quality checking must be conducted in accor
 
 Certificate applications must be processed and a certificate issued within 90 days of identity verification.
 
-Certificate Issuance
---------------------
+## Certificate Issuance
 
 ### CA Actions During Certificate Issuance
 
@@ -1676,8 +1654,7 @@ All attribute information received from a prospective Subscriber must be verifie
 
 CAs operating under this policy must inform the Subscriber (or other certificate subject) of the creation of a certificate and make the certificate available to the Subscriber. For device certificates, the CA must inform the human sponsor.
 
-Certificate Acceptance
-----------------------
+## Certificate Acceptance
 
 Before Human Subscribers can use their private keys, they must accept the responsibilities defined in Section 9.6.3 by accepting the Subscriber agreement.
 
@@ -1697,8 +1674,7 @@ Certificates that contain the FASC-N and/or UUID in the subject alternative name
 
 The FPKIPA must be notified at least two weeks prior to issuance of a CA certificate. In addition, notification must be provided to the FPKIPA when the CA certificate is published.
 
-Key Pair and Certificate Usage
-------------------------------
+## Key Pair and Certificate Usage
 
 ### Subscriber Private Key and Certificate Usage
 
@@ -1708,8 +1684,7 @@ The intended scope of usage for a private key is specified through certificate e
 
 Common Policy-issued certificates specify restrictions on use through certificate extensions, including the basic constraints and key usage extensions. CAs provide certificate status information. Relying parties should process certificate and status information as specified in \[X.509\] when relying on Common Policy certificates.
 
-Certificate Renewal
--------------------
+## Certificate Renewal
 
 Renewing a certificate means creating a new certificate with a new serial number where all certificate subject information, including the subject public key and subject key identifier, remain unchanged.
 
@@ -1755,8 +1730,7 @@ This policy makes no stipulation regarding publication of Subscriber certificate
 
 As specified in Section 4.4.3.
 
-Certificate Re-key
-------------------
+## Certificate Re-key
 
 Re-key is identical to renewal except the new certificate must have a different subject public key and serial number.
 
@@ -1802,8 +1776,7 @@ This policy makes no stipulation regarding publication of Subscriber certificate
 
 As specified in Section 4.4.3.
 
-Certificate Modification
-------------------------
+## Certificate Modification
 
 Modifying a certificate means creating a new certificate that has the same or a different key and a different serial number, and that differs in one or more other fields from the old certificate. Once modified, the old certificate may or may not be revoked, but must not be reused for requesting further renewals, re-keys, or modifications.
 
@@ -1849,8 +1822,7 @@ This policy makes no stipulation regarding publication of Subscriber certificate
 
 As specified in Section 4.4.3.
 
-Certificate Revocation and Suspension
--------------------------------------
+## Certificate Revocation and Suspension
 
 Revocation requests must be authenticated. Requests to revoke a certificate may be authenticated using that certificate\'s public key, regardless of whether or not the associated private key has been compromised.
 
@@ -2012,8 +1984,7 @@ No stipulation for Subscriber certificates.
 
 No stipulation for Subscriber certificates.
 
-Certificate Status Services
----------------------------
+## Certificate Status Services
 
 See Section 4.9.9 for OCSP.
 
@@ -2031,13 +2002,11 @@ Where applicable this must be described in the CPS.
 
 Where applicable this must be described in the CPS.
 
-End Of Subscription
--------------------
+## End Of Subscription
 
 No stipulation.
 
-Key Escrow and Recovery
------------------------
+## Key Escrow and Recovery
 
 ###  Key Escrow and Recovery Policy and Practices
 
@@ -2153,11 +2122,9 @@ The KED must verify that the DDS recovery request falls within the organizationa
 
 CAs that support session key encapsulation and recovery must identify the document describing the practices in the applicable CPS.
 
-Facility, Management, and Operational Controls
-==============================================
+# Facility, Management, and Operational Controls
 
-Physical Controls
------------------
+## Physical Controls
 
 CA equipment must be protected from unauthorized access while the cryptographic module is installed and activated. The CA must implement physical access controls to reduce the risk of equipment tampering even when the cryptographic module is not installed and activated. CA cryptographic tokens must be protected against theft, loss, and unauthorized use.
 
@@ -2251,8 +2218,7 @@ For offline CAs, the backup must be performed each time the system is turned on 
 
 Requirements for CA private key backup are specified in Section 6.2.4.1.
 
-Procedural Controls
--------------------
+## Procedural Controls
 
 ### Trusted Roles
 
@@ -2325,8 +2291,7 @@ Under no circumstances will a KRA or KRO be an Administrator or Auditor for a KE
 
 A Registration Authority (RA) may fill the role of a KRA or KRO. A Trusted Agent (TA), may fill the role of a KRO.
 
-Personnel Controls
-------------------
+## Personnel Controls
 
 ### Qualifications, Experience, and Clearance Requirements
 
@@ -2395,8 +2360,7 @@ PKI vendors who provide any services must establish procedures to ensure that an
 
 Documentation sufficient to define duties and procedures for each role must be provided to the personnel filling that role.
 
-Audit Logging Procedures
-------------------------
+## Audit Logging Procedures
 
 The objective of audit log processing is to review all actions to ensure they are made by authorized parties and for legitimate reasons.
 
@@ -2649,8 +2613,7 @@ The methodology, tools and frequency of the vulnerability assessment must be doc
   Practice Note: The audit data should be reviewed by the auditor for events such as repeated failed actions, requests for privileged information, attempted access of system files, requests for escrowed keys, attempted access of escrowed keys, unauthenticated responses, and other suspicious or unusual activity. Auditors should check for continuity of the audit data.
   --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Records Archival
-----------------
+## Records Archival
 
 The primary objective of the CA archive is to prove the validity of any certificate (including those revoked or expired) issued by the CA in the event of dispute regarding the use of the certificate.
 
@@ -2770,8 +2733,7 @@ Copies of records of individual transactions may be released upon request of any
 
 Procedures, detailing how to create, verify, package, transmit, and store the CA/KRS archive information, must be included in the CPS/KRPS.
 
-Key Changeover
---------------
+## Key Changeover
 
 Each CA's signing key must have a validity period as described in Section 6.3.2.
 
@@ -2783,8 +2745,7 @@ When a CA performs a key changeover and thus generates a new public key, the CA 
 
 When a CA performs a key changeover, the CA may generate key rollover certificates, where the new public key is signed by the old private key, and vice versa. This permits immediate acceptance of newly issued certificates and CRLs by current users.
 
-Compromise and Disaster Recovery
---------------------------------
+## Compromise and Disaster Recovery
 
 CAs under this policy must have an incident handling process, which documents any security incidents. Security incidents may include violation or threat of violation to the system, improper usage, malicious or anomalous activity and violations of the CPS or CP.
 
@@ -2890,8 +2851,7 @@ In the case of a disaster whereby the CA installation is physically damaged and 
   Practice Note: KED and DDS may take more than 72 hours to restore depending on the business needs of the operator. In this event, the FPKIPA must be notified of the expected recovery timeline.
   --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-CA or RA Termination
---------------------
+## CA or RA Termination
 
 Whenever possible, the FPKIPA must be notified at least two weeks prior to the termination of a CA operating under this policy. For emergency termination, CAs must follow the notification procedures in Section 5.7.
 
@@ -2903,11 +2863,9 @@ Prior to CA/KRS termination, the CA/KRS must provide archived data to an archive
 
 When an organizational RA function operating under this policy terminates operations, the RA must archive all audit logs and other records prior to termination and destroy its private keys upon termination.
 
-Technical Security Controls
-===========================
+# Technical Security Controls
 
-Key Pair Generation and Installation
-------------------------------------
+## Key Pair Generation and Installation
 
 ### Key Pair Generation
 
@@ -3058,8 +3016,7 @@ Certificates that assert id-fpki-common-piv-contentSigning must include a critic
 
 Certificates that assert id-fpki-common-pivi-contentSigning must include a critical Extended Key Usage extension that asserts only id-fpki-pivi-content-signing {2.16.840.1.101.3.8.7} (see \[PIV-I Profile\]).
 
-Private Key Protection and Cryptographic Module Engineering Controls
---------------------------------------------------------------------
+## Private Key Protection and Cryptographic Module Engineering Controls
 
 ### Cryptographic Module Standards and Controls
 
@@ -3275,8 +3232,7 @@ To ensure future access to encrypted data, Subscriber private key management key
 
 See Section 6.2.1.
 
-Other Aspects of Key Pair Management
-------------------------------------
+## Other Aspects of Key Pair Management
 
 ### Public Key Archival
 
@@ -3305,8 +3261,7 @@ A CA private key may be used to sign CRLs and OCSP responder certificates for th
 
 RA, DDS, KRA and KRO are considered Subscribers.
 
-Activation Data
----------------
+## Activation Data
 
 ### Activation Data Generation and Installation
 
@@ -3332,8 +3287,7 @@ Data used to unlock private keys must be protected from disclosure by a combinat
 
 A CA operating under this policy must define any other aspects of Activation Data in its CPS.
 
-Computer Security Controls
---------------------------
+## Computer Security Controls
 
 ### Specific Computer Security Technical Requirements
 
@@ -3391,8 +3345,7 @@ All communications between any PKI Trusted Role and the CA must be authenticated
 
 CAs operating under this policy must identify any Computer Security Rating requirements in the applicable CPS.
 
-Life Cycle Technical Controls
------------------------------
+## Life Cycle Technical Controls
 
 ### System Development Controls
 
@@ -3416,8 +3369,7 @@ The configuration of the CA system, in addition to any modifications and upgrade
 
 CAs operating under this policy must identify any Life Cycle Security Control requirements in the applicable CPS.
 
-Network Security Controls
--------------------------
+## Network Security Controls
 
 This section does not apply to offline CAs.
 
@@ -3433,16 +3385,13 @@ The remote workstation used to administer the CA must use a VPN to access the CA
 
 The CA must permit remote administration only after successful multi-factor authentication of the Trusted Role at a level of assurance commensurate with that of the CA.
 
-Time-Stamping
--------------
+## Time-Stamping
 
 Asserted times must be accurate to within three minutes. Electronic or manual procedures may be used to maintain system time. Clock adjustments are auditable events (see Section 5.4.1).
 
-Certificate, CRL, and OCSP Profiles
-===================================
+# Certificate, CRL, and OCSP Profiles
 
-Certificate Profile
--------------------
+## Certificate Profile
 
 Certificates issued by a CA under this policy must conform to the Common Policy X.509 Certificate and Certificate Revocation List (CRL) Profiles \[CCP-PROF\].
 
@@ -3529,8 +3478,7 @@ Certificates issued under this policy must contain a non-critical certificate po
 
 The CAs may assert InhibitAnyPolicy in CA certificates. When present, this extension may be marked critical. Skip certs must be set to 0, since certificate policies are required in the Federal PKI.
 
-CRL Profile
------------
+## CRL Profile
 
 CRLs issued by a CA under this CP must conform to the CRL profile specified in \[CCP-PROF\].
 
@@ -3542,8 +3490,7 @@ The CAs must issue X.509 Version two (2) CRLs.
 
 Detailed CRL profiles addressing the use of each extension are specified in \[CCP-PROF\].
 
-OCSP Profile
-------------
+## OCSP Profile
 
 CSSs operated under this policy must sign responses using algorithms designated for CRL signing.
 
@@ -3557,8 +3504,7 @@ CSSs operated under this policy must use OCSP version 1.
 
 Critical OCSP extensions must not be used.
 
-Compliance Audit and Other Assessments
-======================================
+# Compliance Audit and Other Assessments
 
 CAs operating under this policy are subject to an annual review by the FPKIPA to ensure their policies and operations remain compliant with this policy.
 
@@ -3570,34 +3516,29 @@ For the Federal Common Policy CA, the FPKIMA must have a compliance audit mechan
 
 This CP does not impose a requirement for any particular assessment methodology.
 
-Frequency or Circumstances of Assessment
-----------------------------------------
+## Frequency or Circumstances of Assessment
 
 CAs and RAs operating under this policy must be subject to an annual compliance audit in accordance with the FPKI Annual Review Requirements document \[AUDIT\]. The FPKIPA has the right to require aperiodic compliance audits of CAs operating under this policy. The FPKIPA must state the reason for any aperiodic compliance audit.
 
 On an annual basis, for each PCI configuration used (as defined by the FIPS 201 Evaluation Program), one populated, representative PIV credential must be submitted to the FIPS 201 Evaluation Program for testing.
 
-Identity/Qualifications of Assessor
------------------------------------
+## Identity/Qualifications of Assessor
 
 The auditor must demonstrate competence in the field of compliance audits, and must be thoroughly familiar with the CA's CPS and this CP. The compliance auditor must perform such compliance audits as a regular ongoing business activity. In addition to the previous requirements, the auditor must be a certified information system auditor (CISA) or IT security specialist, and a PKI subject matter specialist who can offer input regarding acceptable risks, mitigation strategies, and industry best practices.
 
-Assessor's Relationship to Assessed Entity
-------------------------------------------
+## Assessor's Relationship to Assessed Entity
 
 The compliance auditor either must be a private firm that is independent from the entities (CA and RAs) being audited, or it must be sufficiently organizationally separated from those entities to provide an unbiased, independent evaluation. An example of the latter situation may be an agency inspector general. To ensure independence and objectivity, the compliance auditor may not have served the entity in developing or maintaining the entity's CA facility or Certification Practices Statement. The FPKIPA may determine whether a compliance auditor meets this requirement.
 
 Each agency is responsible for identifying and engaging a qualified auditor of agency operations implementing aspects of this CP.
 
-Topics Covered by Assessment
-----------------------------
+## Topics Covered by Assessment
 
 The purpose of a compliance audit must be to verify that a CA and its RAs comply with all the requirements of the current versions of this CP and the CA's CPS. All aspects of the CA/RA operation must be subject to compliance audit inspections. Components other than CAs may be audited fully or by using a representative sample.
 
 If the compliance auditor uses statistical sampling, all PKI components, PKI component managers and operators must be considered in the sample. The samples must vary on an annual basis.
 
-Actions Taken as a Result of Deficiency
----------------------------------------
+## Actions Taken as a Result of Deficiency
 
 When the compliance auditor or FIPS 201 Evaluation Program testing finds a discrepancy between the requirements of this CP or the stipulations in the CPS and the design, operation, or maintenance of the PKI Authorities, the following actions must be performed:
 
@@ -3609,18 +3550,15 @@ When the compliance auditor or FIPS 201 Evaluation Program testing finds a discr
 
 Depending upon the nature and severity of the discrepancy, and how quickly it can be corrected, the FPKIPA may decide to temporarily halt operation of the CA or RA, to revoke a certificate issued to the CA or RA, or take other actions it deems appropriate. The FPKIPA will develop procedures for making and implementing such determinations. A compliance audit or FIPS 201 Evaluation Program test may be required to confirm the implementation and effectiveness of the remedy.
 
-Communication of Results
-------------------------
+## Communication of Results
 
 On an annual basis, CAs operating under this policy must submit an annual review package to the FPKIPA. This package must be prepared by the CA's PMA, in accordance with the FPKI Annual Review Requirements document. The package must include an assertion that all PKI components have been audited including any components that may be separately managed and operated. The report must identify the versions of this CP and the CPS used in the assessment. Additionally, where necessary, the results must be communicated as set forth in Section 8.5 above.
 
 Each agency must provide an Auditor Letter of Compliance for those PKI components that it operates to its issuing CA or directly to the FPKIPA.
 
-Other Business and Legal Matters
-================================
+# Other Business and Legal Matters
 
-Fees
-----
+## Fees
 
 ### Certificate Issuance or Renewal Fees
 
@@ -3642,8 +3580,7 @@ CAs operating under this policy must make this determination.
 
 CAs operating under this policy must make this determination.
 
-Financial Responsibility
-------------------------
+## Financial Responsibility
 
 This CP contains no limits on the use of certificates issued by CAs under this policy. Rather, entities, acting as relying parties, must determine what financial limits, if any, they wish to impose for certificates used to consummate a transaction.
 
@@ -3659,8 +3596,7 @@ CAs operating under this policy must make this determination.
 
 CAs operating under this policy must make this determination.
 
-Confidentiality of Business Information
----------------------------------------
+## Confidentiality of Business Information
 
 CA information not requiring protection must be made publicly available. Public access to organizational information must be determined by the respective organization.
 
@@ -3676,8 +3612,7 @@ CAs operating under this policy must make this determination.
 
 A CA must not disclose non-certificate information to any third party unless authorized by this policy, required by U.S. law, U.S. government rule or regulation, or order of a U.S. court of competent jurisdiction. The contents of the archives maintained by CAs operating under this policy must not be released except as required by this policy, required by U.S. law, U.S. government rule or regulation, or order of a U.S. court of competent jurisdiction.
 
-Privacy of Personal Information
--------------------------------
+## Privacy of Personal Information
 
 ### Privacy Plan
 
@@ -3711,13 +3646,11 @@ The FPKIMA or an agency POC must not disclose private information to any third p
 
 None.
 
-Intellectual Property Rights
-----------------------------
+## Intellectual Property Rights
 
 CAs must not knowingly violate intellectual property rights held by others.
 
-Representations and Warranties
-------------------------------
+## Representations and Warranties
 
 The obligations described below pertain to the FPKIMA and each issuing agency.
 
@@ -3905,23 +3838,19 @@ Third-party key recovery Requestors must formally acknowledge and agree to the o
 
 > "I hereby state that I have legitimate and official need to recover this key in order to obtain (recover) the encrypted data that I have authorization to access. I acknowledge receipt of a recovered encryption key associated with the Subscriber identified here \[Subscriber Name\]. I certify that I have accurately identified myself to the KRO, and truthfully described all reasons that I require access to data protected by the recovered key. I acknowledge my responsibility to use this recovered key only for the stated purposes, to protect it from further exposure, and to destroy all key materials or return them to the KRO when no longer needed. I understand that I am bound by \[Issuing Organization\] policies, applicable laws and Federal regulations concerning the protection of the recovered key and any data recovered using the key."
 
-Disclaimers of Warranties
--------------------------
+## Disclaimers of Warranties
 
 CAs operating under this policy may not disclaim any responsibilities described in this CP.
 
-Limitations of Liability
-------------------------
+## Limitations of Liability
 
 The U.S. Government must not be liable to any party, except as determined pursuant to the \[Federal Tort Claims Act (FTCA), 28 U.S.C. 2671-2680\], or as determined through a valid express written contract between the Government and another party.
 
-Indemnities
------------
+## Indemnities
 
 No stipulation.
 
-Term and Termination
---------------------
+## Term and Termination
 
 ### Term
 
@@ -3935,8 +3864,7 @@ Termination of this CP is at the discretion of the FPKIPA.
 
 The requirements of this CP remain in effect through the end of the archive period for the last certificate issued.
 
-Individual Notices and Communications with Participants
--------------------------------------------------------
+## Individual Notices and Communications with Participants
 
 The FPKIPA must establish appropriate procedures for communications with CAs operating under this policy via contracts or memoranda of agreement as applicable.
 
@@ -3944,8 +3872,7 @@ For CAs operating under this policy, any planned changes to the infrastructure t
 
 For all other communications, no stipulation.
 
-Amendments
-----------
+## Amendments
 
 ### Procedure for Amendment
 
@@ -3959,23 +3886,19 @@ Proposed changes to this CP must be distributed electronically to FPKIPA members
 
 OIDs will be changed if the FPKIPA determines that a change in the CP reduces the level of assurance provided.
 
-Dispute Resolution Provisions
------------------------------
+## Dispute Resolution Provisions
 
 The FPKIPA must facilitate the resolution between entities when conflicts arise as a result of the use of certificates issued under this policy. When the dispute is between federal agencies, and the FPKIPA is unable to facilitate resolution, dispute resolution may be escalated to the White House Office of Management and Budget or to the U.S. Department of Justice, Office of Legal Counsel as necessary.
 
-Governing Law
--------------
+## Governing Law
 
 The construction, validity, performance and effect of certificates issued under this CP for all purposes must be governed by United States federal law (statute, case law, or regulation).
 
-Compliance with Applicable Law
-------------------------------
+## Compliance with Applicable Law
 
 All CAs operating under this policy are required to comply with applicable law.
 
-Miscellaneous Provisions
-------------------------
+## Miscellaneous Provisions
 
 ### Entire Agreement
 
@@ -3997,15 +3920,13 @@ CAs operating under this policy must make this determination.
 
 CAs operating under this policy must make this determination.
 
-Other Provisions
-----------------
+## Other Provisions
 
 CAs operating under this policy must make this determination.
 
- 
+#  
 
-Appendix A: PIV and Common PIV Interoperable Comparison {#appendix-a-piv-and-common-piv-interoperable-comparison .list-paragraph}
-=======================================================
+# Appendix A: PIV and Common PIV Interoperable Comparison {#appendix-a-piv-and-common-piv-interoperable-comparison .list-paragraph}
 
 +-------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+-----------------------+-------------------------+
 | > **[Trust]{.underline}**           | **[Technical Requirements]{.underline}**                                                                                           | **[PIV]{.underline}** | **[PIV-I]{.underline}** |
@@ -4047,10 +3968,9 @@ Appendix A: PIV and Common PIV Interoperable Comparison {#appendix-a-piv-and-com
 | > **[Card Management System]{.underline}** | Card Management Master Key maintained in a FIPS 140-2 Level 2 Cryptographic Module and conforms to \[NIST SP 800-78\] requirements; activation of the Card Management Master Key requires commensurate authentication of Trusted Roles | x | x |
 +--------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---+---+
 
- 
+#  
 
-Appendix B: References {#appendix-b-references .list-paragraph}
-======================
+# Appendix B: References {#appendix-b-references .list-paragraph}
 
 +-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | ABADSG                | Digital Signature Guidelines, 1996-08-01. <http://itlaw.wikia.com/wiki/American_Bar_Association_(ABA)_Digital_Signature_Guidelines> [ ]{.underline}                                                                                            |
@@ -4156,10 +4076,9 @@ Appendix B: References {#appendix-b-references .list-paragraph}
 | X.509                 | ITU-T Recommendation X.509 (2005) \| ISO/IEC 9594-8:2005, Information technology - Open Systems Interconnection - The Directory: Public-key and attribute certificate frameworks.                                                              |
 +-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
- 
+#  
 
-Appendix C: Acronyms and Abbreviations {#appendix-c-acronyms-and-abbreviations .list-paragraph}
-======================================
+# Appendix C: Acronyms and Abbreviations {#appendix-c-acronyms-and-abbreviations .list-paragraph}
 
   --------- ---------------------------------------------------------
   AIA       Authority Information Access
@@ -4221,8 +4140,7 @@ Appendix C: Acronyms and Abbreviations {#appendix-c-acronyms-and-abbreviations .
   WWW       World Wide Web
   --------- ---------------------------------------------------------
 
-Appendix D: Glossary {#appendix-d-glossary .list-paragraph}
-====================
+# Appendix D: Glossary {#appendix-d-glossary .list-paragraph}
 
 +-------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Access                                                      | Ability to make use of any information system (IS) resource. \[NS4009\]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
