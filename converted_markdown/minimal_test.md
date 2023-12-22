@@ -20,19 +20,29 @@ Chair, Federal Public Key Infrastructure Policy Authority DATE
 
 **Revision History**
 
-  -----------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **Document Version**   **Document Date**    **Revision Details**
-  ---------------------- -------------------- ---------------------------------------------------------------------------------------------------------------------
-  1.0                    May 7, 2007          Revised Common Policy (RFC 3647 format)
-
-
-FOREWORD
-
-This is the policy framework governing the public key infrastructure (PKI) component of the Federal Enterprise Architecture. The policy framework incorporates seven specific certificate policies: a policy for users with software cryptographic modules, a policy for users with hardware cryptographic modules, a policy for devices with software cryptographic modules, a policy for devices with hardware cryptographic modules, a high assurance user policy, a user authentication policy, and a card authentication policy. There are two Certification Authorities associated with the Common Policy Framework: The Federal Common Policy Root CA and the SHA-1 Federal Root CA.
++----------------------+-------------------+--------------------------------------------------------------------+
+| **Document Version** | **Document Date** | **Revision Details**                                               |
++======================+===================+====================================================================+
+| 1.0                  | May 7, 2007       | Revised Common Policy (RFC 3647 format)                            |
++----------------------+-------------------+--------------------------------------------------------------------+
+| 1.1                  | July 17, 2007     | Alignment of Cryptographic Algorithm Requirements with SP 800-78-1 |
++----------------------+-------------------+--------------------------------------------------------------------+
 
 # Table of Contents {#table-of-contents .TOC-Heading}
 
 [1. Introduction 1](#introduction)
+
+[1.1 Overview 2](#overview)
+
+[1.1.1. Certificate Policy (CP) 2](#certificate-policy-cp)
+
+[2. Publication and Repository Responsibilities 2](#publication-and-repository-responsibilities)
+
+[2.1. ***Repositories*** 2](#repositories)
+
+[2.2. ***Publication of Certification Information*** 2](#publication-of-certification-information)
+
+[2.2.1. Publication of Certificates and Certificate Status 2](#publication-of-certificates-and-certificate-status)
 
 #  Introduction
 
@@ -52,6 +62,8 @@ A PKI that uses this CP will provide the following security management services:
 
 -   Directory management of certificate related items
 
+-   This is a sub-bullet in a list
+
 -   Certificate token initialization/programming/management
 
 -   System management functions (e.g., security audit, configuration management, archive.)
@@ -63,3 +75,23 @@ This policy does not presume any particular PKI architecture. The policy may be 
 This policy establishes requirements for the secure distribution of self-signed certificates for use as trust anchors. These constraints apply only to CAs that chose to distribute self-signed certificates, such as a hierarchical PKI's root CA.
 
 This CP is consistent with request for comments (RFC) 3647, the Internet Engineering Task Force (IETF) Public Key Infrastructure X.509 (IETF PKIX) Certificate Policy and Certification Practices Framework.
+
+## 1.1 Overview {#overview .list-paragraph}
+
+### Certificate Policy (CP)
+
+Certificates issued under this policy contain a registered certificate policy object identifier (OID), which may be used by a relying party to decide whether a certificate is trusted for a particular purpose. This CP applies only to CAs owned by or operated on behalf of the Federal government that issue certificates according to this policy.
+
+# Publication and Repository Responsibilities
+
+## ***Repositories***
+
+All CAs that issue certificates under this policy are obligated to post all CA certificates issued by or to the CA and CRLs issued by the CA in a repository that is publicly accessible through all Uniform Resource Identifier (URI) references asserted in valid certificates issued by that CA. Specific requirements are found in *Shared Service Provider Repository Service Requirements* \[SSP REP\]. CAs may optionally post subscriber certificates in this repository in accordance with agency policy, except as noted in section 9.4.3. To promote consistent access to certificates and CRLs, the repository shall implement access controls and communication mechanisms to prevent unauthorized modification or deletion of information.
+
+Posted certificates and CRLs may be replicated in additional repositories for performance enhancement. Such repositories may be operated by the CA or other parties (e.g., Federal agencies).
+
+## ***Publication of Certification Information***
+
+### Publication of Certificates and Certificate Status
+
+The publicly accessible repository system shall be designed and implemented so as to provide 99% availability overall and limit scheduled down-time to 0.5% annually. Where applicable, the certificate status server (CSS) shall be designed and implemented so as to provide 99% availability overall and limit scheduled down-time to 0.5% annually.
