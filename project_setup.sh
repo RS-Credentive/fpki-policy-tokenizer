@@ -1,4 +1,12 @@
 #!/usr/bin/env bash
-sudo apt update
-sudo apt upgrade
-sudo apt install pandoc
+platform=`uname -i`
+
+if [ $platform="aarch64" ]; then
+    filename=pandoc-3.1.11-linux-arm64.tar.gz
+elif [ $platform="x86_64" ]; then
+    filename=pandoc-3.1.11-linux-amd64.tar.gz
+fi
+
+wget https://github.com/jgm/pandoc/releases/download/3.1.11/$filename
+
+tar xzf $filename
