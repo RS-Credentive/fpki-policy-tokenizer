@@ -70,6 +70,11 @@ for markdown_doc in glob.glob("converted_markdown/minimal_test.md"):
             # Add the terminating '|' a the end of the last column
             processed_lines[-1] = processed_lines[-1] + "|"
 
+        # Preserve empty lines
+        elif line[0] == "\n":
+            processed_lines.append(line)
+            
+
         # If we get here, we're probably dealing with a regular line of text 
         else:
             processed_lines.extend(get_sentences(input=line))
