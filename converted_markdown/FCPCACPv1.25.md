@@ -1,4 +1,4 @@
-![FPKIPA Federal Public Key Infrastructure Policy Authority ](media/image1.emf){width="3.7604166666666665in" height="0.75in"}
+![FPKIPA Federal Public Key Infrastructure Policy Authority ](media/image1.emf)
 
 **X.509 Certificate Policy**
 
@@ -24,69 +24,152 @@ Co-chair, Federal Public Key Infrastructure Policy Authority DATE
 
 **Revision History**
 
-+----------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| **Document Version** | **Document Date**  | **Revision Details**                                                                                                                                                                                                                                                                                                                                                                                                     |
-+======================+====================+==========================================================================================================================================================================================================================================================================================================================================================================================================================+
-| 1.0                  | May 7, 2007        | Revised Common Policy (RFC 3647 format)                                                                                                                                                                                                                                                                                                                                                                                  |
-+----------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 1.1                  | July 17, 2007      | **2007-01**. Alignment of Cryptographic Algorithm Requirements with SP 800-78-1                                                                                                                                                                                                                                                                                                                                          |
-+----------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 1.2                  | September 12, 2007 | **2007-02**. Requiring the inclusion of a subject DN in PIV Authentication Certificates                                                                                                                                                                                                                                                                                                                                  |
-+----------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 1.3                  | October 16, 2007   | **2007-03**. Accommodating legacy PKIs for PIV Authentication                                                                                                                                                                                                                                                                                                                                                            |
-+----------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 1.4                  | April 3, 2008      | **2008-01.** § 8.3 Assessor's Relationship to Assessed Entity                                                                                                                                                                                                                                                                                                                                                            |
-+----------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 1.5                  | November 20, 2008  | **2008-02**. Include a provision for a role-based signature certificate                                                                                                                                                                                                                                                                                                                                                  |
-+----------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 1.6                  | February 11, 2009  | **2009-01.** nextUpdate in Certificate Revocation Lists (CRL) published by legacy Federal PKIs                                                                                                                                                                                                                                                                                                                           |
-+----------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 1.7                  | April 15, 2009     | **2009-02.** Allow the use of the PIV Authentication certificate as proof of identity and employment                                                                                                                                                                                                                                                                                                                     |
-+----------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 1.8                  | January 21, 2010   | **2010-01**. Align key length requirements w/ SP 800-57\                                                                                                                                                                                                                                                                                                                                                                 |
-|                      |                    | \                                                                                                                                                                                                                                                                                                                                                                                                                        |
-|                      |                    | **2010-02**. Remote Administration of Certification Authorities                                                                                                                                                                                                                                                                                                                                                          |
-+----------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 1.9                  | March 15, 2010     | **2010-03**. Allowing inclusion of UUIDs in Card Authentication Certificates                                                                                                                                                                                                                                                                                                                                             |
-+----------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 1.10                 | April 8, 2010      | **2010-04**. § 8.1 & 8.4                                                                                                                                                                                                                                                                                                                                                                                                 |
-+----------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 1.11                 | August 16, 2010    | **2010-05**. Clarify the archive definition and how its records are intended to be used                                                                                                                                                                                                                                                                                                                                  |
-+----------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 1.12                 | October 15, 2010   | **2010-06.** Allow Federal Legacy PKIs to Directly Cross Certify with Common Policy CA                                                                                                                                                                                                                                                                                                                                   |
-+----------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 1.13                 | November 18, 2010  | **2010-07**. Legacy use of SHA-1 during transition period Jan 1, 2011 to Dec 31, 2013                                                                                                                                                                                                                                                                                                                                    |
-+----------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 1.14                 | December 17, 2010  | Clarify requirement to support CA Key Rollover                                                                                                                                                                                                                                                                                                                                                                           |
-+----------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 1.15                 | January 24, 2011   | **2011-01**, CAs to assert policy OIDs in OCSP responder certificates for which the OCSP responder is authoritative                                                                                                                                                                                                                                                                                                      |
-+----------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 1.16                 | September 23, 2011 | **2011-02**, Clarify requirements for device subscribers and certificates                                                                                                                                                                                                                                                                                                                                                |
-+----------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 1.17                 | December 13, 2011  | **2011-03**, Remove Requirements for LDAP References in Certificates                                                                                                                                                                                                                                                                                                                                                     |
-+----------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 1.18                 | April 26, 2012     | **2012-01.** Clarify RA audit requirements: revise section 1.3.1.5, add new last sentence to first paragraph of section 8, revise first paragraph of section 8.1, revise sections 8.4, 8.5, and 8.6, revise \"Policy Management Authority (PMA)\" glossary definition.                                                                                                                                                   |
-+----------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 1.19                 | June 22, 2012      | **2012-02.** Add new section 4.1.1.4, *Code Signing Certificates*, to address change proposal (approved by FPKIPA on 6/12/12) requiring organizations receiving a code signing certificate to have access to a Time Stamp Authority.                                                                                                                                                                                     |
-+----------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 1.20                 | August 19, 2012    | **2012-03.** Add new language to sections 3.2.3.2 and 9.6.3 to address change proposal (approved by FPKIPA on 8/14/12) to allow a human device sponsor, who is not physically located near the sponsored device, and/or who does not have sufficient administrative privileges on the sponsored device to fulfill these responsibilities, to delegate them to an authorized administrator of the device.                 |
-|                      |                    |                                                                                                                                                                                                                                                                                                                                                                                                                          |
-|                      |                    | **2012-04.** Revise section 4.9.7 to address change proposal (approved by FPKIPA on 8/12/12) to detail and clarify the Common Policy CA's CRL issuance policies to ensure Offline Root CA operations are permitted.                                                                                                                                                                                                      |
-+----------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 1.21                 | December 18, 2012  | **2012-05.** Revise sections 1.2, 1.4.1, 3.1.1, 6.2.8, 6.3.2, 7.1.4, 7.1.6, and add new sections 6.1.1.4 and 6.2.4.6 to address change proposal (approved by FPKIPA on 12/6/12) to create a new Common PIV Content Signing Policy OID.                                                                                                                                                                                   |
-+----------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 1.22                 | December 2, 2013   | **2013-01.** Clarify places in the Common Policy CP which were flagged during the FPKIMA Annual Audit as either contradictory with the FBCA CP or contradictory to current best practices. Clarify division of responsibilities between trusted roles (Section5.2.1); clarify meaning of "all Security Audit logs (section 5.4.1), and allow audit logs to be removed from production site once reviewed (section 5.4.3) |
-|                      |                    |                                                                                                                                                                                                                                                                                                                                                                                                                          |
-|                      |                    | **2013-02. Remove SHA-1 policies from Common Policy.**                                                                                                                                                                                                                                                                                                                                                                   |
-+----------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 1.23                 | May 5, 2014        | **2013-03.** Require PIV Cards to be on the GSA Approved Products List (APL) Prior to Issuance and require annual PIV card testing.                                                                                                                                                                                                                                                                                      |
-+----------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 1.24                 | May 7, 2015        | **2015-01.** Create two new Common Derived PIV Authentication Certificate Policy OIDs in the Common Policy, and change/add text in appropriate sections throughout the CP.                                                                                                                                                                                                                                               |
-+----------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 1.25                 | September 22, 2016 | **2016-01.** Alignment with CAB Forum Baseline Requirements (BR) v1.3.4. This will facilitate FPKI conformance to CAB Forum BRs for publicly-trusted SSL/TLS certificates, which will help promote inclusion of the Federal Root in public trust stores and provide guidance for issuance of publicly-trusted device certificates.                                                                                       |
-|                      |                    |                                                                                                                                                                                                                                                                                                                                                                                                                          |
-|                      |                    | **2016-02.** Allow a long term CRL when a CA retires a key after performing a key changeover to align with the FPKI CPS.                                                                                                                                                                                                                                                                                                 |
-+----------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+<table>
+<thead>
+<tr class="header">
+<th><strong>Document Version</strong></th>
+<th><strong>Document Date</strong></th>
+<th><strong>Revision Details</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1.0</td>
+<td>May 7, 2007</td>
+<td>Revised Common Policy (RFC 3647 format)</td>
+</tr>
+<tr class="even">
+<td>1.1</td>
+<td>July 17, 2007</td>
+<td><strong>2007-01</strong>. Alignment of Cryptographic Algorithm Requirements with SP 800-78-1</td>
+</tr>
+<tr class="odd">
+<td>1.2</td>
+<td>September 12, 2007</td>
+<td><strong>2007-02</strong>. Requiring the inclusion of a subject DN in PIV Authentication Certificates</td>
+</tr>
+<tr class="even">
+<td>1.3</td>
+<td>October 16, 2007</td>
+<td><strong>2007-03</strong>. Accommodating legacy PKIs for PIV Authentication</td>
+</tr>
+<tr class="odd">
+<td>1.4</td>
+<td>April 3, 2008</td>
+<td><strong>2008-01.</strong> § 8.3 Assessor’s Relationship to Assessed Entity</td>
+</tr>
+<tr class="even">
+<td>1.5</td>
+<td>November 20, 2008</td>
+<td><strong>2008-02</strong>. Include a provision for a role-based signature certificate</td>
+</tr>
+<tr class="odd">
+<td>1.6</td>
+<td>February 11, 2009</td>
+<td><strong>2009-01.</strong> nextUpdate in Certificate Revocation Lists (CRL) published by legacy Federal PKIs</td>
+</tr>
+<tr class="even">
+<td>1.7</td>
+<td>April 15, 2009</td>
+<td><strong>2009-02.</strong> Allow the use of the PIV Authentication certificate as proof of identity and employment</td>
+</tr>
+<tr class="odd">
+<td>1.8</td>
+<td>January 21, 2010</td>
+<td><strong>2010-01</strong>. Align key length requirements w/ SP 800-57<br />
+<br />
+<strong>2010-02</strong>. Remote Administration of Certification Authorities</td>
+</tr>
+<tr class="even">
+<td>1.9</td>
+<td>March 15, 2010</td>
+<td><strong>2010-03</strong>. Allowing inclusion of UUIDs in Card Authentication Certificates</td>
+</tr>
+<tr class="odd">
+<td>1.10</td>
+<td>April 8, 2010</td>
+<td><strong>2010-04</strong>. § 8.1 &amp; 8.4</td>
+</tr>
+<tr class="even">
+<td>1.11</td>
+<td>August 16, 2010</td>
+<td><strong>2010-05</strong>. Clarify the archive definition and how its records are intended to be used</td>
+</tr>
+<tr class="odd">
+<td>1.12</td>
+<td>October 15, 2010</td>
+<td><strong>2010-06.</strong> Allow Federal Legacy PKIs to Directly Cross Certify with Common Policy CA</td>
+</tr>
+<tr class="even">
+<td>1.13</td>
+<td>November 18, 2010</td>
+<td><strong>2010-07</strong>. Legacy use of SHA-1 during transition period Jan 1, 2011 to Dec 31, 2013</td>
+</tr>
+<tr class="odd">
+<td>1.14</td>
+<td>December 17, 2010</td>
+<td>Clarify requirement to support CA Key Rollover</td>
+</tr>
+<tr class="even">
+<td>1.15</td>
+<td>January 24, 2011</td>
+<td><strong>2011-01</strong>, CAs to assert policy OIDs in OCSP responder certificates for which the OCSP responder is authoritative</td>
+</tr>
+<tr class="odd">
+<td>1.16</td>
+<td>September 23, 2011</td>
+<td><strong>2011-02</strong>, Clarify requirements for device subscribers and certificates</td>
+</tr>
+<tr class="even">
+<td>1.17</td>
+<td>December 13, 2011</td>
+<td><strong>2011-03</strong>, Remove Requirements for LDAP References in Certificates</td>
+</tr>
+<tr class="odd">
+<td>1.18</td>
+<td>April 26, 2012</td>
+<td><strong>2012-01.</strong> Clarify RA audit requirements: revise section 1.3.1.5, add new last sentence to first paragraph of section 8, revise first paragraph of section 8.1, revise sections 8.4, 8.5, and 8.6, revise "Policy Management Authority (PMA)" glossary definition.</td>
+</tr>
+<tr class="even">
+<td>1.19</td>
+<td>June 22, 2012</td>
+<td><strong>2012-02.</strong> Add new section 4.1.1.4, <em>Code Signing Certificates</em>, to address change proposal (approved by FPKIPA on 6/12/12) requiring organizations receiving a code signing certificate to have access to a Time Stamp Authority.</td>
+</tr>
+<tr class="odd">
+<td>1.20</td>
+<td>August 19, 2012</td>
+<td><p><strong>2012-03.</strong> Add new language to sections 3.2.3.2 and 9.6.3 to address change proposal (approved by FPKIPA on 8/14/12) to allow a human device sponsor, who is not physically located near the sponsored device, and/or who does not have sufficient administrative privileges on the sponsored device to fulfill these responsibilities, to delegate them to an authorized administrator of the device.</p>
+<p><strong>2012-04.</strong> Revise section 4.9.7 to address change proposal (approved by FPKIPA on 8/12/12) to detail and clarify the Common Policy CA’s CRL issuance policies to ensure Offline Root CA operations are permitted.</p></td>
+</tr>
+<tr class="even">
+<td>1.21</td>
+<td>December 18, 2012</td>
+<td><strong>2012-05.</strong> Revise sections 1.2, 1.4.1, 3.1.1, 6.2.8, 6.3.2, 7.1.4, 7.1.6, and add new sections 6.1.1.4 and 6.2.4.6 to address change proposal (approved by FPKIPA on 12/6/12) to create a new Common PIV Content Signing Policy OID.</td>
+</tr>
+<tr class="odd">
+<td>1.22</td>
+<td>December 2, 2013</td>
+<td><p><strong>2013-01.</strong> Clarify places in the Common Policy CP which were flagged during the FPKIMA Annual Audit as either contradictory with the FBCA CP or contradictory to current best practices. Clarify division of responsibilities between trusted roles (Section5.2.1); clarify meaning of “all Security Audit logs (section 5.4.1), and allow audit logs to be removed from production site once reviewed (section 5.4.3)</p>
+<p><strong>2013-02. Remove SHA-1 policies from Common Policy.</strong></p></td>
+</tr>
+<tr class="even">
+<td>1.23</td>
+<td>May 5, 2014</td>
+<td><strong>2013-03.</strong> Require PIV Cards to be on the GSA Approved Products List (APL) Prior to Issuance and require annual PIV card testing.</td>
+</tr>
+<tr class="odd">
+<td>1.24</td>
+<td>May 7, 2015</td>
+<td><strong>2015-01.</strong> Create two new Common Derived PIV Authentication Certificate Policy OIDs in the Common Policy, and change/add text in appropriate sections throughout the CP.</td>
+</tr>
+<tr class="even">
+<td>1.25</td>
+<td>September 22, 2016</td>
+<td><p><strong>2016-01.</strong> Alignment with CAB Forum Baseline Requirements (BR) v1.3.4. This will facilitate FPKI conformance to CAB Forum BRs for publicly-trusted SSL/TLS certificates, which will help promote inclusion of the Federal Root in public trust stores and provide guidance for issuance of publicly-trusted device certificates.</p>
+<p><strong>2016-02.</strong> Allow a long term CRL when a CA retires a key after performing a key changeover to align with the FPKI CPS.</p></td>
+</tr>
+</tbody>
+</table>
 
 FOREWORD
 
@@ -104,7 +187,7 @@ The certificate policies that comprise this policy framework are consistent with
 
 The terms and provisions of these certificate policies shall be interpreted under and governed by applicable Federal law.
 
-# Table of Contents {#table-of-contents .TOC-Heading}
+# Table of Contents
 
 [1. Introduction 1](#introduction)
 
@@ -604,7 +687,7 @@ The terms and provisions of these certificate policies shall be interpreted unde
 
 [8.2 Identity/Qualifications of Assessor 69](#identityqualifications-of-assessor)
 
-[8.3 Assessor's Relationship to Assessed Entity 69](#assessors-relationship-to-assessed-entity)
+[8.3 Assessor’s Relationship to Assessed Entity 69](#assessors-relationship-to-assessed-entity)
 
 [8.4 Topics Covered by Assessment 69](#topics-covered-by-assessment)
 
@@ -710,7 +793,7 @@ The terms and provisions of these certificate policies shall be interpreted unde
 
 [9.16.3 Severability 77](#severability)
 
-[9.16.4 Enforcement (Attorneys' Fees and Waiver of Rights) 77](#enforcement-attorneys-fees-and-waiver-of-rights)
+[9.16.4 Enforcement (Attorneys’ Fees and Waiver of Rights) 77](#enforcement-attorneys-fees-and-waiver-of-rights)
 
 [9.16.5 Force Majeure 77](#force-majeure)
 
@@ -724,9 +807,10 @@ The terms and provisions of these certificate policies shall be interpreted unde
 
 [13. Acknowledgments 93](#acknowledgments)
 
-#  Introduction
+#   
+Introduction
 
-This certificate policy (CP) includes many distinct certificate policies: a policy for users with software cryptographic modules, a policy for users with hardware cryptographic modules, a policy for devices with software cryptographic modules, a policy for devices with hardware cryptographic modules, a policy for devices that sign PIV data objects, a policy for publicly trusted Server Authentication certificates, a high assurance user policy, three user authentication policies, and a card authentication policy. In this document, the term "device" means a non-person entity, i.e., a hardware device or software application. Where a specific policy is not stated, the policies and procedures in this specification apply equally to all eleven policies.
+This certificate policy (CP) includes many distinct certificate policies: a policy for users with software cryptographic modules, a policy for users with hardware cryptographic modules, a policy for devices with software cryptographic modules, a policy for devices with hardware cryptographic modules, a policy for devices that sign PIV data objects, a policy for publicly trusted Server Authentication certificates, a high assurance user policy, three user authentication policies, and a card authentication policy. In this document, the term “device” means a non-person entity, i.e., a hardware device or software application. Where a specific policy is not stated, the policies and procedures in this specification apply equally to all eleven policies.
 
 The use of SHA-1 to create digital signatures is not allowed under Common Policy after 12/31/2013.
 
@@ -734,23 +818,23 @@ The user policies apply to certificates issued to Federal employees, contractors
 
 A PKI that uses this CP will provide the following security management services:
 
--   Key generation/storage
+  - Key generation/storage
 
--   Certificate generation, modification, re-key, and distribution
+  - Certificate generation, modification, re-key, and distribution
 
--   Certificate revocation list (CRL) generation and distribution
+  - Certificate revocation list (CRL) generation and distribution
 
--   Directory management of certificate related items
+  - Directory management of certificate related items
 
--   Certificate token initialization/programming/management
+  - Certificate token initialization/programming/management
 
--   System management functions (e.g., security audit, configuration management, archive.)
+  - System management functions (e.g., security audit, configuration management, archive.)
 
 The user policies require Federal employees, contractors, and other affiliated personnel to use FIPS 140 validated cryptographic modules for cryptographic operations and the protection of trusted public keys. The device policy also requires use of FIPS 140 validated cryptographic modules for cryptographic operations and the protection of trusted public keys.
 
 This policy does not presume any particular PKI architecture. The policy may be implemented through a hierarchical PKI, mesh PKI, or a single certification authority (CA). Any CA that asserts this policy in certificates must obtain prior approval from the Federal PKI Policy Authority. CAs that issue certificates under this policy may operate simultaneously under other policies. Such CAs must not assert the OIDs in this policy in certificates unless they are issued in accordance with all the requirements of this policy.
 
-This policy establishes requirements for the secure distribution of self-signed certificates for use as trust anchors. These constraints apply only to CAs that chose to distribute self-signed certificates, such as a hierarchical PKI's root CA.
+This policy establishes requirements for the secure distribution of self-signed certificates for use as trust anchors. These constraints apply only to CAs that chose to distribute self-signed certificates, such as a hierarchical PKI’s root CA.
 
 This CP is consistent with request for comments (RFC) 3647, the Internet Engineering Task Force (IETF) Public Key Infrastructure X.509 (IETF PKIX) Certificate Policy and Certification Practices Framework.
 
@@ -780,19 +864,19 @@ This CP provides substantial assurance concerning identity of certificate subjec
 
 *Table* *1 - id-fpki-common Policy OIDs*
 
-  ------------------------------------------ ----------------------------------
-  id-fpki-common-policy                      ::= {2 16 840 1 101 3 2 1 3 6}
-  id-fpki-common-hardware                    ::= {2 16 840 1 101 3 2 1 3 7}
-  id-fpki-common-devices                     ::= {2 16 840 1 101 3 2 1 3 8}
-  id-fpki-common-devicesHardware             ::= {2 16 840 1 101 3 2 1 3 36}
-  id-fpki-common-authentication              ::= {2 16 840 1 101 3 2 1 3 13}
-  id-fpki-common-High                        ::= {2 16 840 1 101 3 2 1 3 16}
-  id-fpki-common-cardAuth                    ::= {2 16 840 1 101 3 2 1 3 17}
-  id-fpki-common-piv-contentSigning          ::= {2 16 840 1 101 3 2 1 3 39}
-  id-fpki-common-derived-pivAuth             ::= {2 16 840 1 101 3 2 1 3 40}
-  id-fpki-common-derived-pivAuth-hardware    ::= {2 16 840 1 101 3 2 1 3 41}
-  id-fpki-common-public-trusted-serverAuth   ::= {2 16 840 1 101 3 2 1 3 tbd}
-  ------------------------------------------ ----------------------------------
+|                                          |                                  |
+| ---------------------------------------- | -------------------------------- |
+| id-fpki-common-policy                    | ::= {2 16 840 1 101 3 2 1 3 6}   |
+| id-fpki-common-hardware                  | ::= {2 16 840 1 101 3 2 1 3 7}   |
+| id-fpki-common-devices                   | ::= {2 16 840 1 101 3 2 1 3 8}   |
+| id-fpki-common-devicesHardware           | ::= {2 16 840 1 101 3 2 1 3 36}  |
+| id-fpki-common-authentication            | ::= {2 16 840 1 101 3 2 1 3 13}  |
+| id-fpki-common-High                      | ::= {2 16 840 1 101 3 2 1 3 16}  |
+| id-fpki-common-cardAuth                  | ::= {2 16 840 1 101 3 2 1 3 17}  |
+| id-fpki-common-piv-contentSigning        | ::= {2 16 840 1 101 3 2 1 3 39}  |
+| id-fpki-common-derived-pivAuth           | ::= {2 16 840 1 101 3 2 1 3 40}  |
+| id-fpki-common-derived-pivAuth-hardware  | ::= {2 16 840 1 101 3 2 1 3 41}  |
+| id-fpki-common-public-trusted-serverAuth | ::= {2 16 840 1 101 3 2 1 3 tbd} |
 
 Certificates issued to CAs may contain a subset of these OIDs. Certificates issued to users, other than devices, to support digitally signed documents or key management may contain either id-fpki-common-policy, id-fpki-common-hardware, or id-fpki-common-High. Subscriber certificates issued to devices under this policy that use FIPS 140 Level 2 or higher cryptographic modules shall include one or more of id-fpki-common-deviceHardware, id-fpki-common-devices, or id-fpki-common-public-trusted-serverAuth. Subscriber certificates issued to devices under this policy using software cryptographic modules shall include id-fpki-common-devices or id-fpki-common-public-trusted-serverAuth.
 
@@ -816,13 +900,13 @@ The Federal CIO Council comprises the Chief Information Officers of all cabinet 
 
 The FPKIPA is a group of U.S. Federal Government Agencies (including cabinet-level Departments) chartered by the Federal CIO Council. The FPKIPA owns this policy and represents the interest of the Federal CIOs. The FPKIPA is responsible for:
 
--   Maintaining this CP,
+  - Maintaining this CP,
 
--   Approving the CPS for each CA that issues certificates under this policy,
+  - Approving the CPS for each CA that issues certificates under this policy,
 
--   Approving the compliance audit report for each CA issuing certificates under this policy, and
+  - Approving the compliance audit report for each CA issuing certificates under this policy, and
 
--   Ensuring continued conformance of each CA that issues certificates under this policy with applicable requirements as a condition for allowing continued participation.
+  - Ensuring continued conformance of each CA that issues certificates under this policy with applicable requirements as a condition for allowing continued participation.
 
 #### FPKI Management Authority (FPKIMA)
 
@@ -834,7 +918,7 @@ The Program Manager is the individual within the FPKIMA who has principal respon
 
 #### Policy Management Authority
 
-Each organization that provides PKI services under this policy shall identify an individual or group that is responsible for maintaining the Shared Service Provider's (SSP) CPS and for ensuring that all SSP PKI components (e.g., CAs, CSSs, CMSs, RAs) are operated in compliance with the SSP CPS and this CP. This body is referred to as the SSP PMA within this CP.
+Each organization that provides PKI services under this policy shall identify an individual or group that is responsible for maintaining the Shared Service Provider’s (SSP) CPS and for ensuring that all SSP PKI components (e.g., CAs, CSSs, CMSs, RAs) are operated in compliance with the SSP CPS and this CP. This body is referred to as the SSP PMA within this CP.
 
 Agencies that contract for the services of a CA under this policy, shall establish a management body to manage any agency-operated components (e.g., RAs or repositories) and resolve name space collisions. This body shall be referred to as an Agency Policy Management Authority, or Agency PMA.
 
@@ -844,15 +928,15 @@ An Agency PMA is responsible for ensuring that all Agency operated PKI component
 
 The CA is the collection of hardware, software and operating personnel that create, sign, and issue public key certificates to subscribers. The CA is responsible for the issuing and managing certificates including:
 
--   The certificate manufacturing process
+  - The certificate manufacturing process
 
--   Publication of certificates
+  - Publication of certificates
 
--   Revocation of certificates
+  - Revocation of certificates
 
--   Generation and destruction of CA signing keys
+  - Generation and destruction of CA signing keys
 
--   Ensuring that all aspects of the CA services, operations, and infrastructure related to certificates issued under this CP are performed in accordance with the requirements, representations, and warranties of this CP.
+  - Ensuring that all aspects of the CA services, operations, and infrastructure related to certificates issued under this CP are performed in accordance with the requirements, representations, and warranties of this CP.
 
 #### **Certificate Status Servers**
 
@@ -860,11 +944,11 @@ PKIs may optionally include an authority that provides status information about 
 
 ### Registration Authorities
 
-The registration authorities (RAs) collect and verify each subscriber's identity and information that is to be entered into the subscriber's public key certificate. The RA performs its function in accordance with a CPS approved by the FPKIPA. The RA is responsible for:
+The registration authorities (RAs) collect and verify each subscriber’s identity and information that is to be entered into the subscriber’s public key certificate. The RA performs its function in accordance with a CPS approved by the FPKIPA. The RA is responsible for:
 
--   Control over the registration process
+  - Control over the registration process
 
--   The identification and authentication process.
+  - The identification and authentication process.
 
 ### Trusted Agents
 
@@ -872,13 +956,13 @@ The trusted agent is a person who satisfies all the trustworthiness requirements
 
 ### Subscribers
 
-A subscriber is the entity whose name appears as the subject in a certificate. The subscriber asserts that he or she uses the key and certificate in accordance with the certificate policy asserted in the certificate, and does not issue certificates. For this policy, subscribers are limited to Federal employees, contractors, affiliated personnel, and devices operated by or on behalf of Federal agencies. CAs are sometimes technically considered "subscribers" in a PKI. However, the term "subscriber" as used in this document refers only to those who request certificates for uses other than signing and issuing certificates or certificate status information.
+A subscriber is the entity whose name appears as the subject in a certificate. The subscriber asserts that he or she uses the key and certificate in accordance with the certificate policy asserted in the certificate, and does not issue certificates. For this policy, subscribers are limited to Federal employees, contractors, affiliated personnel, and devices operated by or on behalf of Federal agencies. CAs are sometimes technically considered “subscribers” in a PKI. However, the term “subscriber” as used in this document refers only to those who request certificates for uses other than signing and issuing certificates or certificate status information.
 
-There is a subset of human subscribers who will be issued role-based certificates. These certificates will identify a specific role on behalf of which the subscriber is authorized to act rather than the subscriber's name and are issued in the interest of supporting accepted business practices. The role-based certificate can be used in situations where non-repudiation is desired. Normally, it will be issued in addition to an individual subscriber certificate. A specific role may be identified in certificates issued to multiple subscribers, however, the key pair will be unique to each individual role-based certificate (i.e. there may be four individuals carrying a certificate issued in the role of "Secretary of Commerce" however, each of the four individual certificates will carry unique keys and certificate identifiers). Roles for which role-based certificates may be issued are limited to those that are held by a unique individual within an organization (e.g. *Chief Information Officer, GSA* is a unique individual whereas *Program Analyst, GSA* is not).
+There is a subset of human subscribers who will be issued role-based certificates. These certificates will identify a specific role on behalf of which the subscriber is authorized to act rather than the subscriber’s name and are issued in the interest of supporting accepted business practices. The role-based certificate can be used in situations where non-repudiation is desired. Normally, it will be issued in addition to an individual subscriber certificate. A specific role may be identified in certificates issued to multiple subscribers, however, the key pair will be unique to each individual role-based certificate (i.e. there may be four individuals carrying a certificate issued in the role of “Secretary of Commerce” however, each of the four individual certificates will carry unique keys and certificate identifiers). Roles for which role-based certificates may be issued are limited to those that are held by a unique individual within an organization (e.g. *Chief Information Officer, GSA* is a unique individual whereas *Program Analyst, GSA* is not).
 
 ### Relying Parties
 
-A relying party is the entity that relies on the validity of the binding of the subscriber's name to a public key. The relying party is responsible for deciding whether or how to check the validity of the certificate by checking the appropriate certificate status information. The relying party can use the certificate to verify the integrity of a digitally signed message, to identify the creator of a message, or to establish confidential communications with the holder of the certificate. A relying party may use information in the certificate (such as CP identifiers) to determine the suitability of the certificate for a particular use.
+A relying party is the entity that relies on the validity of the binding of the subscriber’s name to a public key. The relying party is responsible for deciding whether or how to check the validity of the certificate by checking the appropriate certificate status information. The relying party can use the certificate to verify the integrity of a digitally signed message, to identify the creator of a message, or to establish confidential communications with the holder of the certificate. A relying party may use information in the certificate (such as CP identifiers) to determine the suitability of the certificate for a particular use.
 
 For this certificate policy, the relying party may be any entity that wishes to validate the binding of a public key to the name (or role) of a federal employee, contractor, or other affiliated personnel.
 
@@ -926,13 +1010,14 @@ CAs issuing under this policy are required to meet all facets of the policy. The
 
 The FPKIPA shall make the determination that a CPS complies with this policy. The CA and RA must meet all requirements of an approved CPS before commencing operations. In some cases, the FPKIPA may require the additional approval of an authorized agency. The FPKIPA will make this determination based on the nature of the system function, the type of communications, or the operating environment.
 
-In each case, the determination of suitability shall be based on an independent compliance auditor's results and recommendations. See section 8 for further details.
+In each case, the determination of suitability shall be based on an independent compliance auditor’s results and recommendations. See section 8 for further details.
 
 ## Definitions and Acronyms
 
 See sections 11 and 12.
 
-#  Publication and Repository Responsibilities
+#   
+Publication and Repository Responsibilities
 
 ## Repositories
 
@@ -948,7 +1033,7 @@ The publicly accessible repository system shall be designed and implemented so a
 
 ### Publication of CA Information
 
-The Common Policy CP shall be publicly available on the FPKIPA website (see <http://www.idmanagement.gov/>). A redacted version of the CPS for the Federal Common Policy Root CAs will be publicly available from the FPKIMA website (See <http://www.idmanagement.gov/>). Other CAs operating under this policy shall make available a redacted CPS and annual PKI Compliance Audit Letter in their organization's public repository.
+The Common Policy CP shall be publicly available on the FPKIPA website (see <http://www.idmanagement.gov/>). A redacted version of the CPS for the Federal Common Policy Root CAs will be publicly available from the FPKIMA website (See <http://www.idmanagement.gov/>). Other CAs operating under this policy shall make available a redacted CPS and annual PKI Compliance Audit Letter in their organization’s public repository.
 
 ### Interoperability
 
@@ -964,7 +1049,8 @@ Publication requirements for CRLs are provided in sections 4.9.7 and 4.9.12
 
 The CA shall protect information not intended for public dissemination or modification. CA certificates and CRLs in the repository shall be publicly available through the Internet. Direct and/or remote access to other information in the CA repositories shall be determined by agencies pursuant to their authorizing and controlling statutes. The CPS shall detail what information in the repository shall be exempt from automatic availability and to whom, and under which conditions the restricted information may be made available.
 
-#  Identification and Authentication
+#   
+Identification and Authentication
 
 ## Naming
 
@@ -974,91 +1060,87 @@ For certificates issued under id-fpki-common-policy, id-fpki-common-hardware, id
 
 All geo-political distinguished names assigned to federal employees shall be in the following directory information tree:
 
--   C=US, o=U.S. Government, \[ou=*department*\], \[ou=*agency*\], \[ou=*structural\_container*\]
+  - > C=US, o=U.S. Government, \[ou=*department*\], \[ou=*agency*\], \[ou=*structural\_container*\]
 
 The organizational units *department* and *agency* appear when applicable and are used to specify the federal entity that employs the subscriber. At least one of these organizational units must appear in the DN. The additional organizational unit *structural\_container* is permitted to support local directory requirements, such as differentiation between human subscribers and devices. This organizational unit may not be employed to further differentiate between subcomponents within an agency.
 
 The distinguished name of the federal employee subscriber shall take one of the three following forms:
 
--   C=US, o=U.S. Government, \[ou=*department*\], \[ou=*agency*\], \[ou=*structural\_container*\], cn=*nickname lastname*
+  - C=US, o=U.S. Government, \[ou=*department*\], \[ou=*agency*\], \[ou=*structural\_container*\], cn=*nickname lastname*
 
--   C=US, o=U.S. Government, \[ou=*department*\], \[ou=*agency*\], \[ou=*structural\_container*\], cn=*firstname initial. lastname*
+  - C=US, o=U.S. Government, \[ou=*department*\], \[ou=*agency*\], \[ou=*structural\_container*\], cn=*firstname initial. lastname*
 
--   C=US, o=U.S. Government, \[ou=*department*\], \[ou=*agency*\], \[ou=*structural\_container*\], cn=*firstname middlename lastname*
+  - C=US, o=U.S. Government, \[ou=*department*\], \[ou=*agency*\], \[ou=*structural\_container*\], cn=*firstname middlename lastname*
 
-In the first name form, *nickname* may be the subscriber's first name, a form of the first name, middle name, or pseudonym (e.g., Buck) by which the subscriber is generally known. A generational qualifier, such as "Sr." or "III", may be appended to any of the common name forms specified above.
+In the first name form, *nickname* may be the subscriber’s first name, a form of the first name, middle name, or pseudonym (e.g., Buck) by which the subscriber is generally known. A generational qualifier, such as “Sr.” or “III”, may be appended to any of the common name forms specified above.
 
 Distinguished names assigned to federal contractors and other affiliated persons shall be within the same directory information tree. The distinguished name of the federal contractor subscribers and affiliate subscribers will take one of the three following forms:
 
--   C=US, o=U.S. Government, \[ou=*department*\], \[ou=*agency*\], \[ou=*structural\_container*\], cn=*nickname lastname* (affiliate)
+  - > C=US, o=U.S. Government, \[ou=*department*\], \[ou=*agency*\], \[ou=*structural\_container*\], cn=*nickname lastname* (affiliate)
 
--   C=US, o=U.S. Government, \[ou=*department*\], \[ou=*agency*\], \[ou=*structural\_container*\], cn=*firstname initial. lastname* (affiliate)
+  - > C=US, o=U.S. Government, \[ou=*department*\], \[ou=*agency*\], \[ou=*structural\_container*\], cn=*firstname initial. lastname* (affiliate)
 
--   C=US, o=U.S. Government, \[ou=*department*\], \[ou=*agency*\], \[ou=*structural\_container*\], cn=*firstname middlename lastname* (affiliate)
+  - > C=US, o=U.S. Government, \[ou=*department*\], \[ou=*agency*\], \[ou=*structural\_container*\], cn=*firstname middlename lastname* (affiliate)
 
-For names assigned to federal contractors and other affiliated persons, generational qualifiers may be inserted between *lastname* and "(affiliate)".
+For names assigned to federal contractors and other affiliated persons, generational qualifiers may be inserted between *lastname* and “(affiliate)”.
 
 Common name fields shall be populated as specified above.
 
 Distinguished names based on Internet domain component names shall be in the following directory information trees:
 
--   dc=gov, dc=*org0*, \[dc=*org1*\], ..., \[ dc=*orgN*\], \[ou=*structural\_container*\]
+  - > dc=gov, dc=*org0*, \[dc=*org1*\], …, \[ dc=*orgN*\], \[ou=*structural\_container*\]
 
--   dc=mil, dc=*org0*, \[dc=*org1*\], ..., \[ dc=*orgN*\], \[ou=*structural\_container*\]
+  - > dc=mil, dc=*org0*, \[dc=*org1*\], …, \[ dc=*orgN*\], \[ou=*structural\_container*\]
 
-The default Internet domain name for the agency, \[*orgN*.\]...\[*org0*\].gov or \[*orgN*.\]...\[*org0*\].mil, will be used to determine DNs. The first domain component of the DN will either be dc=gov or dc=mil. At a minimum, the *org0* domain component must appear in the DN. The *org1* to *orgN* domain components appear, in order, when applicable and are used to specify the federal entity that employs the subscriber.
+The default Internet domain name for the agency, \[*orgN*.\]…\[*org0*\].gov or \[*orgN*.\]…\[*org0*\].mil, will be used to determine DNs. The first domain component of the DN will either be dc=gov or dc=mil. At a minimum, the *org0* domain component must appear in the DN. The *org1* to *orgN* domain components appear, in order, when applicable and are used to specify the federal entity that employs the subscriber.
 
-The distinguished name of the federal employee subscriber shall take one of the three following forms when their agency's Internet domain name ends in .gov:
+The distinguished name of the federal employee subscriber shall take one of the three following forms when their agency’s Internet domain name ends in .gov:
 
--   dc=gov, dc=*org0*, \[dc=*org1*\], ..., \[dc=*orgN*\], \[ou=*structural\_container*\], cn=*nickname lastname*
+  - > dc=gov, dc=*org0*, \[dc=*org1*\], …, \[dc=*orgN*\], \[ou=*structural\_container*\], cn=*nickname lastname*
 
--   dc=gov, dc=*org0*, \[dc=*org1*\], ..., \[dc=*orgN*\], \[ou=*structural\_container*\], cn=*firstname initial. lastname*
+  - > dc=gov, dc=*org0*, \[dc=*org1*\], …, \[dc=*orgN*\], \[ou=*structural\_container*\], cn=*firstname initial. lastname*
 
--   dc=gov, dc=*org0*, \[dc=*org1*\], ..., \[dc=*orgN*\], \[ou=*structural\_container*\], cn=*firstname middlename lastname*
+  - > dc=gov, dc=*org0*, \[dc=*org1*\], …, \[dc=*orgN*\], \[ou=*structural\_container*\], cn=*firstname middlename lastname*
 
-The distinguished name of the federal contractors and affiliated subscribers shall take one of the three following forms when the agency's Internet domain name ends in .gov:
+The distinguished name of the federal contractors and affiliated subscribers shall take one of the three following forms when the agency’s Internet domain name ends in .gov:
 
--   dc=gov, dc=*org0*, \[dc=*org1*\], ..., \[dc=*orgN*\], \[ou=*structural\_container*\], cn=*nickname lastname* (affiliate)
+  - > dc=gov, dc=*org0*, \[dc=*org1*\], …, \[dc=*orgN*\], \[ou=*structural\_container*\], cn=*nickname lastname* (affiliate)
 
-```{=html}
-<!-- -->
-```
--   dc=gov, dc=*org0*, \[dc=*org1*\], ..., \[dc=*orgN*\], \[ou=*structural\_container*\], cn=*firstname initial. lastname* (affiliate)
+<!-- end list -->
 
--   dc=gov, dc=*org0*, \[dc=*org1*\], ..., \[dc=*orgN*\], \[ou=*structural\_container*\], cn=*firstname middlename lastname* (affiliate)
+  - > dc=gov, dc=*org0*, \[dc=*org1*\], …, \[dc=*orgN*\], \[ou=*structural\_container*\], cn=*firstname initial. lastname* (affiliate)
 
-The distinguished name of the federal employee subscriber shall take one of the three following forms when their agency's Internet domain name ends in .mil:
+  - > dc=gov, dc=*org0*, \[dc=*org1*\], …, \[dc=*orgN*\], \[ou=*structural\_container*\], cn=*firstname middlename lastname* (affiliate)
 
--   dc=mil, dc=*org0*, \[dc=*org1*\], ..., \[dc=*orgN*\], \[ou=*structural\_container*\], cn=*nickname lastname*
+The distinguished name of the federal employee subscriber shall take one of the three following forms when their agency’s Internet domain name ends in .mil:
 
-```{=html}
-<!-- -->
-```
--   dc=mil, dc=*org0*, \[dc=*org1*\], ..., \[dc=*orgN*\], \[ou=*structural\_container*\], cn=*firstname initial. lastname*
+  - > dc=mil, dc=*org0*, \[dc=*org1*\], …, \[dc=*orgN*\], \[ou=*structural\_container*\], cn=*nickname lastname*
 
--   dc=mil, dc=*org0*, \[dc=*org1*\], ..., \[dc=*orgN*\], \[ou=*structural\_container*\], cn=*firstname middlename lastname*
+<!-- end list -->
 
-The distinguished name of the federal contractors and affiliated subscribers shall take one of the three following forms when the agency's Internet domain name ends in .mil:
+  - > dc=mil, dc=*org0*, \[dc=*org1*\], …, \[dc=*orgN*\], \[ou=*structural\_container*\], cn=*firstname initial. lastname*
 
--   dc=mil, dc=*org0*, \[dc=*org1*\], ..., \[dc=*orgN*\], \[ou=*structural\_container*\], cn=*nickname lastname* (affiliate)
+  - > dc=mil, dc=*org0*, \[dc=*org1*\], …, \[dc=*orgN*\], \[ou=*structural\_container*\], cn=*firstname middlename lastname*
 
-```{=html}
-<!-- -->
-```
--   dc=mil, dc=*org0*, \[dc=*org1*\], ..., \[dc=*orgN*\], \[ou=*structural\_container*\], cn=*firstname initial. lastname* (affiliate)
+The distinguished name of the federal contractors and affiliated subscribers shall take one of the three following forms when the agency’s Internet domain name ends in .mil:
 
--   dc=mil, dc=*org0*, \[dc=*org1*\], ..., \[dc=*orgN*\], \[ou=*structural\_container*\], cn=*firstname middlename lastname* (affiliate)
+  - > dc=mil, dc=*org0*, \[dc=*org1*\], …, \[dc=*orgN*\], \[ou=*structural\_container*\], cn=*nickname lastname* (affiliate)
 
-The CA may supplement any of the name forms for users specified in this section by including a dnQualifier, serial number, or user id attribute. When any of these attributes are included, they may appear as part of a multi-valued relative distinguished name (RDN) with the common name or as a distinct RDN that follows the RDN containing the common name attribute. Generational qualifiers may optionally be included in common name attributes in distinguished names based on Internet domain names. For names assigned to employees, generational qualifiers may be appended to the common name. For names assigned to federal contractors and other affiliated persons, generational qualifiers may be inserted between *lastname* and "(affiliate)".
+<!-- end list -->
+
+  - > dc=mil, dc=*org0*, \[dc=*org1*\], …, \[dc=*orgN*\], \[ou=*structural\_container*\], cn=*firstname initial. lastname* (affiliate)
+
+  - > dc=mil, dc=*org0*, \[dc=*org1*\], …, \[dc=*orgN*\], \[ou=*structural\_container*\], cn=*firstname middlename lastname* (affiliate)
+
+The CA may supplement any of the name forms for users specified in this section by including a dnQualifier, serial number, or user id attribute. When any of these attributes are included, they may appear as part of a multi-valued relative distinguished name (RDN) with the common name or as a distinct RDN that follows the RDN containing the common name attribute. Generational qualifiers may optionally be included in common name attributes in distinguished names based on Internet domain names. For names assigned to employees, generational qualifiers may be appended to the common name. For names assigned to federal contractors and other affiliated persons, generational qualifiers may be inserted between *lastname* and “(affiliate)”.
 
 Signature certificates issued under id-fpki-common-hardware or id-fpki-common-High may be issued with a common name that specifies an organizational role, such as the head of an agency, as follows:
 
--   C=US, o=U.S. Government, \[ou=*department*\], \[ou=*agency*\], \[ou=*structural\_container*\], cn=*role* \[*, department/agency*\]
+  - > C=US, o=U.S. Government, \[ou=*department*\], \[ou=*agency*\], \[ou=*structural\_container*\], cn=*role* \[*, department/agency*\]
 
-```{=html}
-<!-- -->
-```
--   dc=gov, dc=..., \[ou=*structural\_container*\], cn=*role* \[, *department/agency*\]
+<!-- end list -->
+
+  - > dc=gov, dc=…, \[ou=*structural\_container*\], cn=*role* \[, *department/agency*\]
 
 The combination of organizational role and agency must unambiguously identify a single person. (That is, widely held roles such as *Computer Scientist* or *Procurement Specialist* cannot be included since they do not identify a particular person. *Chief Information Officer*, *AgencyX* could be included as it specifies a role held by a single person.)
 
@@ -1066,59 +1148,57 @@ Where the \[department/agency\] is implicit in the role (e.g., Secretary of Comm
 
 Devices that are the subject of certificates issued under this policy shall be assigned either a geo‑political name or an Internet domain component name. Device names shall take one of the following forms:
 
--   C=US, o=U.S. Government, \[ou=department\], \[ou=agency\], \[ou=*structural\_container*\], cn=*device name*
+  - > C=US, o=U.S. Government, \[ou=department\], \[ou=agency\], \[ou=*structural\_container*\], cn=*device name*
 
-```{=html}
-<!-- -->
-```
--   dc=gov, dc=*org0*, \[*dc=org1*\], ..., \[dc=*orgN*\], \[ou=*structural\_container*\], \[cn=*device name*\]
+<!-- end list -->
 
--   dc=mil, dc=*org0*, \[*dc=org1*\], ..., \[dc=*orgN*\], \[ou=*structural\_container*\], \[cn=*device name*\]
+  - > dc=gov, dc=*org0*, \[*dc=org1*\], …, \[dc=*orgN*\], \[ou=*structural\_container*\], \[cn=*device name*\]
+
+  - > dc=mil, dc=*org0*, \[*dc=org1*\], …, \[dc=*orgN*\], \[ou=*structural\_container*\], \[cn=*device name*\]
 
 where *device name* is a descriptive name for the device. Where a device is fully described by the Internet domain name, the common name attribute is optional.
 
 In addition, id-fpki-common-public-trusted-serverAuth certificates shall conform to the following:
 
--   The extendedKeyUsage extension shall assert the serverAuthentication value;
+  - The extendedKeyUsage extension shall assert the serverAuthentication value;
 
--   The *SubjectAltName* field shall contain a *dNSName* containing a Fully Qualified Domain Name (FQDN) of a server;
+  - The *SubjectAltName* field shall contain a *dNSName* containing a Fully Qualified Domain Name (FQDN) of a server;
 
--   Internet Protocol (IP) Addresses shall not be included in the *SubjectAltName* field;
+  - Internet Protocol (IP) Addresses shall not be included in the *SubjectAltName* field;
 
 For certificates that assert serverAuth in the EKU:
 
--   Wildcard Domain Names are permitted if all sub-domains covered by the wildcard fall within the same application, cloud service, or system accreditation boundary within the scope of the sponsoring Agency. 
+  - Wildcard Domain Names are permitted if all sub-domains covered by the wildcard fall within the same application, cloud service, or system accreditation boundary within the scope of the sponsoring Agency. 
 
--   Wildcards shall not be used in subdomains that host more than one distinct application platform. The use of third-level Agency wildcards, (e.g., \*.\[agency\].gov), shall be prohibited to reduce the likelihood that a certificate will overlap multiple systems or services. Third level wildcards are permitted for DNS names dedicated to a specific application (e.g., \*.\[application\_name\].gov).
+  - Wildcards shall not be used in subdomains that host more than one distinct application platform. The use of third-level Agency wildcards, (e.g., \*.\[agency\].gov), shall be prohibited to reduce the likelihood that a certificate will overlap multiple systems or services. Third level wildcards are permitted for DNS names dedicated to a specific application (e.g., \*.\[application\_name\].gov).
 
--   Before issuing a publicly trusted serverAuth certificate containing a wildcard, the CA shall ensure the sponsoring agency has a documented procedure for determining that the scope of the certificate does not now and will not infringe on other agency applications.
+  - Before issuing a publicly trusted serverAuth certificate containing a wildcard, the CA shall ensure the sponsoring agency has a documented procedure for determining that the scope of the certificate does not now and will not infringe on other agency applications.
 
 This policy does not restrict the directory information tree for names of CAs and CSSs. However, CAs that issue certificates under this policy must have distinguished names. CA and CSS distinguished names may be either a geo-political name or an Internet domain component name.
 
 CA and CSS geo-political distinguished names shall be composed of any combination of the following attributes: country; organization; organizational unit; and common name. Internet domain component names are composed of the following attributes: domain component; organizational unit; and common name.
 
-The Common PIV Content Signing certificate's subject DN shall indicate the organization administering the PIV card issuance system or device according to types of names for devices.
+The Common PIV Content Signing certificate’s subject DN shall indicate the organization administering the PIV card issuance system or device according to types of names for devices.
 
 Certificates issued under id-fpki-common-derived-pivAuth-hardware and id-fpki-common-derived-pivAuth shall include a non-empty subject DN and shall also include a subject alternative name extension that includes a UUID, which shall be encoded as a URI as specified in Section 3 of \[RFC 4122\]. A unique UUID shall be created for each certificate issued under one of these policies. For certificates issued under this policy by a CA operating as part of the Shared Service Providers program, subject distinguished names shall follow either the rules specified above for id‑fpki-common-hardware or the rules specified below for including a non-NULL subject DN with a UUID in id-fpki-common-cardAuth. For legacy Federal PKIs only, distinguished names may follow established agency naming conventions.
 
-For certificates issued under id-fpki-common-authentication, assignment of X.500 distinguished names is mandatory. For certificates issued under this policy by a CA operating as part of the Shared Service Providers program, distinguished names shall follow either the rules specified above for id‑fpki-common-hardware or the rules specified below for including a non-NULL subject DN in id-fpki-common-cardAuth. For legacy Federal PKIs only, distinguished names may follow established agency naming conventions. Certificates issued under id-fpki-common-authentication shall include a subject alternative name. At a minimum, the subject alternative name extension shall include the pivFASC-N name type \[FIPS 201\]. The value for this name shall be the FASC-N \[PACS\] of the subject's PIV card.
+For certificates issued under id-fpki-common-authentication, assignment of X.500 distinguished names is mandatory. For certificates issued under this policy by a CA operating as part of the Shared Service Providers program, distinguished names shall follow either the rules specified above for id‑fpki-common-hardware or the rules specified below for including a non-NULL subject DN in id-fpki-common-cardAuth. For legacy Federal PKIs only, distinguished names may follow established agency naming conventions. Certificates issued under id-fpki-common-authentication shall include a subject alternative name. At a minimum, the subject alternative name extension shall include the pivFASC-N name type \[FIPS 201\]. The value for this name shall be the FASC-N \[PACS\] of the subject’s PIV card.
 
-Certificates issued under id-fpki-common-cardAuth shall include a subject alternative name extension that includes the pivFASC-N name type. The value for this name shall be the FASC-N of the subject's PIV card. Certificates issued under id-fpki-common-cardAuth may also include a UUID \[RFC 4122\] in the subject alternative name extension, if the UUID is included as specified in Section 3.3 of \[SP 800-73-3(1)\]. Certificates issued under id-fpki-common-cardAuth shall not include any other name in the subject alternative name extension but may include a non-NULL name in the subject field. If included, the subject distinguished name shall take one of the following forms:
+Certificates issued under id-fpki-common-cardAuth shall include a subject alternative name extension that includes the pivFASC-N name type. The value for this name shall be the FASC-N of the subject’s PIV card. Certificates issued under id-fpki-common-cardAuth may also include a UUID \[RFC 4122\] in the subject alternative name extension, if the UUID is included as specified in Section 3.3 of \[SP 800-73-3(1)\]. Certificates issued under id-fpki-common-cardAuth shall not include any other name in the subject alternative name extension but may include a non-NULL name in the subject field. If included, the subject distinguished name shall take one of the following forms:
 
--   C=US, o=U.S. Government, \[ou=*department*\], \[ou=*agency*\], \[ou=*structural\_container*\], serialNumber=*FASC-N*
+  - > C=US, o=U.S. Government, \[ou=*department*\], \[ou=*agency*\], \[ou=*structural\_container*\], serialNumber=*FASC-N*
 
-```{=html}
-<!-- -->
-```
--   dc=gov, dc=*org0*, \[*dc=org1*\], ..., \[dc=*orgN*\], \[ou=*structural\_container*\], serialNumber=*FASC-N*
+<!-- end list -->
 
--   dc=mil, dc=*org0*, \[*dc=org1*\], ..., \[dc=*orgN*\], \[ou=*structural\_container*\], serialNumber=*FASC-N*
+  - > dc=gov, dc=*org0*, \[*dc=org1*\], …, \[dc=*orgN*\], \[ou=*structural\_container*\], serialNumber=*FASC-N*
 
--   C=US, o=U.S. Government, \[ou=*department*\], \[ou=*agency*\], \[ou=*structural\_container*\], serialNumber=*UUID*
+  - > dc=mil, dc=*org0*, \[*dc=org1*\], …, \[dc=*orgN*\], \[ou=*structural\_container*\], serialNumber=*FASC-N*
 
--   dc=gov, dc=*org0*, \[dc=*org1*\], ..., \[dc=*orgN*\], \[ou=*structural\_container*\], serialNumber=*UUID*
+  - > C=US, o=U.S. Government, \[ou=*department*\], \[ou=*agency*\], \[ou=*structural\_container*\], serialNumber=*UUID*
 
--   dc=mil, dc=*org0*, \[dc=*org1*\], ..., \[dc=*orgN*\], \[ou=*structural\_container*\], serialNumber=*UUID*
+  - > dc=gov, dc=*org0*, \[dc=*org1*\], …, \[dc=*orgN*\], \[ou=*structural\_container*\], serialNumber=*UUID*
+
+  - > dc=mil, dc=*org0*, \[dc=*org1*\], …, \[dc=*orgN*\], \[ou=*structural\_container*\], serialNumber=*UUID*
 
 ### Need for Names to Be Meaningful
 
@@ -1156,13 +1236,13 @@ CAs operating under this policy shall not issue a certificate knowing that it in
 
 ### Method to Prove Possession of Private Key
 
-In all cases where the party named in a certificate generates its own keys, that party shall be required to prove possession of the private key, which corresponds to the public key in the certificate request. For signature keys, this may be done by the entity using its private key to sign a value supplied by the CA. The CA shall then validate the signature using the party's public key. The FPKIPA may allow other mechanisms that are at least as secure as those cited here.
+In all cases where the party named in a certificate generates its own keys, that party shall be required to prove possession of the private key, which corresponds to the public key in the certificate request. For signature keys, this may be done by the entity using its private key to sign a value supplied by the CA. The CA shall then validate the signature using the party’s public key. The FPKIPA may allow other mechanisms that are at least as secure as those cited here.
 
-In the case where key generation is performed under the CA or RA's direct control, proof of possession is not required.
+In the case where key generation is performed under the CA or RA’s direct control, proof of possession is not required.
 
 ### Authentication of Organization Identity
 
-Requests for CA certificates shall include the CA name, address, and documentation of the existence of the CA. Before issuing CA certificates, an authority for the issuing CA shall verify the information, in addition to the authenticity of the requesting representative and the representative's authorization to act in the name of the CA.
+Requests for CA certificates shall include the CA name, address, and documentation of the existence of the CA. Before issuing CA certificates, an authority for the issuing CA shall verify the information, in addition to the authenticity of the requesting representative and the representative’s authorization to act in the name of the CA.
 
 ### Authentication of Individual Identity
 
@@ -1172,79 +1252,79 @@ This policy allows a certificate to be issued only to a single entity. Certifica
 
 Procedures used by agencies to issue identification to their own personnel and affiliates may be more stringent than that set forth below. When this is the case, the agency procedures for authentication of personnel shall apply in addition to the guidance in this section.
 
-The RA shall ensure that the applicant's identity information is verified. Identity shall be verified no more than 30 days before initial certificate issuance. At id-fpki-common-High, the applicant shall appear at the RA in person. For all other policies, RAs may accept authentication of an applicant's identity attested to and documented by a trusted agent to support identity proofing of remote applicants, assuming agency identity badging requirements are otherwise satisfied. Authentication by a trusted agent does not relieve the RA of its responsibility to perform steps 1), 2), the verification of identifying information (e.g., by checking official records) in step 3), and the maintenance of biometrics in step 4), below.
+The RA shall ensure that the applicant’s identity information is verified. Identity shall be verified no more than 30 days before initial certificate issuance. At id-fpki-common-High, the applicant shall appear at the RA in person. For all other policies, RAs may accept authentication of an applicant’s identity attested to and documented by a trusted agent to support identity proofing of remote applicants, assuming agency identity badging requirements are otherwise satisfied. Authentication by a trusted agent does not relieve the RA of its responsibility to perform steps 1), 2), the verification of identifying information (e.g., by checking official records) in step 3), and the maintenance of biometrics in step 4), below.
 
 At a minimum, authentication procedures for employees must include the following steps:
 
-1)  Verify that a request for certificate issuance to the applicant was submitted by agency management.
+1)  > Verify that a request for certificate issuance to the applicant was submitted by agency management.
 
-2)  Verify Applicant's employment through use of official agency records.
+2)  > Verify Applicant’s employment through use of official agency records.
 
-3)  Establish applicant's identity by in-person proofing before the registration authority, based on either of the following processes:
+3)  > Establish applicant’s identity by in-person proofing before the registration authority, based on either of the following processes:
+    
+    1.  > Process \#1:
+        
+        1.  > The applicant presents a government-issued form of identification (e.g., an Agency ID badge, a passport, or driver’s license) as proof of identity, and
+        
+        2.  > The RA examines the presented credential for biometric data that can be linked to the applicant (e.g., a photograph on the credential itself or a securely linked photograph of applicant), and
+        
+        3.  > The credential presented in step 3) a) i) above shall be verified by the RA for currency and legitimacy (e.g., the agency ID is verified as valid). Typically, this is accomplished by querying a database maintained by the organization that issued the credential, but other equivalent methods may be used.
+    
+    2.  > Process \#2:
+        
+        1.  > The applicant presents a government-issued form of identification (e.g., an Agency ID badge, a passport, or driver’s license) as proof of identity, and
+        
+        2.  > The RA examines the presented credential for biometric data that can be linked to the applicant (e.g., a photograph on the credential itself or a securely linked photograph of applicant), and
+        
+        3.  > The applicant presents current corroborating information (e.g., current credit card bill or recent utility bill) to the RA. The identifying information (e.g., name and address) on the credential presented in step 3) b) i) above shall be verified by the RA for currency and legitimacy (e.g., the agency ID is verified as valid).
 
-    a.  Process \#1:
-
-        i.  The applicant presents a government-issued form of identification (e.g., an Agency ID badge, a passport, or driver's license) as proof of identity, and
-
-        ii. The RA examines the presented credential for biometric data that can be linked to the applicant (e.g., a photograph on the credential itself or a securely linked photograph of applicant), and
-
-        iii. The credential presented in step 3) a) i) above shall be verified by the RA for currency and legitimacy (e.g., the agency ID is verified as valid). Typically, this is accomplished by querying a database maintained by the organization that issued the credential, but other equivalent methods may be used.
-
-    b.  Process \#2:
-
-        i.  The applicant presents a government-issued form of identification (e.g., an Agency ID badge, a passport, or driver's license) as proof of identity, and
-
-        ii. The RA examines the presented credential for biometric data that can be linked to the applicant (e.g., a photograph on the credential itself or a securely linked photograph of applicant), and
-
-        iii. The applicant presents current corroborating information (e.g., current credit card bill or recent utility bill) to the RA. The identifying information (e.g., name and address) on the credential presented in step 3) b) i) above shall be verified by the RA for currency and legitimacy (e.g., the agency ID is verified as valid).
-
-4)  Record and maintain a biometric of the applicant (e.g., a photograph or fingerprint) by the RA or CA. (Handwritten signatures and other behavioral characteristics are not accepted as biometrics for the purposes of this policy.) This establishes an audit trail for dispute resolution.
+4)  > Record and maintain a biometric of the applicant (e.g., a photograph or fingerprint) by the RA or CA. (Handwritten signatures and other behavioral characteristics are not accepted as biometrics for the purposes of this policy.) This establishes an audit trail for dispute resolution.
 
 For contractors and other affiliated personnel, the authentication procedures must include the following steps:
 
-1)  Verify that a request for certificate issuance to the applicant was submitted by an authorized sponsoring agency employee (e.g., contracting officer or contracting officer's technical representative).
+1)  > Verify that a request for certificate issuance to the applicant was submitted by an authorized sponsoring agency employee (e.g., contracting officer or contracting officer’s technical representative).
 
-2)  Verify sponsoring agency employee's identity and employment through either one of the following methods:
+2)  > Verify sponsoring agency employee’s identity and employment through either one of the following methods:
+    
+    1.  > A digitally signed request from the sponsoring agency employee, verified by a currently valid employee signature certificate issued by an agency CA, may be accepted as proof of both employment and identity,
+    
+    2.  > Authentication of the sponsoring agency employee with a valid employee PIV-authentication certificate issued by the agency may be accepted as proof of both employment and identity, or
+    
+    3.  > In-person identity proofing of the sponsoring agency employee may be established before the registration authority as specified in employee authentication above and employment validated through use of the official agency records.
 
-    a.  A digitally signed request from the sponsoring agency employee, verified by a currently valid employee signature certificate issued by an agency CA, may be accepted as proof of both employment and identity,
+3)  > Establish applicant’s identity by in-person proofing before the registration authority, based on either of the following processes:
+    
+    1.  > Process \#1:
+        
+        1.  > The applicant presents a government-issued form of identification (e.g., an Agency ID badge, a passport, or driver’s license) as proof of identity, and
+        
+        2.  > The RA examines the presented credential for biometric data that can be linked to the applicant (e.g., a photograph on the credential itself or a securely linked photograph of applicant), and
+        
+        3.  > The credential presented in step 3) a) i) above shall be verified by the RA for currency and legitimacy (e.g., the agency ID is verified as valid). Typically, this is accomplished by querying official records maintained by the organization that issued the credential.
+    
+    2.  > Process \#2:
+        
+        1.  > The applicant presents a government-issued form of identification (e.g., an Agency ID badge, a passport, or driver’s license) as proof of identity, and
+        
+        2.  > The RA examines the presented credential for biometric data that can be linked to the applicant (e.g., a photograph on the credential itself or a securely linked photograph of applicant), and
+        
+        3.  > The applicant presents current corroborating information (e.g., current credit card bill or recent utility bill) to the RA. The identifying information (e.g., name and address) on the credential presented in step 3) b) i) above shall be verified by the RA for currency and legitimacy (e.g., the agency ID is verified as valid).
 
-    b.  Authentication of the sponsoring agency employee with a valid employee PIV-authentication certificate issued by the agency may be accepted as proof of both employment and identity, or
-
-    c.  In-person identity proofing of the sponsoring agency employee may be established before the registration authority as specified in employee authentication above and employment validated through use of the official agency records.
-
-3)  Establish applicant's identity by in-person proofing before the registration authority, based on either of the following processes:
-
-    a.  Process \#1:
-
-        i.  The applicant presents a government-issued form of identification (e.g., an Agency ID badge, a passport, or driver's license) as proof of identity, and
-
-        ii. The RA examines the presented credential for biometric data that can be linked to the applicant (e.g., a photograph on the credential itself or a securely linked photograph of applicant), and
-
-        iii. The credential presented in step 3) a) i) above shall be verified by the RA for currency and legitimacy (e.g., the agency ID is verified as valid). Typically, this is accomplished by querying official records maintained by the organization that issued the credential.
-
-    b.  Process \#2:
-
-        i.  The applicant presents a government-issued form of identification (e.g., an Agency ID badge, a passport, or driver's license) as proof of identity, and
-
-        ii. The RA examines the presented credential for biometric data that can be linked to the applicant (e.g., a photograph on the credential itself or a securely linked photograph of applicant), and
-
-        iii. The applicant presents current corroborating information (e.g., current credit card bill or recent utility bill) to the RA. The identifying information (e.g., name and address) on the credential presented in step 3) b) i) above shall be verified by the RA for currency and legitimacy (e.g., the agency ID is verified as valid).
-
-4)  Record and maintain a biometric of the applicant (e.g., a photograph or fingerprint) by the RA or CA. (Handwritten signatures and other behavioral characteristics are not accepted as biometrics for the purposes of this policy.) This establishes an audit trail for dispute resolution.
+4)  > Record and maintain a biometric of the applicant (e.g., a photograph or fingerprint) by the RA or CA. (Handwritten signatures and other behavioral characteristics are not accepted as biometrics for the purposes of this policy.) This establishes an audit trail for dispute resolution.
 
 Additionally, the RA shall record the process that was followed for issuance of each certificate. The process documentation and authentication requirements shall include the following:
 
--   The identity of the person performing the identification;
+  - > The identity of the person performing the identification;
 
--   A signed declaration by that person that he or she verified the identity of the Applicant as required by the CPS using the format set forth at 28 U.S.C. 1746 (declaration under penalty of perjury);
+  - > A signed declaration by that person that he or she verified the identity of the Applicant as required by the CPS using the format set forth at 28 U.S.C. 1746 (declaration under penalty of perjury);
 
--   Unique identifying number(s) from the ID(s) of the applicant, or a facsimile of the ID(s);
+  - > Unique identifying number(s) from the ID(s) of the applicant, or a facsimile of the ID(s);
 
--   The biometric of the applicant;
+  - > The biometric of the applicant;
 
--   The date and time of the verification; and
+  - > The date and time of the verification; and
 
--   A declaration of identity signed by the applicant using a handwritten signature and performed in the presence of the person performing the identity authentication, using the format set forth at 28 U.S.C. 1746 (declaration under penalty of perjury).
+  - > A declaration of identity signed by the applicant using a handwritten signature and performed in the presence of the person performing the identity authentication, using the format set forth at 28 U.S.C. 1746 (declaration under penalty of perjury).
 
 FIPS 201 imposes the strict requirement of in-person registration. The following text only applies to the issuance of non-FIPS 201 credentials:
 
@@ -1254,51 +1334,51 @@ FIPS 201 imposes the strict requirement of in-person registration. The following
 
 Some computing and communications devices (routers, firewalls, servers, etc.) and software applications will be named as certificate subjects. In such cases, the device must have a human sponsor who is affiliated with the agency under which the certificate is being issued. The sponsor is responsible for providing the following registration information:
 
--   Equipment identification (e.g., serial number) or service name (e.g., DNS name) or unique software application name
+  - Equipment identification (e.g., serial number) or service name (e.g., DNS name) or unique software application name
 
--   Equipment or software application public keys
+  - Equipment or software application public keys
 
--   Equipment or software application authorizations and attributes (if any are to be included in the certificate)
+  - Equipment or software application authorizations and attributes (if any are to be included in the certificate)
 
--   Contact information to enable the CA or RA to communicate with the sponsor when required.
+  - Contact information to enable the CA or RA to communicate with the sponsor when required.
 
-These certificates shall be issued only to authorized devices under the subscribing organization's control. In the case a human sponsor is changed, the new sponsor shall review the status of each device under his/her sponsorship to ensure it is still authorized to receive certificates. The CPS shall describe procedures to ensure that certificate accountability is maintained. See section 9.6.3 for subscriber responsibilities.
+These certificates shall be issued only to authorized devices under the subscribing organization’s control. In the case a human sponsor is changed, the new sponsor shall review the status of each device under his/her sponsorship to ensure it is still authorized to receive certificates. The CPS shall describe procedures to ensure that certificate accountability is maintained. See section 9.6.3 for subscriber responsibilities.
 
-For each Fully-Qualified Domain Name listed in an id-fpki-common-public-trusted-serverAuth certificate, the CA shall confirm and maintain documented evidence that, as of the date the Certificate was issued, the Sponsor's agency has control over the FQDN and the sponsor is authorized to request the certificate.
+For each Fully-Qualified Domain Name listed in an id-fpki-common-public-trusted-serverAuth certificate, the CA shall confirm and maintain documented evidence that, as of the date the Certificate was issued, the Sponsor’s agency has control over the FQDN and the sponsor is authorized to request the certificate.
 
-Each agency shall have a naming policy for devices that receive an id-fpki-common-public-trusted-serverAuth certificate that specifies unique meaningful FQDN names and the CPS shall document how the CA ensures compliance with the sponsoring agency's policy.
+Each agency shall have a naming policy for devices that receive an id-fpki-common-public-trusted-serverAuth certificate that specifies unique meaningful FQDN names and the CPS shall document how the CA ensures compliance with the sponsoring agency’s policy.
 
 Note: FQDNs shall be listed in id-fpki-common-public-trusted-serverAuth Subscriber Certificates using dNSNames in the subjectAltName extension or in Subordinate CA Certificates via dNSNames in permittedSubtrees within the Name Constraints extension.
 
-Before issuing a certificate with a wildcard character (\*) in a CN or subjectAltName of type DNS-ID, the CA shall establish and follow a documented procedure to ensure that the wildcard does not fall immediately to the left of an agency or organization name, but is qualified down to a unique application, server, or server farm under control of the sponsor's organization. The device sponsor shall demonstrate that the domain name requested is entirely within the name space to be covered by the wildcard certificate.
+Before issuing a certificate with a wildcard character (\*) in a CN or subjectAltName of type DNS-ID, the CA shall establish and follow a documented procedure to ensure that the wildcard does not fall immediately to the left of an agency or organization name, but is qualified down to a unique application, server, or server farm under control of the sponsor’s organization. The device sponsor shall demonstrate that the domain name requested is entirely within the name space to be covered by the wildcard certificate.
 
 All requests for device certificates shall be digitally signed by the sponsor.
 
 The identity of the sponsor shall be authenticated by:
 
--   Verification of digitally signed messages sent from the sponsor using a certificate issued under this policy; or
+  - Verification of digitally signed messages sent from the sponsor using a certificate issued under this policy; or
 
--   In-person registration by the sponsor, with the identity of the sponsor confirmed in accordance with the requirements of section 3.2.3.1.
+  - In-person registration by the sponsor, with the identity of the sponsor confirmed in accordance with the requirements of section 3.2.3.1.
 
 #### Authentication for Derived PIV Credentials
 
 For certificates issued under id-fpki-common-derived-pivAuth-hardware and id-fpki-common-derived-pivAuth, identity shall be verified in accordance with the requirements specified for issuing derived credentials in \[SP 800-157\]. The RA or CA shall:
 
-1)  Verify that the request for certificate issuance to the applicant was submitted by an authorized agency employee.
+1)  > Verify that the request for certificate issuance to the applicant was submitted by an authorized agency employee.
 
-2)  Use the PKI-AUTH authentication mechanism from Section 6 of FIPS 201 to verify that the PIV Authentication certificate on the applicant's PIV Card is valid and that the applicant is in possession of the corresponding private key.
+2)  > Use the PKI-AUTH authentication mechanism from Section 6 of FIPS 201 to verify that the PIV Authentication certificate on the applicant’s PIV Card is valid and that the applicant is in possession of the corresponding private key.
 
-3)  Maintain a copy of the applicant's PIV Authentication certificate.
+3)  > Maintain a copy of the applicant’s PIV Authentication certificate.
 
 Seven days after issuing the Derived credential, the issuer should recheck the revocation status of the PIV Authentication certificate. This step can detect use of a compromised PIV Card to obtain a derived credential
 
 For certificates issued under id-fpki-common-derived-pivAuth-hardware, the applicant shall appear at the RA in person to present the PIV Card and perform the PKI-AUTH authentication mechanism. The RA shall perform a one-to-one comparison of the applicant against biometric data stored on the PIV Card, in accordance with \[SP 800-76\], and shall record and maintain the biometric sample used to validate the applicant. In cases where a 1:1 biometric match against the biometrics available on the PIV Card or in the chain-of-trust, as defined in \[FIPS201\] is not possible:
 
-1)  The applicant shall present a government-issued form of identification (e.g., a passport or driver's license) in addition to the PIV Card, and
+1)  > The applicant shall present a government-issued form of identification (e.g., a passport or driver’s license) in addition to the PIV Card, and
 
-2)  The RA shall examine the presented credentials for biometric data that can be linked to the applicant (e.g., a photograph on the credential itself or a securely linked photograph of the applicant), and
+2)  > The RA shall examine the presented credentials for biometric data that can be linked to the applicant (e.g., a photograph on the credential itself or a securely linked photograph of the applicant), and
 
-3)  The process documentation for the issuance of the certificate shall include the identity of the person performing the verification of the second (non-PIV) form of identification, a signed declaration by that person that he or she verified the identity of the applicant as required by the CPS using the format set forth at 28 U.S.C. 1746 (declaration under penalty of perjury), a unique identifying number from the second form of identification or a facsimile of the ID, a biometric of the applicant, and the date and time of the verification.
+3)  > The process documentation for the issuance of the certificate shall include the identity of the person performing the verification of the second (non-PIV) form of identification, a signed declaration by that person that he or she verified the identity of the applicant as required by the CPS using the format set forth at 28 U.S.C. 1746 (declaration under penalty of perjury), a unique identifying number from the second form of identification or a facsimile of the ID, a biometric of the applicant, and the date and time of the verification.
 
 ### Non-verified Subscriber Information
 
@@ -1306,9 +1386,9 @@ Information that is not verified shall not be included in certificates.
 
 ### Validation of Authority
 
-Before issuing CA certificates or signature certificates that assert organizational authority, the CA shall validate the individual's authority to act in the name of the organization. For pseudonymous certificates that identify subjects by their organizational roles, the CA shall validate that the individual either holds that role or has been delegated the authority to sign on behalf of the role.
+Before issuing CA certificates or signature certificates that assert organizational authority, the CA shall validate the individual’s authority to act in the name of the organization. For pseudonymous certificates that identify subjects by their organizational roles, the CA shall validate that the individual either holds that role or has been delegated the authority to sign on behalf of the role.
 
-In accordance with section 3.2.3.2, all requests for device certificates in the name of an organization, shall be digitally signed by the sponsor. In addition, the CPS shall specify a process by which an organization identifies the individuals who may request certificates that assert organizational authority. If an organization specifies, in writing, the individuals who may request a certificate, then the CA shall not accept any certificate requests that are outside this specification. The CA shall provide an Applicant with a list of the organization's authorized certificate requesters upon the Applicant's verified written request.
+In accordance with section 3.2.3.2, all requests for device certificates in the name of an organization, shall be digitally signed by the sponsor. In addition, the CPS shall specify a process by which an organization identifies the individuals who may request certificates that assert organizational authority. If an organization specifies, in writing, the individuals who may request a certificate, then the CA shall not accept any certificate requests that are outside this specification. The CA shall provide an Applicant with a list of the organization’s authorized certificate requesters upon the Applicant’s verified written request.
 
 ### Criteria for Interoperation
 
@@ -1324,11 +1404,11 @@ For re-key of subscriber certificates issued under id-fpki-common-derived-pivAut
 
 For re-key of subscriber certificates issued under id-fpki-common-High, identity may be established through use of current signature key, except that identity shall be established through an in-person registration process at least once every three years from the time of initial registration.
 
-For policies other than id-fpki-common-High, a subscriber's identity may be established through use of current signature key, except that identity shall be re-established through an in-person registration process at least once every nine years from the time of initial registration.
+For policies other than id-fpki-common-High, a subscriber’s identity may be established through use of current signature key, except that identity shall be re-established through an in-person registration process at least once every nine years from the time of initial registration.
 
 In addition, for re-key of subscriber certificates issued under id-fpki-common-derived-pivAuth-hardware, identity shall be established via mutual authentication between the issuer and the cryptographic module containing the current key, if the new key will be stored in the same cryptographic module as the current key. Identity shall be established through the initial registration process if the new key will be stored in a different cryptographic module than the current key.
 
-For device certificates, identity may be established through the use of the device's current signature key or the signature key of the device's human sponsor, except that identity shall be established through the initial registration process at least once every nine years from the time of initial registration.
+For device certificates, identity may be established through the use of the device’s current signature key or the signature key of the device’s human sponsor, except that identity shall be established through the initial registration process at least once every nine years from the time of initial registration.
 
 ### Identification and Authentication for Re-key after Revocation
 
@@ -1336,21 +1416,22 @@ In the event of certificate revocation, issuance of a new certificate shall alwa
 
 ## Identification and Authentication for Revocation Request
 
-Revocation requests must be authenticated. Requests to revoke a certificate may be authenticated using that certificate\'s public key, regardless of whether or not the associated private key has been compromised.
+Revocation requests must be authenticated. Requests to revoke a certificate may be authenticated using that certificate's public key, regardless of whether or not the associated private key has been compromised.
 
-#  Certificate Life-Cycle Operational Requirements
+#   
+Certificate Life-Cycle Operational Requirements
 
 ## Certificate Application
 
 The Certificate application process must provide sufficient information to:
 
--   Establish the applicant's authorization (by the employing or sponsoring agency) to obtain a certificate. (per section 3.2.3)
+  - Establish the applicant’s authorization (by the employing or sponsoring agency) to obtain a certificate. (per section 3.2.3)
 
--   Establish and record identity of the applicant. (per section 3.2.3)
+  - Establish and record identity of the applicant. (per section 3.2.3)
 
--   Obtain the applicant's public key and verify the applicant's possession of the private key for each certificate required. (per section 3.2.1)
+  - Obtain the applicant’s public key and verify the applicant’s possession of the private key for each certificate required. (per section 3.2.1)
 
--   Verify any role or authorization information requested for inclusion in the certificate.
+  - Verify any role or authorization information requested for inclusion in the certificate.
 
 These steps may be performed in any order that is convenient for the PKI Authorities and applicants that does not defeat security, but all must be completed before certificate issuance.
 
@@ -1388,7 +1469,7 @@ Information in certificate applications must be verified as accurate before cert
 
 ### Performing Identification and Authentication Functions
 
-The identification and authentication of the subscriber must meet the requirements specified for subscriber authentication as specified in sections 3.2 and 3.3 of this CP. The PKI Authority must identify the components of the PKI Authority (e.g., CA or RA) that are responsible for authenticating the subscriber's identity in each case. For CAs that issue id-fpki-common-public-trusted-serverAuth certificates and subordinate to a publicly trusted Federal Common Policy Root CA, the CPS shall state whether the CA reviews Certification Authority Authorization (CAA) DNS Resource Records, and if so, the CA's practice on processing CAA records for fully Qualified Domain Names.
+The identification and authentication of the subscriber must meet the requirements specified for subscriber authentication as specified in sections 3.2 and 3.3 of this CP. The PKI Authority must identify the components of the PKI Authority (e.g., CA or RA) that are responsible for authenticating the subscriber’s identity in each case. For CAs that issue id-fpki-common-public-trusted-serverAuth certificates and subordinate to a publicly trusted Federal Common Policy Root CA, the CPS shall state whether the CA reviews Certification Authority Authorization (CAA) DNS Resource Records, and if so, the CA’s practice on processing CAA records for fully Qualified Domain Names.
 
 ### Approval or Rejection of Certificate Applications
 
@@ -1408,19 +1489,19 @@ Certificate applications must be processed and a certificate issued within 30 da
 
 ### CA Actions During Certificate Issuance
 
-Upon receiving the request, the CAs/RAs will---
+Upon receiving the request, the CAs/RAs will—
 
--   Verify the identity of the requester.
+  - Verify the identity of the requester.
 
--   Verify the authority of the requester and the integrity of the information in the certificate request.
+  - Verify the authority of the requester and the integrity of the information in the certificate request.
 
--   Build and sign a certificate if all certificate requirements have been met (in the case of an RA, have the CA sign the certificate).
+  - Build and sign a certificate if all certificate requirements have been met (in the case of an RA, have the CA sign the certificate).
 
--   Make the certificate available to the subscriber after confirming that the subscriber has formally acknowledged their obligations as described in section 9.6.3.
+  - Make the certificate available to the subscriber after confirming that the subscriber has formally acknowledged their obligations as described in section 9.6.3.
 
-The certificate request may already contain a certificate built by either the RA or the subscriber. This certificate will not be signed until all verifications and modifications, if any, have been completed to the CA's satisfaction.
+The certificate request may already contain a certificate built by either the RA or the subscriber. This certificate will not be signed until all verifications and modifications, if any, have been completed to the CA’s satisfaction.
 
-All authorization and other attribute information received from a prospective subscriber shall be verified before inclusion in a certificate. The responsibility for verifying prospective subscriber data shall be described in a CA's CPS.
+All authorization and other attribute information received from a prospective subscriber shall be verified before inclusion in a certificate. The responsibility for verifying prospective subscriber data shall be described in a CA’s CPS.
 
 ### Notification to Subscriber by the CA of Issuance of Certificate
 
@@ -1556,7 +1637,7 @@ Subscribers with a currently valid certificate may request certificate modificat
 
 ### Processing Certificate Modification Requests
 
-If an individual's name changes (e.g., due to marriage), then proof of the name change must be provided to the RA or other designated agent in order for a certificate with the new name to be issued. If an individual's authorizations or privileges change, the RA will verify those authorizations. If authorizations have reduced, the old certificate must be revoked.
+If an individual’s name changes (e.g., due to marriage), then proof of the name change must be provided to the RA or other designated agent in order for a certificate with the new name to be issued. If an individual’s authorizations or privileges change, the RA will verify those authorizations. If authorizations have reduced, the old certificate must be revoked.
 
 Proof of all subject information changes must be provided to the RA or other designated agent and verified before the modified certificate is issued.
 
@@ -1586,45 +1667,45 @@ CAs operating under this policy shall issue CRLs covering all unexpired certific
 
 CAs operating under this policy shall make public a description of how to obtain revocation information for the certificates they publish, and an explanation of the consequences of using dated revocation information. This information shall be given to subscribers during certificate request or issuance, and shall be readily available to any potential relying party.
 
-Revocation requests must be authenticated. Requests to revoke a certificate may be authenticated using that certificate\'s associated private key, regardless of whether or not the private key has been compromised***.***
+Revocation requests must be authenticated. Requests to revoke a certificate may be authenticated using that certificate's associated private key, regardless of whether or not the private key has been compromised***.***
 
 Certificate suspension for CA certificates is not allowed by this policy. However, the use of certificate suspension for end entity certificates is allowed.
 
 ### Circumstances for Revocation
 
-A certificate shall be revoked when the binding between the subject and the subject's public key defined within the certificate is no longer considered valid. Examples of circumstances that invalidate the binding are---
+A certificate shall be revoked when the binding between the subject and the subject’s public key defined within the certificate is no longer considered valid. Examples of circumstances that invalidate the binding are—
 
--   Identifying information or affiliation components of any names in the certificate becomes invalid. This would include evidence that a wild card certificate has been issued with a name where PKI Sponsor does not exercise control of the entire name space associated with the wild card certificate.
+  - Identifying information or affiliation components of any names in the certificate becomes invalid. This would include evidence that a wild card certificate has been issued with a name where PKI Sponsor does not exercise control of the entire name space associated with the wild card certificate.
 
--   Privilege attributes asserted in the subscriber's certificate are reduced.
+  - Privilege attributes asserted in the subscriber’s certificate are reduced.
 
--   The subscriber can be shown to have violated the stipulations of its subscriber agreement.
+  - The subscriber can be shown to have violated the stipulations of its subscriber agreement.
 
--   There is reason to believe the private key has been compromised.
+  - There is reason to believe the private key has been compromised.
 
--   The subscriber or other authorized party (as defined in the CPS) asks for his/her certificate to be revoked.
+  - The subscriber or other authorized party (as defined in the CPS) asks for his/her certificate to be revoked.
 
--   The failure of a CA to adequately adhere to the requirements of this CP or the approved CPS. For example, there is strong evidence that the CA has failed to comply with the requirements of section 6.7 of the CP.
+  - The failure of a CA to adequately adhere to the requirements of this CP or the approved CPS. For example, there is strong evidence that the CA has failed to comply with the requirements of section 6.7 of the CP.
 
 In addition, for id-fpki-common-public-trusted-serverAuth certificates, a certificate shall be revoked when:
 
--   The CA obtains evidence that the issuing CA (or Subordinate CA) no longer complies with the requirements of section 6.7. In this case, all certificates under an issuing CA or subordinate CA shall be revoked.
+  - The CA obtains evidence that the issuing CA (or Subordinate CA) no longer complies with the requirements of section 6.7. In this case, all certificates under an issuing CA or subordinate CA shall be revoked.
 
--   The CA is made aware that a Wildcard Certificate has been used to authenticate a fraudulently misleading subordinate Fully-Qualified Domain Name.
+  - The CA is made aware that a Wildcard Certificate has been used to authenticate a fraudulently misleading subordinate Fully-Qualified Domain Name.
 
 Whenever any of the above circumstances are reported, the appropriate authority shall review the circumstances and make a revocation decision.  The revocation decision shall be made based on appropriate criteria, to include:
 
--   The nature of the alleged problem;
+  - The nature of the alleged problem;
 
--   The number of Certificate Problem Reports received about a particular Certificate or Subscriber; and
+  - The number of Certificate Problem Reports received about a particular Certificate or Subscriber; and
 
--   Relevant legislation.
+  - Relevant legislation.
 
 If it is determined that revocation is required, the associated certificate shall be revoked and placed on the CRL. Revoked certificates shall be included on all new publications of the certificate status information until the certificates expire.
 
 ### Who Can Request Revocation
 
-Within the PKI, a CA may summarily revoke certificates within its domain. A written notice and brief explanation for the revocation shall subsequently be provided to the subscriber. The RA can request the revocation of a subscriber's certificate on behalf of any authorized party as specified in the CPS. A subscriber may request that its own certificate be revoked. The human sponsor of a device can request the revocation of the device's certificate. Other authorized agency officials may request revocation as described in the CPS.
+Within the PKI, a CA may summarily revoke certificates within its domain. A written notice and brief explanation for the revocation shall subsequently be provided to the subscriber. The RA can request the revocation of a subscriber’s certificate on behalf of any authorized party as specified in the CPS. A subscriber may request that its own certificate be revoked. The human sponsor of a device can request the revocation of the device’s certificate. Other authorized agency officials may request revocation as described in the CPS.
 
 The CA shall provide Subscribers, Relying Parties, Application Software Suppliers, and other third parties with clear instructions for reporting suspected Private Key Compromise, Certificate misuse, or other types of fraud, compromise, misuse, inappropriate conduct, or any other matter related to Certificates. The CA shall publicly disclose the instructions through a readily accessible online means.
 
@@ -1634,15 +1715,15 @@ A request to revoke a certificate shall identify the certificate to be revoked, 
 
 Where subscribers use hardware tokens, revocation is optional if all the following conditions are met:
 
--   the revocation request was not for key compromise;
+  - > the revocation request was not for key compromise;
 
--   the hardware token does not permit the user to export the signature private key;
+  - > the hardware token does not permit the user to export the signature private key;
 
--   the subscriber surrendered the token to the PKI;
+  - > the subscriber surrendered the token to the PKI;
 
--   the token was zeroized or destroyed promptly upon surrender;
+  - > the token was zeroized or destroyed promptly upon surrender;
 
--   the token has been protected from malicious use between surrender and zeroization or destruction.
+  - > the token has been protected from malicious use between surrender and zeroization or destruction.
 
 In all other cases, revocation of the certificates is mandatory. Even where all the above conditions have been met, revocation of the associated certificates is recommended.
 
@@ -1686,13 +1767,13 @@ For publicly trusted server authentication and code signing certificates, CAs sh
 
 For the status of Subscriber Certificates:
 
--   The CA shall update information provided via an Online Certificate Status Protocol at least every 18 hours. OCSP responses from this service shall have a maximum expiration time of ten days.
+  - The CA shall update information provided via an Online Certificate Status Protocol at least every 18 hours. OCSP responses from this service shall have a maximum expiration time of ten days.
 
 For the status of Subordinate CA Certificates:
 
--   The CA shall update information provided via an Online Certificate Status Protocol whenever CRLs are generated and at least within 18 hours after revoking a Subordinate CA Certificate.
+  - The CA shall update information provided via an Online Certificate Status Protocol whenever CRLs are generated and at least within 18 hours after revoking a Subordinate CA Certificate.
 
-If the OCSP responder receives a request for status of a certificate that has not been issued, then the responder should not respond with a \"good\" status. The CA should monitor the responder for such requests as part of its security response procedures.
+If the OCSP responder receives a request for status of a certificate that has not been issued, then the responder should not respond with a "good" status. The CA should monitor the responder for such requests as part of its security response procedures.
 
 The CA shall operate and maintain its CRL and OCSP capability with resources sufficient to provide a response time of ten seconds or less under normal operating conditions.
 
@@ -1702,9 +1783,9 @@ The CA shall maintain a continuous 24x7 ability to respond internally to a high-
 
 In addition, for id-fpki-common-public-trusted-serverAuth certificates, OCSP responses must be signed either:
 
-1.  by the CA that issued the certificates whose revocation status is being checked, or
+1.  > by the CA that issued the certificates whose revocation status is being checked, or
 
-2.  by a delegated OCSP Responder using a certificate signed by the CA that issued the certificate whose revocation status is being checked.
+2.  > by a delegated OCSP Responder using a certificate signed by the CA that issued the certificate whose revocation status is being checked.
 
 In the latter case, the OCSP signing Certificate shall contain an extension of type id-pkix-ocsp-nocheck, as defined by RFC2560.
 
@@ -1718,11 +1799,11 @@ Relying party client software may optionally support on-line status checking. Cl
 
 A CA may also use other methods to publicize the certificates it has revoked. Any alternative method must meet the following requirements:
 
--   The alternative method must be described in the CA's approved CPS;
+  - The alternative method must be described in the CA’s approved CPS;
 
--   The alternative method must provide authentication and integrity services commensurate with the assurance level of the certificate being verified.
+  - The alternative method must provide authentication and integrity services commensurate with the assurance level of the certificate being verified.
 
--   The alternative method must meet the issuance and latency requirements for CRLs stated in sections 4.9.7 and 4.9.8.
+  - The alternative method must meet the issuance and latency requirements for CRLs stated in sections 4.9.7 and 4.9.8.
 
 ###  Special Requirements Related To Key Compromise
 
@@ -1782,7 +1863,8 @@ Under no circumstances shall a subscriber signature key be held in trust by a th
 
 CAs that support session key encapsulation and recovery shall identify the document describing the practices in the applicable CPS.
 
-#  Facility, Management, and Operational Controls
+#   
+Facility, Management, and Operational Controls
 
 ## Physical Controls
 
@@ -1798,29 +1880,29 @@ The location and construction of the facility housing the CA equipment, as well 
 
 #### Physical Access for CA Equipment
 
-At a minimum, the physical access controls for CA equipment, as well as remote workstations used to administer the CAs, shall---
+At a minimum, the physical access controls for CA equipment, as well as remote workstations used to administer the CAs, shall—
 
--   Ensure that no unauthorized access to the hardware is permitted.
+  - > Ensure that no unauthorized access to the hardware is permitted.
 
--   Ensure that all removable media and paper containing sensitive plain-text information is stored in secure containers.
+  - > Ensure that all removable media and paper containing sensitive plain-text information is stored in secure containers.
 
--   Be manually or electronically monitored for unauthorized intrusion at all times.
+  - > Be manually or electronically monitored for unauthorized intrusion at all times.
 
--   Ensure an access log is maintained and inspected periodically.
+  - > Ensure an access log is maintained and inspected periodically.
 
--   Require two-person physical access control to both the cryptographic module and computer systems.
+  - > Require two-person physical access control to both the cryptographic module and computer systems.
 
 When not in use, removable cryptographic modules, activation information used to access or enable cryptographic modules, and CA equipment shall be placed in secure containers. Activation data shall be either memorized or recorded and stored in a manner commensurate with the security afforded the cryptographic module, and shall not be stored with the cryptographic module or removable hardware associated with remote workstations used to administer the CA.
 
 A security check of the facility housing the CA equipment or remote workstations used to administer the CAs shall occur if the facility is to be left unattended. At a minimum, the check shall verify the following:
 
--   The equipment is in a state appropriate to the current mode of operation (e.g., that cryptographic modules are in place when "open," and secured when "closed," and for the CA, that all equipment other than the repository is shut down).
+  - The equipment is in a state appropriate to the current mode of operation (e.g., that cryptographic modules are in place when “open,” and secured when “closed,” and for the CA, that all equipment other than the repository is shut down).
 
--   Any security containers are properly secured.
+  - Any security containers are properly secured.
 
--   Physical security systems (e.g., door locks, vent covers) are functioning properly.
+  - Physical security systems (e.g., door locks, vent covers) are functioning properly.
 
--   The area is secured against unauthorized access.
+  - The area is secured against unauthorized access.
 
 A person or group of persons shall be made explicitly responsible for making such checks. When a group of persons is responsible, a log identifying the person performing a check at each instance shall be maintained. If the facility is not continuously attended, the last person to depart shall initial a sign-out sheet that indicates the date and time and asserts that all necessary physical protection mechanisms are in place and activated.
 
@@ -1856,7 +1938,7 @@ Sensitive media and documentation that are no longer needed for operations shall
 
 ### Off-Site Backup
 
-Full system backups sufficient to recover from system failure shall be made on a periodic schedule, and described in a CA's CPS. Backups are to be performed and stored off-site not less than once per week. At least one full backup copy shall be stored at an off-site location (separate from CA equipment). Only the latest full backup need be retained. The backup shall be stored at a site with physical and procedural controls commensurate to that of the operational CA.
+Full system backups sufficient to recover from system failure shall be made on a periodic schedule, and described in a CA’s CPS. Backups are to be performed and stored off-site not less than once per week. At least one full backup copy shall be stored at an off-site location (separate from CA equipment). Only the latest full backup need be retained. The backup shall be stored at a site with physical and procedural controls commensurate to that of the operational CA.
 
 For legacy Federal PKIs operating an offline CA, the full system backup shall be performed each time the system is turned on or once a week, whichever is less frequent.
 
@@ -1870,13 +1952,13 @@ A trusted role is one whose incumbent performs functions that can introduce secu
 
 The requirements of this policy are defined in terms of four roles. (Note: the information derives from the Certificate Issuing and Management Components (CIMC) Protection Profile.)
 
-1.  *Administrator* -- authorized to install, configure, and maintain the CA; establish and maintain system accounts; configure audit parameters; and generate component keys.
+1.  > *Administrator* – authorized to install, configure, and maintain the CA; establish and maintain system accounts; configure audit parameters; and generate component keys.
 
-2.  *Officer* -- authorized to request or approve certificate issuance and revocations.
+2.  > *Officer* – authorized to request or approve certificate issuance and revocations.
 
-3.  *Auditor* -- authorized to review, maintain, and archive audit logs.
+3.  > *Auditor* – authorized to review, maintain, and archive audit logs.
 
-4.  *Operator* -- authorized to perform system backup and recovery.
+4.  > *Operator* – authorized to perform system backup and recovery.
 
 Administrators do not issue certificates to subscribers.
 
@@ -1886,14 +1968,13 @@ The roles required for each level of assurance are identified in Section 5.2.4. 
 
 Two or more persons are required for the following tasks:
 
--   CA key generation;
+  - CA key generation;
 
-```{=html}
-<!-- -->
-```
--   CA signing key activation;
+<!-- end list -->
 
--   CA private key backup.
+  - > CA signing key activation;
+
+  - > CA private key backup.
 
 Where multiparty control is required, at least one of the participants shall be an Administrator. All participants must serve in a trusted role as defined in section 5.2.1. Multiparty control shall not be achieved using personnel that serve in the Auditor trusted role.
 
@@ -1915,18 +1996,17 @@ All persons filling trusted roles shall be selected on the basis of loyalty, tru
 
 CA personnel shall, at a minimum, pass a background investigation covering the following areas:
 
--   Employment;
+  - Employment;
 
-```{=html}
-<!-- -->
-```
--   Education;
+<!-- end list -->
 
--   Place of residence;
+  - > Education;
 
--   Law Enforcement; and
+  - > Place of residence;
 
--   References.
+  - > Law Enforcement; and
+
+  - > References.
 
 The period of investigation must cover at least the last five years for each area, excepting the residence check which must cover at least the last three years. Regardless of the date of award, the highest educational degree shall be verified.
 
@@ -1936,15 +2016,15 @@ Adjudication of the background investigation shall be performed by a competent a
 
 All personnel performing duties with respect to the operation of the CA or RA shall receive comprehensive training. Training shall be conducted in the following areas:
 
--   CA (or RA) security principles and mechanisms;
+  - CA (or RA) security principles and mechanisms;
 
--   All PKI software versions in use on the CA (or RA) system;
+  - All PKI software versions in use on the CA (or RA) system;
 
--   All PKI duties they are expected to perform;
+  - All PKI duties they are expected to perform;
 
--   Disaster recovery and business continuity procedures; and
+  - Disaster recovery and business continuity procedures; and
 
--   Stipulations of this policy.
+  - Stipulations of this policy.
 
 ### Retraining Frequency and Requirements
 
@@ -1978,199 +2058,199 @@ Audit log files shall be generated for all events relating to the security of th
 
 All security auditing capabilities of CA operating system and CA applications required by this CP shall be enabled during installation. At a minimum, each audit record shall include the following (either recorded automatically or manually for each auditable event):
 
--   The type of event;
+  - The type of event;
 
--   The date and time the event occurred;
+  - The date and time the event occurred;
 
--   A success or failure indicator when executing the CA's signing process;
+  - A success or failure indicator when executing the CA’s signing process;
 
--   A success or failure indicator when performing certificate revocation; and
+  - A success or failure indicator when performing certificate revocation; and
 
--   The identity of the entity and/or operator that caused the event.
+  - The identity of the entity and/or operator that caused the event.
 
 A message from any source requesting an action by the CA is an auditable event; the corresponding audit record must also include message date and time, source, destination, and contents.
 
 The CA shall record the events identified in the list below. Where these events cannot be electronically logged, the CA shall supplement electronic audit logs with physical logs as necessary.
 
--   SECURITY AUDIT:
-
-    -   Any changes to the Audit parameters, e.g., audit frequency, type of event audited
-
-    -   Any attempt to delete or modify the Audit logs
-
-    -   Obtaining a third-party time-stamp
-
--   IDENTIFICATION AND AUTHENTICATION:
-
-    -   Successful and unsuccessful attempts to assume a role
-
-    -   The value of maximum authentication attempts is changed
-
-    -   Maximum authentication attempts unsuccessful authentication attempts occur during user login
-
-    -   An Administrator unlocks an account that has been locked as a result of unsuccessful authentication attempts
-
-    -   An Administrator changes the type of authenticator, e.g., from password to biometrics
-
--   LOCAL DATA ENTRY:
-
-    -   All security-relevant data that is entered in the system
-
--   REMOTE DATA ENTRY:
-
-    -   All security-relevant messages that are received by the system
-
--   DATA EXPORT AND OUTPUT:
-
-    -   All successful and unsuccessful requests for confidential and security-relevant information
-
--   KEY GENERATION:
-
-    -   Whenever the CA generates a key. (Not mandatory for single session or one-time use symmetric keys)
-
--   PRIVATE KEY LOAD AND STORAGE:
-
-    -   The loading of Component private keys
-
-    -   All access to certificate subject private keys retained within the CA for key recovery purposes
-
--   TRUSTED PUBLIC KEY ENTRY, DELETION AND STORAGE:
-
-    -   All changes to the trusted public keys, including additions and deletions
-
--   SECRET KEY STORAGE:
-
-    -   The manual entry of secret keys used for authentication
-
--   PRIVATE AND SECRET KEY EXPORT:
-
-    -   The export of private and secret keys (keys used for a single session or message are excluded)
-
--   CERTIFICATE REGISTRATION:
-
-    -   All certificate requests
-
--   CERTIFICATE REVOCATION:
-
-    -   All certificate revocation requests
-
--   CERTIFICATE STATUS CHANGE APPROVAL:
-
-    -   The approval or rejection of a certificate status change request
-
--   CA CONFIGURATION:
-
-    -   Any security-relevant changes to the configuration of the CA
-
--   ACCOUNT ADMINISTRATION:
-
-    -   Roles and users are added or deleted
-
-    -   The access control privileges of a user account or a role are modified
-
--   CERTIFICATE PROFILE MANAGEMENT:
-
-    -   All changes to the certificate profile
-
--   REVOCATION PROFILE MANAGEMENT:
-
-    -   All changes to the revocation profile
-
--   CERTIFICATE REVOCATION LIST PROFILE MANAGEMENT:
-
-    -   All changes to the certificate revocation list profile
-
--   MISCELLANEOUS:
-
-    -   Appointment of an individual to a trusted role
-
-    -   Designation of personnel for multiparty control
-
-    -   Installation of the operating system
-
-    -   Installation of the CA
-
-    -   Installing hardware cryptographic modules
-
-    -   Removing hardware cryptographic modules
-
-    -   Destruction of cryptographic modules
-
-    -   System startup
-
-    -   Logon attempts to CA applications
-
-    -   Receipt of hardware / software
-
-    -   Attempts to set passwords
-
-    -   Attempts to modify passwords
-
-    -   Backing up CA internal database
-
-    -   Restoring CA internal database
-
-    -   File manipulation (e.g., creation, renaming, moving)
-
-    -   Posting of any material to a repository
-
-    -   Access to CA internal database
-
-    -   All certificate compromise notification requests
-
-    -   Loading tokens with certificates
-
-    -   Shipment of tokens
-
-    -   Zeroizing tokens
-
-    -   Re-key of the CA
-
-    -   Configuration changes to the CA server involving:
-
-        -   Hardware
-
-        -   Software
-
-        -   Operating system
-
-        -   Patches
-
-        -   Security profiles
-
--   PHYSICAL ACCESS / SITE SECURITY:
-
-    -   Personnel access to room housing CA
-
-    -   Access to the CA server
-
-    -   Known or suspected violations of physical security
-
--   ANOMALIES:
-
-    -   Software error conditions
-
-    -   Software check integrity failures
-
-    -   Receipt of improper messages
-
-    -   Misrouted messages
-
-    -   Network attacks (suspected or confirmed)
-
-    -   Equipment failure
-
-    -   Electrical power outages
-
-    -   Uninterruptible power supply (UPS) failure
-
-    -   Obvious and significant network service or access failures
-
-    -   Violations of certificate policy
-
-    -   Violations of certification practice statement
-
-    -   Resetting operating system clock
+  - SECURITY AUDIT:
+    
+      - > Any changes to the Audit parameters, e.g., audit frequency, type of event audited
+    
+      - > Any attempt to delete or modify the Audit logs
+    
+      - > Obtaining a third-party time-stamp
+
+  - IDENTIFICATION AND AUTHENTICATION:
+    
+      - > Successful and unsuccessful attempts to assume a role
+    
+      - > The value of maximum authentication attempts is changed
+    
+      - > Maximum authentication attempts unsuccessful authentication attempts occur during user login
+    
+      - > An Administrator unlocks an account that has been locked as a result of unsuccessful authentication attempts
+    
+      - > An Administrator changes the type of authenticator, e.g., from password to biometrics
+
+  - LOCAL DATA ENTRY:
+    
+      - > All security-relevant data that is entered in the system
+
+  - REMOTE DATA ENTRY:
+    
+      - > All security-relevant messages that are received by the system
+
+  - DATA EXPORT AND OUTPUT:
+    
+      - > All successful and unsuccessful requests for confidential and security-relevant information
+
+  - KEY GENERATION:
+    
+      - > Whenever the CA generates a key. (Not mandatory for single session or one-time use symmetric keys)
+
+  - PRIVATE KEY LOAD AND STORAGE:
+    
+      - > The loading of Component private keys
+    
+      - > All access to certificate subject private keys retained within the CA for key recovery purposes
+
+  - TRUSTED PUBLIC KEY ENTRY, DELETION AND STORAGE:
+    
+      - > All changes to the trusted public keys, including additions and deletions
+
+  - SECRET KEY STORAGE:
+    
+      - > The manual entry of secret keys used for authentication
+
+  - PRIVATE AND SECRET KEY EXPORT:
+    
+      - > The export of private and secret keys (keys used for a single session or message are excluded)
+
+  - CERTIFICATE REGISTRATION:
+    
+      - > All certificate requests
+
+  - CERTIFICATE REVOCATION:
+    
+      - > All certificate revocation requests
+
+  - CERTIFICATE STATUS CHANGE APPROVAL:
+    
+      - > The approval or rejection of a certificate status change request
+
+  - CA CONFIGURATION:
+    
+      - > Any security-relevant changes to the configuration of the CA
+
+  - ACCOUNT ADMINISTRATION:
+    
+      - > Roles and users are added or deleted
+    
+      - > The access control privileges of a user account or a role are modified
+
+  - CERTIFICATE PROFILE MANAGEMENT:
+    
+      - > All changes to the certificate profile
+
+  - REVOCATION PROFILE MANAGEMENT:
+    
+      - > All changes to the revocation profile
+
+  - CERTIFICATE REVOCATION LIST PROFILE MANAGEMENT:
+    
+      - > All changes to the certificate revocation list profile
+
+  - MISCELLANEOUS:
+    
+      - > Appointment of an individual to a trusted role
+    
+      - > Designation of personnel for multiparty control
+    
+      - > Installation of the operating system
+    
+      - > Installation of the CA
+    
+      - > Installing hardware cryptographic modules
+    
+      - > Removing hardware cryptographic modules
+    
+      - > Destruction of cryptographic modules
+    
+      - > System startup
+    
+      - > Logon attempts to CA applications
+    
+      - > Receipt of hardware / software
+    
+      - > Attempts to set passwords
+    
+      - > Attempts to modify passwords
+    
+      - > Backing up CA internal database
+    
+      - > Restoring CA internal database
+    
+      - > File manipulation (e.g., creation, renaming, moving)
+    
+      - > Posting of any material to a repository
+    
+      - > Access to CA internal database
+    
+      - > All certificate compromise notification requests
+    
+      - > Loading tokens with certificates
+    
+      - > Shipment of tokens
+    
+      - > Zeroizing tokens
+    
+      - > Re-key of the CA
+    
+      - > Configuration changes to the CA server involving:
+        
+          - > Hardware
+        
+          - > Software
+        
+          - > Operating system
+        
+          - > Patches
+        
+          - > Security profiles
+
+  - PHYSICAL ACCESS / SITE SECURITY:
+    
+      - > Personnel access to room housing CA
+    
+      - > Access to the CA server
+    
+      - > Known or suspected violations of physical security
+
+  - ANOMALIES:
+    
+      - > Software error conditions
+    
+      - > Software check integrity failures
+    
+      - > Receipt of improper messages
+    
+      - > Misrouted messages
+    
+      - > Network attacks (suspected or confirmed)
+    
+      - > Equipment failure
+    
+      - > Electrical power outages
+    
+      - > Uninterruptible power supply (UPS) failure
+    
+      - > Obvious and significant network service or access failures
+    
+      - > Violations of certificate policy
+    
+      - > Violations of certification practice statement
+    
+      - > Resetting operating system clock
 
 ### Frequency of Processing Log
 
@@ -2212,70 +2292,69 @@ The Common Policy CA must follow either the General Records Schedules establishe
 
 CA archive records shall be sufficiently detailed to determine the proper operation of the CA and the validity of any certificate (including those revoked or expired) issued by the CA. At a minimum, the following data shall be recorded for archive:
 
--   CA accreditation (if applicable)
+  - CA accreditation (if applicable)
 
-```{=html}
-<!-- -->
-```
--   Certificate policy
+<!-- end list -->
 
--   Certification practice statement
+  - > Certificate policy
 
--   Contractual obligations
+  - > Certification practice statement
 
--   and other agreements concerning operations of the CA
+  - > Contractual obligations
 
--   System and equipment configuration
+  - > and other agreements concerning operations of the CA
 
--   Modifications and updates to system or configuration
+  - > System and equipment configuration
 
--   Certificate requests
+  - > Modifications and updates to system or configuration
 
--   All certificates issued and/or published
+  - > Certificate requests
 
--   Record of re-key
+  - > All certificates issued and/or published
 
--   Revocation requests
+  - > Record of re-key
 
--   Subscriber identity authentication data as per section 3.2.3
+  - > Revocation requests
 
--   Documentation of receipt and acceptance of certificates (if applicable)
+  - > Subscriber identity authentication data as per section 3.2.3
 
--   Subscriber agreements
+  - > Documentation of receipt and acceptance of certificates (if applicable)
 
--   Documentation of receipt of tokens
+  - > Subscriber agreements
 
--   All CRLs issued and/or published
+  - > Documentation of receipt of tokens
 
--   Other data or applications to verify archive contents
+  - > All CRLs issued and/or published
 
--   Compliance Auditor reports
+  - > Other data or applications to verify archive contents
 
--   Any changes to the Audit parameters, e.g. audit frequency, type of event audited
+  - > Compliance Auditor reports
 
--   Any attempt to delete or modify the Audit logs
+  - > Any changes to the Audit parameters, e.g. audit frequency, type of event audited
 
--   Whenever the CA generates a key (Not mandatory for single session or one-time use symmetric keys)
+  - > Any attempt to delete or modify the Audit logs
 
--   All access to certificate subject private keys retained within the CA for key recovery purposes
+  - > Whenever the CA generates a key (Not mandatory for single session or one-time use symmetric keys)
 
--   All changes to the trusted public keys, including additions and deletions
+  - > All access to certificate subject private keys retained within the CA for key recovery purposes
 
--   The export of private and secret keys (keys used for a single session or message are excluded)
+  - > All changes to the trusted public keys, including additions and deletions
 
--   The approval or rejection of a certificate status change request
+  - > The export of private and secret keys (keys used for a single session or message are excluded)
 
--   Appointment of an individual to a Trusted Role
+  - > The approval or rejection of a certificate status change request
 
--   Destruction of cryptographic modules
+  - > Appointment of an individual to a Trusted Role
 
--   All certificate compromise notifications
+  - > Destruction of cryptographic modules
 
--   Remedial action taken as a result of violations of physical security
+  - > All certificate compromise notifications
 
--   Violations of Certificate Policy
+  - > Remedial action taken as a result of violations of physical security
 
--   Violations of Certification Practice Statement
+  - > Violations of Certificate Policy
+
+  - > Violations of Certification Practice Statement
 
 ### Retention Period for Archive
 
@@ -2311,13 +2390,13 @@ Procedures, detailing how to create, verify, package, transmit, and store the CA
 
 ## Key Changeover
 
-To minimize risk from compromise of a CA's private signing key, that key may be changed often. From that time on, only the new key will be used to sign CA and subscriber certificates. If the old private key is used to sign OCSP responder certificates or CRLs that cover certificates signed with that key, the old key must be retained and protected.
+To minimize risk from compromise of a CA’s private signing key, that key may be changed often. From that time on, only the new key will be used to sign CA and subscriber certificates. If the old private key is used to sign OCSP responder certificates or CRLs that cover certificates signed with that key, the old key must be retained and protected.
 
 After a CA performs a Key Changeover, the CA may continue to issue CRLs with the old key until all certificates signed with that key have expired. As an alternative, after all certificates signed with that old key have been revoked, the CA may issue a final long-term CRL using the old key, with a nextUpdate time past the validity period of all issued certificates. This final CRL shall be available for all relying parties until the validity period of all issued certificates has past. Once the last CRL has been issued, the old private signing key of the CA may be destroyed.
 
-The CA's signing key shall have a validity period as described in section 6.3.2.
+The CA’s signing key shall have a validity period as described in section 6.3.2.
 
-When a CA updates its private signature key and thus generates a new public key, the CA shall notify all CAs, RAs, and subscribers that rely on the CA's certificate that it has been changed. When a CA that distributes self-signed certificates updates its private signature key, the CA shall generate key rollover certificates, where the new public key is signed by the old private key, and vice versa. This permits acceptance of newly issued certificates and CRLs without distribution of the new self-signed certificate to current users. Key rollover certificates are optional for CAs that do not distribute self-signed certificates. SSPs and Federal Legacy PKIs CAs cross certified with the Common Policy Root CA must be able to continue to interoperate with the Common Policy Root CA after the Common Policy Root CA performs a key rollover, whether or not the DN of the Common Policy Root CA is changed.
+When a CA updates its private signature key and thus generates a new public key, the CA shall notify all CAs, RAs, and subscribers that rely on the CA’s certificate that it has been changed. When a CA that distributes self-signed certificates updates its private signature key, the CA shall generate key rollover certificates, where the new public key is signed by the old private key, and vice versa. This permits acceptance of newly issued certificates and CRLs without distribution of the new self-signed certificate to current users. Key rollover certificates are optional for CAs that do not distribute self-signed certificates. SSPs and Federal Legacy PKIs CAs cross certified with the Common Policy Root CA must be able to continue to interoperate with the Common Policy Root CA after the Common Policy Root CA performs a key rollover, whether or not the DN of the Common Policy Root CA is changed.
 
 ## Compromise and Disaster Recovery
 
@@ -2325,32 +2404,31 @@ When a CA updates its private signature key and thus generates a new public key,
 
 The FPKIPA shall be notified if any CAs operating under this policy experience the following:
 
--   suspected or detected compromise of the CA systems;
+  - suspected or detected compromise of the CA systems;
 
--   suspected or detected compromise of a certificate status server (CSS) if (1) the CSS certificate has a lifetime of more than 72 hours and (2) the CSS certificate cannot be revoked (e.g., an OCSP responder certificate with the id-pkix-ocsp-nocheck extension);
+  - suspected or detected compromise of a certificate status server (CSS) if (1) the CSS certificate has a lifetime of more than 72 hours and (2) the CSS certificate cannot be revoked (e.g., an OCSP responder certificate with the id-pkix-ocsp-nocheck extension);
 
--   physical or electronic penetration of CA systems;
+  - physical or electronic penetration of CA systems;
 
--   successful denial of service attacks on CA components; or
+  - successful denial of service attacks on CA components; or
 
--   any incident preventing the CA from issuing a CRL within 48 hours of the issuance of the previous CRL.
+  - any incident preventing the CA from issuing a CRL within 48 hours of the issuance of the previous CRL.
 
 The FPKIPA will take appropriate steps to protect the integrity of the Federal PKI.
 
-The CA's Management Authority shall reestablish operational capabilities as quickly as possible in accordance with procedures set forth in the CA\'s CPS.
+The CA’s Management Authority shall reestablish operational capabilities as quickly as possible in accordance with procedures set forth in the CA's CPS.
 
 ### Computing Resources, Software, and/or Data Are Corrupted
 
 When computing resources, software, and/or data are corrupted, CAs operating under this policy shall respond as follows:
 
--   Before returning to operation, ensure that the system's integrity has been restored.
+  - Before returning to operation, ensure that the system’s integrity has been restored.
 
-```{=html}
-<!-- -->
-```
--   If the CA signature keys are not destroyed**,** CA operation shall be reestablished, giving priority to the ability to generate certificate status information within the CRL issuance schedule specified in section 4.9.7.
+<!-- end list -->
 
--   If the CA signature keys are destroyed**,** CA operation shall be reestablished as quickly as possible, giving priority to the generation of a new CA key pair.
+  - If the CA signature keys are not destroyed**,** CA operation shall be reestablished, giving priority to the ability to generate certificate status information within the CRL issuance schedule specified in section 4.9.7.
+
+  - If the CA signature keys are destroyed**,** CA operation shall be reestablished as quickly as possible, giving priority to the generation of a new CA key pair.
 
 The Agency PMA shall be notified as soon as possible.
 
@@ -2358,23 +2436,21 @@ The Agency PMA shall be notified as soon as possible.
 
 In the event of a CA private key compromise, the following operations must be performed.
 
--   The FPKIPA shall be immediately informed, as well as any superior or cross-certified CAs and any entities known to be distributing the CA certificate (e.g., in a root store).
+  - The FPKIPA shall be immediately informed, as well as any superior or cross-certified CAs and any entities known to be distributing the CA certificate (e.g., in a root store).
 
-```{=html}
-<!-- -->
-```
--   The CA must generate new keys in accordance with section 6.1.1.1.
+<!-- end list -->
+
+  - The CA must generate new keys in accordance with section 6.1.1.1.
 
 If the CA distributed the private key in a Trusted Certificate, the CA shall perform the following operations:
 
--   Generate a new Trusted Certificate.
+  - Generate a new Trusted Certificate.
 
-```{=html}
-<!-- -->
-```
--   Securely distribute the new Trusted Certificate as specified in section 6.1.4.
+<!-- end list -->
 
--   Initiate procedures to notify subscribers of the compromise.
+  - Securely distribute the new Trusted Certificate as specified in section 6.1.4.
+
+  - Initiate procedures to notify subscribers of the compromise.
 
 Subscriber certificates may be renewed automatically by the CA under the new key pair (see section 4.6), or the CA may require subscribers to repeat the initial certificate application process.
 
@@ -2398,7 +2474,8 @@ Any issued certificates that have not expired, shall be revoked and a final long
 
 Prior to CA termination, the CA shall provide archived data to an archive facility as specified in the CPS. As soon as possible, the CA will advise all other organizations to which it has issued certificates of its termination, using an agreed-upon method of communication specified in the CPS.
 
-#  Technical Security Controls
+#   
+Technical Security Controls
 
 ## Key Pair Generation and Installation
 
@@ -2430,26 +2507,25 @@ If subscribers generate their own key pairs, then there is no need to deliver pr
 
 When CAs or RAs generate keys on behalf of the subscriber, then the private key must be delivered securely to the subscriber. Private keys may be delivered electronically or may be delivered on a hardware cryptographic module. In all cases, the following requirements must be met:
 
--   Anyone who generates a private signing key for a subscriber shall not retain any copy of the key after delivery of the private key to the subscriber.
+  - Anyone who generates a private signing key for a subscriber shall not retain any copy of the key after delivery of the private key to the subscriber.
 
--   The private key(s) must be protected from activation, compromise, or modification during the delivery process.
+  - The private key(s) must be protected from activation, compromise, or modification during the delivery process.
 
--   The subscriber shall acknowledge receipt of the private key(s).
+  - The subscriber shall acknowledge receipt of the private key(s).
 
--   Delivery shall be accomplished in a way that ensures that the correct tokens and activation data are provided to the correct subscribers.
+  - Delivery shall be accomplished in a way that ensures that the correct tokens and activation data are provided to the correct subscribers.
 
-```{=html}
-<!-- -->
-```
--   For hardware modules, accountability for the location and state of the module must be maintained until the subscriber accepts possession of it.
+<!-- end list -->
 
--   For electronic delivery of private keys, the key material shall be encrypted using a cryptographic algorithm and key size at least as strong as the private key. Activation data shall be delivered using a separate secure channel.
+  - For hardware modules, accountability for the location and state of the module must be maintained until the subscriber accepts possession of it.
+
+  - For electronic delivery of private keys, the key material shall be encrypted using a cryptographic algorithm and key size at least as strong as the private key. Activation data shall be delivered using a separate secure channel.
 
 The CA must maintain a record of the subscriber acknowledgment of receipt of the token.
 
 ### Public Key Delivery to Certificate Issuer
 
-Where key pairs are generated by the subscriber or RA, the public key and the subscriber's identity must be delivered securely to the CA for certificate issuance. The delivery mechanism shall bind the subscriber's verified identity to the public key. If cryptography is used to achieve this binding, it must be at least as strong as the CA keys used to sign the certificate.
+Where key pairs are generated by the subscriber or RA, the public key and the subscriber’s identity must be delivered securely to the CA for certificate issuance. The delivery mechanism shall bind the subscriber’s verified identity to the public key. If cryptography is used to achieve this binding, it must be at least as strong as the CA keys used to sign the certificate.
 
 ### CA Public Key Delivery to Relying Parties
 
@@ -2457,25 +2533,23 @@ When a CA updates its signature key pair, the CA shall distribute the new public
 
 Self-signed certificates shall be conveyed to relying parties in a secure fashion to preclude substitution attacks. Acceptable methods for self-signed certificate delivery are:
 
--   Loading a self-signed certificate onto tokens delivered to relying parties via secure mechanisms; such as
+  - > Loading a self-signed certificate onto tokens delivered to relying parties via secure mechanisms; such as
 
-```{=html}
-<!-- -->
-```
--   The Trusted Certificate is loaded onto the token during the subscriber's appearance at the RA.
+<!-- end list -->
 
--   The Trusted Certificate is loaded onto the token when the RA generates the subscriber's key pair and loads the private key onto the token, which is then delivered to the subscriber in accordance with section 6.1.2.
+  - > The Trusted Certificate is loaded onto the token during the subscriber’s appearance at the RA.
 
-```{=html}
-<!-- -->
-```
--   Secure distribution of self-signed certificates through secure out-of-band mechanisms;
+  - > The Trusted Certificate is loaded onto the token when the RA generates the subscriber’s key pair and loads the private key onto the token, which is then delivered to the subscriber in accordance with section 6.1.2.
 
--   Comparison of the hash of the self-signed certificate against a hash value made available via authenticated out-of-band sources (note that hashes posted in-band along with the certificate are not acceptable as an authentication mechanism); and
+<!-- end list -->
 
--   Loading certificates from web sites secured with a currently valid certificate of equal or greater assurance level than the certificate being downloaded.
+  - > Secure distribution of self-signed certificates through secure out-of-band mechanisms;
 
-Key rollover certificates are signed with the CA's current private key, so secure distribution is not required.
+  - > Comparison of the hash of the self-signed certificate against a hash value made available via authenticated out-of-band sources (note that hashes posted in-band along with the certificate are not acceptable as an authentication mechanism); and
+
+  - > Loading certificates from web sites secured with a currently valid certificate of equal or greater assurance level than the certificate being downloaded.
+
+Key rollover certificates are signed with the CA’s current private key, so secure distribution is not required.
 
 ### Key Sizes
 
@@ -2485,11 +2559,11 @@ Trusted Certificates that expire before January 1, 2031 shall contain subject pu
 
 CAs that generate certificates and CRLs under this policy shall use signature keys of 1024, 2048, or 3072 bits for RSA and 256 or 384 bits for elliptic curve algorithms. Certificates that expire on or after December 31, 2010 shall be generated with 2048 or 3072 bit keys for RSA and 256 or 384 bit keys for elliptic curve algorithms. Certificates that expire after December 31, 2030 shall be generated with 3072 bit keys for RSA and 256 or 384 bit keys for elliptic curve algorithms.
 
-  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  Practice Note: Where certificates are issued to satisfy FIPS 201 requirements, CAs shall use signature keys of 2048 or 3072 bits for RSA and 256 or 384 bits for elliptic curve algorithms to sign certificates issued on or after January 1, 2008. CAs may continue to use 1024 bit RSA keys to sign CRLs that only cover certificates that were signed using 1024 bit RSA keys. CAs may also use 1024 bit RSA keys to sign OCSP responder certificates that expire before December 31, 2010.
-  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Practice Note: Where certificates are issued to satisfy FIPS 201 requirements, CAs shall use signature keys of 2048 or 3072 bits for RSA and 256 or 384 bits for elliptic curve algorithms to sign certificates issued on or after January 1, 2008. CAs may continue to use 1024 bit RSA keys to sign CRLs that only cover certificates that were signed using 1024 bit RSA keys. CAs may also use 1024 bit RSA keys to sign OCSP responder certificates that expire before December 31, 2010. |
 
-CAs that generate certificates and CRLs under this policy shall use the SHA-1, SHA‑256, or SHA-384 hash algorithm when generating digital signatures. RSA signatures on certificates and CRLs that are issued after December 31, 2010 shall be generated using SHA‑256[,]{.underline} however, RSA signatures on CRLs that are issued before January 1, 2012, and that include status information for certificates that were generated using SHA-1 may be generated using SHA-1. RSA signatures on CRLs that are issued on or after January 1, 2012, but before January 1, 2014 that only provide status information for certificates that were generated using SHA-1 may continue to be generated using SHA-1. ECDSA signatures on certificates and CRLs shall be generated using SHA-256 or SHA-384, as appropriate for the key length.
+CAs that generate certificates and CRLs under this policy shall use the SHA-1, SHA‑256, or SHA-384 hash algorithm when generating digital signatures. RSA signatures on certificates and CRLs that are issued after December 31, 2010 shall be generated using SHA‑256<span class="underline">,</span> however, RSA signatures on CRLs that are issued before January 1, 2012, and that include status information for certificates that were generated using SHA-1 may be generated using SHA-1. RSA signatures on CRLs that are issued on or after January 1, 2012, but before January 1, 2014 that only provide status information for certificates that were generated using SHA-1 may continue to be generated using SHA-1. ECDSA signatures on certificates and CRLs shall be generated using SHA-256 or SHA-384, as appropriate for the key length.
 
 RSA signatures on certificates that are issued after December 31, 2010 and before January 1, 2014, to CAs that issued certificates prior to December 31, 2010 may be generated using SHA-1 provided that CA issues no additional end entity certificates. Additionally, certificates issued to OCSP responders that include SHA-1 certificates may be signed using SHA-1 until December 31, 2013. CAs that issue certificates signed with SHA-224 or SHA-256 after December 31, 2010 must not issue certificates signed with SHA-1.
 
@@ -2555,17 +2629,17 @@ Subscriber key management keys may be escrowed to provide key recovery as descri
 
 #### Backup of CA Private Signature Key
 
-The CA private signature keys shall be backed up under the same multiperson control as the original signature key. At least one copy of the private signature key shall be stored off-site. All copies of the CA private signature key shall be accounted for and protected in the same manner as the original. Backup procedures shall be included in the CA's CPS.
+The CA private signature keys shall be backed up under the same multiperson control as the original signature key. At least one copy of the private signature key shall be stored off-site. All copies of the CA private signature key shall be accounted for and protected in the same manner as the original. Backup procedures shall be included in the CA’s CPS.
 
 #### Backup of Subscriber Private Signature Key
 
 Subscriber private signature keys whose corresponding public key is contained in a certificate asserting the id-fpki-common-authentication, id-fpki-common-derived-pivAuth-hardware, id-fpki-common-cardAuth, or id-fpki-common-High policy shall not be backed up or copied.
 
-All other Subscriber private signature keys may be backed up or copied, but must be held in the subscriber's control. Backed up subscriber private signature keys shall not be stored in plaintext form outside the cryptographic module. Storage must ensure security controls consistent with the protection provided by the subscriber's cryptographic module.
+All other Subscriber private signature keys may be backed up or copied, but must be held in the subscriber’s control. Backed up subscriber private signature keys shall not be stored in plaintext form outside the cryptographic module. Storage must ensure security controls consistent with the protection provided by the subscriber’s cryptographic module.
 
 #### Backup of Subscriber Private Key Management Key
 
-Backed up subscriber private key management keys shall not be stored in plaintext form outside the cryptographic module. Storage must ensure security controls consistent with the protection provided by the subscriber's cryptographic module.
+Backed up subscriber private key management keys shall not be stored in plaintext form outside the cryptographic module. Storage must ensure security controls consistent with the protection provided by the subscriber’s cryptographic module.
 
 #### Backup of CSS Private Key
 
@@ -2573,7 +2647,7 @@ CSS private keys may be backed up. If backed up, all copies shall be accounted f
 
 #### Backup of Device Private Keys
 
-Device private keys may be backed up or copied, but must be held under the control of the device's human sponsor or other authorized administrator. Backed up device private keys shall not be stored in plaintext form outside the cryptographic module. Storage must ensure security controls consistent with the protection provided by the device's cryptographic module.
+Device private keys may be backed up or copied, but must be held under the control of the device’s human sponsor or other authorized administrator. Backed up device private keys shall not be stored in plaintext form outside the cryptographic module. Storage must ensure security controls consistent with the protection provided by the device’s cryptographic module.
 
 #### Backup of Common PIV Content Signing Key
 
@@ -2599,7 +2673,7 @@ No stipulation beyond that specified in FIPS 140.
 
 For certificates issued under id-fpki-common-authentication, id-fpki-common-derived-pivAuth-hardware, id-fpki-common-derived-pivAuth, id-fpki-common-policy, id-fpki-common-hardware, and id-fpki-common-High, the subscriber must be authenticated to the cryptographic token before the activation of the associated private key(s). Acceptable means of authentication include but are not limited to passphrases, PINs or biometrics. Entry of activation data shall be protected from disclosure (i.e., the data should not be displayed while it is entered).
 
-For certificates issued under id-fpki-common-devices and id-fpki-common-devicesHardware, the device may be configured to activate its private key without requiring its human sponsor or authorized administrator to authenticate to the cryptographic token, provided that appropriate physical and logical access controls are implemented for the device and its cryptographic token. For certificates issued under id-fpki-common-piv-contentSigning, the PIV card issuance system or device may be configured to activate its private key without requiring its human sponsor or authorized administrator to authenticate to the cryptographic token, provided that appropriate physical and logical access controls are implemented for content signing operations conformant with PIV issuance requirements (see \[FIPS 201\]). The strength of the security controls shall be commensurate with the level of threat in the device's environment, and shall protect the device's hardware, software, and the cryptographic token and its activation data from compromise.
+For certificates issued under id-fpki-common-devices and id-fpki-common-devicesHardware, the device may be configured to activate its private key without requiring its human sponsor or authorized administrator to authenticate to the cryptographic token, provided that appropriate physical and logical access controls are implemented for the device and its cryptographic token. For certificates issued under id-fpki-common-piv-contentSigning, the PIV card issuance system or device may be configured to activate its private key without requiring its human sponsor or authorized administrator to authenticate to the cryptographic token, provided that appropriate physical and logical access controls are implemented for content signing operations conformant with PIV issuance requirements (see \[FIPS 201\]). The strength of the security controls shall be commensurate with the level of threat in the device’s environment, and shall protect the device’s hardware, software, and the cryptographic token and its activation data from compromise.
 
 For certificates issued under id-fpki-common-cardAuth, subscriber authentication is not required to use the associated private key.
 
@@ -2627,7 +2701,7 @@ The public key is archived as part of the certificate archival.
 
 The usage period for the Common Policy Root CA key pair is a maximum of 20 years.
 
-For all other CAs operating under this policy, the usage period for a CA key pair is a maximum of ten years. The CA private key may be used to sign certificates for at most four years, but may be used to sign CRLs and OCSP responder certificates for the entire usage period. All certificates signed by a specific CA key pair must expire before the end of that key pair's usage period.
+For all other CAs operating under this policy, the usage period for a CA key pair is a maximum of ten years. The CA private key may be used to sign certificates for at most four years, but may be used to sign CRLs and OCSP responder certificates for the entire usage period. All certificates signed by a specific CA key pair must expire before the end of that key pair’s usage period.
 
 Subscriber public keys in certificates that assert the id-PIV-content-signing OID in the extended key usage extension have a maximum usage period of nine years. The private keys corresponding to the public keys in these certificates have a maximum usage period of three years. Expiration of the id-fpki-common-piv-contentSigning certificate shall be later than the expiration of the id-fpki-common-authentication, id-fpki-common-derived-pivAuth-hardware, or id-fpki-common-derived-pivAuth certificates.
 
@@ -2645,11 +2719,11 @@ RA and subscriber activation data may be user-selected. The strength of the acti
 
 Data used to unlock private keys shall be protected from disclosure by a combination of cryptographic and physical access control mechanisms. Activation data shall be:
 
--   memorized;
+  - memorized;
 
--   biometric in nature; or
+  - biometric in nature; or
 
--   recorded and secured at the level of assurance associated with the activation of the cryptographic module, and shall not be stored with the cryptographic module.
+  - recorded and secured at the level of assurance associated with the activation of the cryptographic module, and shall not be stored with the cryptographic module.
 
 ### Other Aspects of Activation Data
 
@@ -2661,65 +2735,65 @@ No stipulation.
 
 Computer security controls are required to ensure CA/RA operations are performed as specified in this policy. The following computer security functions pertaining to the Common Policy Root CA may be provided by the operating system, or through a combination of operating system, software, and physical safeguards**:**
 
--   Require authenticated logins
+  - Require authenticated logins
 
--   Provide discretionary access control
+  - Provide discretionary access control
 
--   Provide a security audit capability
+  - Provide a security audit capability
 
--   Enforce access control for CA services and PKI roles
+  - Enforce access control for CA services and PKI roles
 
--   Enforce separation of duties for PKI roles
+  - Enforce separation of duties for PKI roles
 
--   Require identification and authentication of PKI roles and associated identities
+  - Require identification and authentication of PKI roles and associated identities
 
--   Prohibit object reuse or require separation for CA random access memory
+  - Prohibit object reuse or require separation for CA random access memory
 
--   Require use of cryptography for session communication and database security
+  - Require use of cryptography for session communication and database security
 
--   Archive CA history and audit data
+  - Archive CA history and audit data
 
--   Require self-test security-related CA services
+  - Require self-test security-related CA services
 
--   Require a trusted path for identification of PKI roles and associated identities
+  - Require a trusted path for identification of PKI roles and associated identities
 
--   Require a recovery mechanism for keys and the CA system
+  - Require a recovery mechanism for keys and the CA system
 
--   Enforce domain integrity boundaries for security-critical processes.
+  - Enforce domain integrity boundaries for security-critical processes.
 
 For other CAs operating under this policy, the computer security functions listed below are required. These functions may be provided by the operating system, or through a combination of operating system, software, and physical safeguards. The CA and its ancillary parts shall include the following functionality:
 
--   authenticate the identity of users before permitting access to the system or applications;
+  - authenticate the identity of users before permitting access to the system or applications;
 
--   manage privileges of users to limit users to their assigned roles;
+  - manage privileges of users to limit users to their assigned roles;
 
--   generate and archive audit records for all transactions; (see section 5.4)
+  - generate and archive audit records for all transactions; (see section 5.4)
 
--   enforce domain integrity boundaries for security critical processes; and
+  - enforce domain integrity boundaries for security critical processes; and
 
--   support recovery from key or system failure.
+  - support recovery from key or system failure.
 
 For certificate status servers operating under this policy, the computer security functions listed below are required:
 
--   authenticate the identity of users before permitting access to the system or applications;
+  - authenticate the identity of users before permitting access to the system or applications;
 
--   manage privileges of users to limit users to their assigned roles;
+  - manage privileges of users to limit users to their assigned roles;
 
--   enforce domain integrity boundaries for security critical processes; and
+  - enforce domain integrity boundaries for security critical processes; and
 
--   support recovery from key or system failure.
+  - support recovery from key or system failure.
 
 For remote workstations used to administer the CAs, the computer security functions listed below are required:
 
--   authenticate the identity of users before permitting access to the system or applications;
+  - authenticate the identity of users before permitting access to the system or applications;
 
--   manage privileges of users to limit users to their assigned roles;
+  - manage privileges of users to limit users to their assigned roles;
 
--   generate and archive audit records for all transactions; (see section 5.4)
+  - generate and archive audit records for all transactions; (see section 5.4)
 
--   enforce domain integrity boundaries for security critical processes; and
+  - enforce domain integrity boundaries for security critical processes; and
 
--   support recovery from key or system failure.
+  - support recovery from key or system failure.
 
 All communications between any PKI trusted role and the CA shall be authenticated and protected from modification.
 
@@ -2733,17 +2807,17 @@ No Stipulation.
 
 The system development controls for the CA and RA are as follows:
 
--   The CA shall use software that has been designed and developed under a formal, documented development methodology.
+  - The CA shall use software that has been designed and developed under a formal, documented development methodology.
 
--   Hardware and software procured to operate the CA shall be purchased in a fashion to reduce the likelihood that any particular component was tampered with (e.g., by ensuring the vendor cannot identify the PKI component that will be installed on a particular device).
+  - Hardware and software procured to operate the CA shall be purchased in a fashion to reduce the likelihood that any particular component was tampered with (e.g., by ensuring the vendor cannot identify the PKI component that will be installed on a particular device).
 
--   Hardware and software developed specifically for the CA shall be developed in a controlled environment, and the development process shall be defined and documented. This requirement does not apply to commercial off-the-shelf hardware or software.
+  - Hardware and software developed specifically for the CA shall be developed in a controlled environment, and the development process shall be defined and documented. This requirement does not apply to commercial off-the-shelf hardware or software.
 
--   The CA hardware and software shall be dedicated to performing one task: the CA. There shall be no other applications, hardware devices, network connections, or component software installed that are not parts of the CA operation. Where the CA operation supports multiple CAs, the hardware platform may support multiple CAs.
+  - The CA hardware and software shall be dedicated to performing one task: the CA. There shall be no other applications, hardware devices, network connections, or component software installed that are not parts of the CA operation. Where the CA operation supports multiple CAs, the hardware platform may support multiple CAs.
 
--   Proper care shall be taken to prevent malicious software from being loaded onto the CA equipment. All applications required to perform the operation of the CA shall be obtained from documented sources. RA hardware and software shall be scanned for malicious code on first use and periodically thereafter.
+  - Proper care shall be taken to prevent malicious software from being loaded onto the CA equipment. All applications required to perform the operation of the CA shall be obtained from documented sources. RA hardware and software shall be scanned for malicious code on first use and periodically thereafter.
 
--   Hardware and software updates shall be purchased or developed in the same manner as original equipment, and shall be installed by trusted and trained personnel in a defined manner.
+  - Hardware and software updates shall be purchased or developed in the same manner as original equipment, and shall be installed by trusted and trained personnel in a defined manner.
 
 ### Security Management Controls
 
@@ -2769,7 +2843,8 @@ The CA shall establish connection with a remote workstation used to administer t
 
 Asserted times shall be accurate to within three minutes. Electronic or manual procedures may be used to maintain system time. Clock adjustments are auditable events (see section 5.4.1).
 
-#  Certificate, CRL, and OCSP Profiles
+#   
+Certificate, CRL, and OCSP Profiles
 
 ## Certificate Profile
 
@@ -2777,7 +2852,7 @@ Certificates issued by a CA under this policy shall conform to the X.509 Certifi
 
 ### Version Number(s)
 
-The CA shall issue X.509 v3 certificates (populate version field with integer "2").
+The CA shall issue X.509 v3 certificates (populate version field with integer “2”).
 
 ### Certificate Extensions
 
@@ -2787,34 +2862,45 @@ Rules for the inclusion, assignment of value, and processing of extensions are d
 
 Certificates issued under this CP shall use the following OIDs for signatures:
 
-  ------------------------- ---------------------------------------------------------------------------------------
-  sha-1WithRSAEncryption    {iso(1) member-body(2) us(840) rsadsi(113549) pkcs(1) pkcs‑1(1) 5}
-  sha256WithRSAEncryption   {iso(1) member-body(2) us(840) rsadsi(113549) pkcs(1) pkcs‑1(1) 11}
-  RSA with PSS padding      id-RSASSA-PSS ::= {iso(1) member-body(2) us(840) rsadsi(113549) pkcs(1) pkcs-1(1) 10}
-  ecdsa-with-Sha256         {iso(1) member-body(2) us(840) ansi-X9-62(10045) signatures(4) ecdsa-with-SHA2(3) 2}
-  ecdsa-with-Sha384         {iso(1) member-body(2) us(840) ansi-X9-62(10045) signatures(4) ecdsa-with-SHA2(3) 3}
-  ------------------------- ---------------------------------------------------------------------------------------
+|                         |                                                                                       |
+| ----------------------- | ------------------------------------------------------------------------------------- |
+| sha-1WithRSAEncryption  | {iso(1) member-body(2) us(840) rsadsi(113549) pkcs(1) pkcs‑1(1) 5}                    |
+| sha256WithRSAEncryption | {iso(1) member-body(2) us(840) rsadsi(113549) pkcs(1) pkcs‑1(1) 11}                   |
+| RSA with PSS padding    | id-RSASSA-PSS ::= {iso(1) member-body(2) us(840) rsadsi(113549) pkcs(1) pkcs-1(1) 10} |
+| ecdsa-with-Sha256       | {iso(1) member-body(2) us(840) ansi-X9-62(10045) signatures(4) ecdsa-with-SHA2(3) 2}  |
+| ecdsa-with-Sha384       | {iso(1) member-body(2) us(840) ansi-X9-62(10045) signatures(4) ecdsa-with-SHA2(3) 3}  |
 
 The PSS padding scheme OID is independent of the hash algorithm; the hash algorithm is specified as a parameter (for details, see \[PKCS\#1\]). Certificates issued under this CP must use the SHA-256 hash algorithm when generating RSASSA-PSS signatures. The following OID shall be used to specify the hash in an RSASSA-PSS digital signature:
 
-  --------- ------------------------------------------------------------------------------------------------------------------------
-  SHA-256   id-sha256 ::= {joint-iso-itu-t(2) country(16) us(840) organization(1) gov(101) csor(3) nistalgorithm(4) hashalgs(2) 1}
-  --------- ------------------------------------------------------------------------------------------------------------------------
+|         |                                                                                                                        |
+| ------- | ---------------------------------------------------------------------------------------------------------------------- |
+| SHA-256 | id-sha256 ::= {joint-iso-itu-t(2) country(16) us(840) organization(1) gov(101) csor(3) nistalgorithm(4) hashalgs(2) 1} |
 
 Certificates issued under this CP shall use the following OIDs to identify the algorithm associated with the subject key:
 
-  ---------------- -------------------------------------------------------------------------
-  rsaEncryption    {iso(1) member-body(2) us(840) rsadsi(113549) pkcs(1) pkcs-1(1) 1}
-  id-ecPublicKey   {iso(1) member-body(2) us(840) ansi-X9-62(10045) id-publicKeyType(2) 1}
-  ---------------- -------------------------------------------------------------------------
+|                |                                                                         |
+| -------------- | ----------------------------------------------------------------------- |
+| rsaEncryption  | {iso(1) member-body(2) us(840) rsadsi(113549) pkcs(1) pkcs-1(1) 1}      |
+| id-ecPublicKey | {iso(1) member-body(2) us(840) ansi-X9-62(10045) id-publicKeyType(2) 1} |
 
 Where the certificate contains an elliptic curve public key, the parameters shall be specified as one of the following named curves:
 
-+------------+-------------------------------------------------------------------+
-| ansip256r1 | > {iso(1) member-body(2) us(840) 10045 curves(3) prime(1) 7}      |
-+------------+-------------------------------------------------------------------+
-| ansip384r1 | > { iso(1) identified-organization(3) certicom(132) curve(0) 34 } |
-+------------+-------------------------------------------------------------------+
+<table>
+<tbody>
+<tr class="odd">
+<td>ansip256r1</td>
+<td><blockquote>
+<p>{iso(1) member-body(2) us(840) 10045 curves(3) prime(1) 7}</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td>ansip384r1</td>
+<td><blockquote>
+<p>{ iso(1) identified-organization(3) certicom(132) curve(0) 34 }</p>
+</blockquote></td>
+</tr>
+</tbody>
+</table>
 
 ### Name Forms
 
@@ -2835,23 +2921,23 @@ The CAs may assert name constraints in CA certificates.
 Certificates issued under this CP shall assert at least one of the following OIDs in the certificate policies extension, as appropriate:
 
 > id-fpki-common-policy ::= {2 16 840 1 101 3 2 1 3 6}
->
+> 
 > id-fpki-common-hardware ::= {2 16 840 1 101 3 2 1 3 7}
->
+> 
 > id-fpki-common-devices ::= {2 16 840 1 101 3 2 1 3 8}
->
+> 
 > id-fpki-common-devicesHardware ::= {2 16 840 1 101 3 2 1 3 36}
->
+> 
 > id-fpki-common-authentication ::= {2 16 840 1 101 3 2 1 3 13}
->
+> 
 > id-fpki-common-derived-pivAuth ::= {2 16 840 1 101 3 2 1 3 40}
->
+> 
 > id-fpki-common-derived-pivAuth-hardware ::= {2 16 840 1 101 3 2 1 3 41}
->
+> 
 > id-fpki-common-High ::= {2 16 840 1 101 3 2 1 3 16}
->
+> 
 > id-fpki-common-cardAuth ::= {2 16 840 1 101 3 2 1 3 17}
->
+> 
 > id-fpki-common-piv-contentSigning ::= {2 16 840 1 101 3 2 1 3 39}
 
 Certificates that express the id-fpki-common-piv-contentSigning policy OID shall not express any other policy OIDs.
@@ -2894,7 +2980,8 @@ CSSs operated under this policy shall use OCSP version 1.
 
 Critical OCSP extensions shall not be used.
 
-#  Compliance Audit and Other Assessments
+#   
+Compliance Audit and Other Assessments
 
 CAs operating under this policy shall have a compliance audit mechanism in place to ensure that the requirements of their CPS are being implemented and enforced. The SSP PMA shall be responsible for ensuring audits are conducted for all PKI functions regardless of how or by whom the PKI components are managed and operated.
 
@@ -2910,27 +2997,27 @@ Further, the FPKIPA has the right to require aperiodic compliance audits of CAs 
 
 ## Identity/Qualifications of Assessor
 
-The auditor must demonstrate competence in the field of compliance audits, and must be thoroughly familiar with the CA's CPS and this CP. The compliance auditor must perform such compliance audits as a regular ongoing business activity. In addition to the previous requirements, the auditor must be a certified information system auditor (CISA) or IT security specialist, and a PKI subject matter specialist who can offer input regarding acceptable risks, mitigation strategies, and industry best practices.
+The auditor must demonstrate competence in the field of compliance audits, and must be thoroughly familiar with the CA’s CPS and this CP. The compliance auditor must perform such compliance audits as a regular ongoing business activity. In addition to the previous requirements, the auditor must be a certified information system auditor (CISA) or IT security specialist, and a PKI subject matter specialist who can offer input regarding acceptable risks, mitigation strategies, and industry best practices.
 
-## Assessor's Relationship to Assessed Entity
+## Assessor’s Relationship to Assessed Entity
 
-The compliance auditor either shall be a private firm that is independent from the entities (CA and RAs) being audited, or it shall be sufficiently organizationally separated from those entities to provide an unbiased, independent evaluation. An example of the latter situation may be an Agency inspector general. To insure independence and objectivity, the compliance auditor may not have served the entity in developing or maintaining the entity's CA Facility or certificate practices statement. The FPKIPA shall determine whether a compliance auditor meets this requirement.
+The compliance auditor either shall be a private firm that is independent from the entities (CA and RAs) being audited, or it shall be sufficiently organizationally separated from those entities to provide an unbiased, independent evaluation. An example of the latter situation may be an Agency inspector general. To insure independence and objectivity, the compliance auditor may not have served the entity in developing or maintaining the entity’s CA Facility or certificate practices statement. The FPKIPA shall determine whether a compliance auditor meets this requirement.
 
 The Agency PMA is responsible for identifying and engaging a qualified auditor of agency operations implementing aspects of this CP.
 
 ## Topics Covered by Assessment
 
-The purpose of a compliance audit shall be to verify that a CA operated by a SSP and all RAs of that CA comply with all the requirements of the current versions of the Federal Common Policy Root CA CP and the SSP's CPS. All aspects of the CA/RA operation shall be subject to compliance audit inspections. Components other than CAs may be audited fully or by using a representative sample. If the auditor uses statistical sampling, all PKI components, PKI component managers and operators shall be considered in the sample. The samples shall vary on an annual basis.
+The purpose of a compliance audit shall be to verify that a CA operated by a SSP and all RAs of that CA comply with all the requirements of the current versions of the Federal Common Policy Root CA CP and the SSP’s CPS. All aspects of the CA/RA operation shall be subject to compliance audit inspections. Components other than CAs may be audited fully or by using a representative sample. If the auditor uses statistical sampling, all PKI components, PKI component managers and operators shall be considered in the sample. The samples shall vary on an annual basis.
 
 ## Actions Taken as a Result of Deficiency
 
 When the compliance auditor finds a discrepancy between the requirements of this CP or the stipulations in the CPS and the design, operation, or maintenance of the PKI Authorities, the following actions shall be performed:
 
--   The compliance auditor shall note the discrepancy;
+  - The compliance auditor shall note the discrepancy;
 
--   The compliance auditor shall notify the responsible party promptly; and
+  - The compliance auditor shall notify the responsible party promptly; and
 
--   The party responsible for correcting the discrepancy will propose a remedy, including expected time for completion, to the FPKIPA and appropriate Agency PMA.
+  - The party responsible for correcting the discrepancy will propose a remedy, including expected time for completion, to the FPKIPA and appropriate Agency PMA.
 
 Depending upon the nature and severity of the discrepancy, and how quickly it can be corrected, the FPKIPA may decide to temporarily halt operation of the CA or RA, to revoke a certificate issued to the CA or RA, or take other actions it deems appropriate. The FPKIPA will develop procedures for making and implementing such determinations. In accordance with section 8.1, a compliance audit may be required to confirm the implementation and effectiveness of the remedy.
 
@@ -2940,7 +3027,8 @@ On an annual basis, an Auditor Letter of Compliance, prepared in accordance with
 
 On an annual basis, the SSP PMA shall submit an audit compliance package to the FPKIPA. This package shall be prepared in accordance with the [*FPKI Compliance Audit Requirements*](http://www.idmanagement.gov/fpkipa/documents/FPKI%20Compliance%20Audit%20Requirements.doc) document and includes an assertion from the SSP PMA that all PKI components have been audited - including any components that may be separately managed and operated. The report shall identify the versions of this CP and CPS used in the assessment. Additionally, where necessary, the results shall be communicated as set forth in section 8.5 above.
 
-#  Other Business and Legal Matters
+#   
+Other Business and Legal Matters
 
 ## Fees
 
@@ -3034,71 +3122,71 @@ The FPKIMA will not knowingly violate intellectual property rights held by other
 
 The obligations described below pertain to the FPKIMA and Agency PMAs.
 
-The FPKIPA shall---
+The FPKIPA shall—
 
--   Approve the CPS for each CA that issues certificates under this policy;
+  - Approve the CPS for each CA that issues certificates under this policy;
 
--   Review periodic compliance audits to ensure that CAs are operating in compliance with their approved CPSs;
+  - Review periodic compliance audits to ensure that CAs are operating in compliance with their approved CPSs;
 
--   Review name space control procedures to ensure that distinguished names are uniquely assigned for all certificates issued under this CP;
+  - Review name space control procedures to ensure that distinguished names are uniquely assigned for all certificates issued under this CP;
 
--   Revise this CP to maintain the level of assurance and operational practicality;
+  - Revise this CP to maintain the level of assurance and operational practicality;
 
--   Publicly distribute this CP; and
+  - Publicly distribute this CP; and
 
--   Coordinate modifications to this CP to ensure continued compliance by CAs operating under approved CPSs.
+  - Coordinate modifications to this CP to ensure continued compliance by CAs operating under approved CPSs.
 
-The Agency Policy Management Authorities shall---
+The Agency Policy Management Authorities shall—
 
--   Review periodic compliance audits to ensure that RAs and other components operated by the agency are operating in compliance with their approved CPSs; and
+  - Review periodic compliance audits to ensure that RAs and other components operated by the agency are operating in compliance with their approved CPSs; and
 
--   Review name space control procedures to ensure that distinguished names are uniquely assigned within their agency.
+  - Review name space control procedures to ensure that distinguished names are uniquely assigned within their agency.
 
 ### CA Representations and Warranties
 
 CAs operating under this policy shall warrant that their procedures are implemented in accordance with this CP, and that any certificates issued that assert the policy OIDs identified in this CP were issued in accordance with the stipulations of this policy.
 
-A CA that issues certificates that assert a policy defined in this document shall conform to the stipulations of this document, including---
+A CA that issues certificates that assert a policy defined in this document shall conform to the stipulations of this document, including—
 
--   Providing to the FPKIPA a CPS, as well as any subsequent changes, for conformance assessment.
+  - Providing to the FPKIPA a CPS, as well as any subsequent changes, for conformance assessment.
 
--   Maintaining its operations in conformance to the stipulations of the approved CPS.
+  - Maintaining its operations in conformance to the stipulations of the approved CPS.
 
--   Ensuring that registration information is accepted only from approved RAs operating under an approved CPS.
+  - Ensuring that registration information is accepted only from approved RAs operating under an approved CPS.
 
--   Including only valid and appropriate information in certificates, and maintaining evidence that due diligence was exercised in validating the information contained in the certificates.
+  - Including only valid and appropriate information in certificates, and maintaining evidence that due diligence was exercised in validating the information contained in the certificates.
 
--   Revoking the certificates of subscribers found to have acted in a manner counter to their obligations in accordance with section 9.6.3.
+  - Revoking the certificates of subscribers found to have acted in a manner counter to their obligations in accordance with section 9.6.3.
 
--   Operating or providing for the services of an on-line repository, and informing the repository service provider of their obligations if applicable.
+  - Operating or providing for the services of an on-line repository, and informing the repository service provider of their obligations if applicable.
 
 This CP will be reviewed and updated as appropriate when Baseline Requirements for the Issuance and Management of Publicly-Trusted Certificates published at <http://www.cabforum.org> are updated.
 
 ### RA Representations and Warranties
 
-An RA that performs registration functions as described in this policy shall comply with the stipulations of this policy, and comply with a CPS approved by the FPKIPA for use with this policy. An RA who is found to have acted in a manner inconsistent with these obligations is subject to revocation of RA responsibilities. An RA supporting this policy shall conform to the stipulations of this document, including---
+An RA that performs registration functions as described in this policy shall comply with the stipulations of this policy, and comply with a CPS approved by the FPKIPA for use with this policy. An RA who is found to have acted in a manner inconsistent with these obligations is subject to revocation of RA responsibilities. An RA supporting this policy shall conform to the stipulations of this document, including—
 
--   Maintaining its operations in conformance to the stipulations of the approved CPS.
+  - Maintaining its operations in conformance to the stipulations of the approved CPS.
 
--   Including only valid and appropriate information in certificate requests, and maintaining evidence that due diligence was exercised in validating the information contained in the certificate.
+  - Including only valid and appropriate information in certificate requests, and maintaining evidence that due diligence was exercised in validating the information contained in the certificate.
 
--   Ensuring that obligations are imposed on subscribers in accordance with section 9.6.3, and that subscribers are informed of the consequences of not complying with those obligations.
+  - Ensuring that obligations are imposed on subscribers in accordance with section 9.6.3, and that subscribers are informed of the consequences of not complying with those obligations.
 
 ### Subscriber Representations and Warranties
 
 A subscriber (or human sponsor for device certificates) shall be required to sign a document containing the requirements the subscriber shall meet respecting protection of the private key and use of the certificate before being issued the certificate. Wherever possible, subscriber documents must be digitally signed.
 
-Subscribers shall---
+Subscribers shall—
 
--   Accurately represent themselves in all communications with the PKI authorities.
+  - Accurately represent themselves in all communications with the PKI authorities.
 
--   Protect their private key(s) at all times, in accordance with this policy, as stipulated in their certificate acceptance agreements and local procedures.
+  - Protect their private key(s) at all times, in accordance with this policy, as stipulated in their certificate acceptance agreements and local procedures.
 
--   Promptly notify the appropriate CA upon suspicion of loss or compromise of their private key(s). Such notification shall be made directly or indirectly through mechanisms consistent with the CA's CPS.
+  - Promptly notify the appropriate CA upon suspicion of loss or compromise of their private key(s). Such notification shall be made directly or indirectly through mechanisms consistent with the CA’s CPS.
 
--   Abide by all the terms, conditions, and restrictions levied on the use of their private key(s) and certificate(s).
+  - Abide by all the terms, conditions, and restrictions levied on the use of their private key(s) and certificate(s).
 
-If the human sponsor for a device is not physically located near the sponsored device, and/or does not have sufficient administrative privileges on the sponsored device to protect the device's private key and ensure that the device's certificate is only used for authorized purposes, the device sponsor may delegate these responsibilities to an authorized administrator for the device. The delegation shall be documented and signed by both the device sponsor and the authorized administrator for the device. Delegation does not relieve the device sponsor of his or her accountability for these responsibilities.
+If the human sponsor for a device is not physically located near the sponsored device, and/or does not have sufficient administrative privileges on the sponsored device to protect the device’s private key and ensure that the device’s certificate is only used for authorized purposes, the device sponsor may delegate these responsibilities to an authorized administrator for the device. The delegation shall be documented and signed by both the device sponsor and the authorized administrator for the device. Delegation does not relieve the device sponsor of his or her accountability for these responsibilities.
 
 ### Relying Parties Representations and Warranties
 
@@ -3182,7 +3270,7 @@ No stipulation.
 
 Should it be determined that one section of this CP is incorrect or invalid, the other sections of this CP shall remain in effect until the CP is updated. The process for updating this CP is described in section 9.12.
 
-### Enforcement (Attorneys' Fees and Waiver of Rights)
+### Enforcement (Attorneys’ Fees and Waiver of Rights)
 
 No stipulation.
 
@@ -3194,266 +3282,336 @@ No stipulation.
 
 No stipulation.
 
-#  Bibliography
+#   
+Bibliography
 
 The following documents were used in part to develop this CP:
 
-+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| ABADSG     | Digital Signature Guidelines, 1996-08-01. <http://www.abanet.org/scitech/ec/isc/dsgfree.html>                                                                                                     |
-+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| APL        | Approved Products List (APL)                                                                                                                                                                      |
-|            |                                                                                                                                                                                                   |
-|            | <http://www.idmanagement.gov/approved-products-list-apl>                                                                                                                                          |
-+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| AUDIT      | FPKI Compliance Audit Requirements <http://www.idmanagement.gov/fpkipa/documents/FPKI%20Compliance%20Audit%20Requirements.doc>                                                                    |
-+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| CCP-PROF   | X.509 Certificate and Certificate Revocation List (CRL) Extensions Profile for the Shared Service Providers (SSP) Program. <http://www.idmanagement.gov/fpkipa/documents/CertCRLprofileForCP.pdf> |
-+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| CIMC       | Certificate Issuing and Management Components Family of Protection Profiles, version 1.0, October 31, 2001.\                                                                                      |
-|            | <http://csrc.nist.gov/pki/documents/CIMC_PP_20011031.pdf>                                                                                                                                         |
-+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| E-Auth     | E-Authentication Guidance for Federal Agencies, M-04-04, December 16, 2003.\                                                                                                                      |
-|            | <http://www.whitehouse.gov/omb/memoranda/fy04/m04-04.pdf>                                                                                                                                         |
-+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| FIPS 140-2 | Security Requirements for Cryptographic Modules, FIPS 140-2, May 25, 2001.\                                                                                                                       |
-|            | <http://csrc.nist.gov/publications/fips/fips140-2/fips1402.pdf>                                                                                                                                   |
-+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| FIPS 186-4 | Digital Signature Standard (DSS), FIPS 186-4, July 2013.\                                                                                                                                         |
-|            | <http://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf>                                                                                                                                       |
-+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| FIPS 201-2 | Personal Identity Verification (PIV) of Federal Employees and Contractors, FIPS 201-2, August 2013.\                                                                                              |
-|            | http://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.201-2.pdf                                                                                                                                         |
-+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| FOIACT     | 5 U.S.C. 552, Freedom of Information Act. <http://www4.law.cornell.edu/uscode/5/552.html>                                                                                                         |
-+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| ISO9594-8  | ITU-T Recommendation X.509 (2005) \| ISO/IEC 9594-8:2005, Information technology - Open Systems Interconnection - The Directory: Public-key and attribute certificate frameworks.                 |
-+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+<table>
+<tbody>
+<tr class="odd">
+<td>ABADSG</td>
+<td>Digital Signature Guidelines, 1996-08-01. <a href="http://www.abanet.org/scitech/ec/isc/dsgfree.html">http://www.abanet.org/scitech/ec/isc/dsgfree.html</a></td>
+</tr>
+<tr class="even">
+<td>APL</td>
+<td><p>Approved Products List (APL)</p>
+<p><a href="http://www.idmanagement.gov/approved-products-list-apl">http://www.idmanagement.gov/approved-products-list-apl</a></p></td>
+</tr>
+<tr class="odd">
+<td>AUDIT</td>
+<td>FPKI Compliance Audit Requirements <a href="http://www.idmanagement.gov/fpkipa/documents/FPKI%20Compliance%20Audit%20Requirements.doc">http://www.idmanagement.gov/fpkipa/documents/FPKI%20Compliance%20Audit%20Requirements.doc</a></td>
+</tr>
+<tr class="even">
+<td>CCP-PROF</td>
+<td>X.509 Certificate and Certificate Revocation List (CRL) Extensions Profile for the Shared Service Providers (SSP) Program. <a href="http://www.idmanagement.gov/fpkipa/documents/CertCRLprofileForCP.pdf">http://www.idmanagement.gov/fpkipa/documents/CertCRLprofileForCP.pdf</a></td>
+</tr>
+<tr class="odd">
+<td>CIMC</td>
+<td>Certificate Issuing and Management Components Family of Protection Profiles, version 1.0, October 31, 2001.<br />
+<a href="http://csrc.nist.gov/pki/documents/CIMC_PP_20011031.pdf">http://csrc.nist.gov/pki/documents/CIMC_PP_20011031.pdf</a></td>
+</tr>
+<tr class="even">
+<td>E-Auth</td>
+<td>E-Authentication Guidance for Federal Agencies, M-04-04, December 16, 2003.<br />
+<a href="http://www.whitehouse.gov/omb/memoranda/fy04/m04-04.pdf">http://www.whitehouse.gov/omb/memoranda/fy04/m04-04.pdf</a></td>
+</tr>
+<tr class="odd">
+<td>FIPS 140-2</td>
+<td>Security Requirements for Cryptographic Modules, FIPS 140-2, May 25, 2001.<br />
+<a href="http://csrc.nist.gov/publications/fips/fips140-2/fips1402.pdf">http://csrc.nist.gov/publications/fips/fips140-2/fips1402.pdf</a></td>
+</tr>
+<tr class="even">
+<td>FIPS 186-4</td>
+<td>Digital Signature Standard (DSS), FIPS 186-4, July 2013.<br />
+<a href="http://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf">http://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf</a></td>
+</tr>
+<tr class="odd">
+<td>FIPS 201-2</td>
+<td>Personal Identity Verification (PIV) of Federal Employees and Contractors, FIPS 201-2, August 2013.<br />
+http://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.201-2.pdf</td>
+</tr>
+<tr class="even">
+<td>FOIACT</td>
+<td>5 U.S.C. 552, Freedom of Information Act. <a href="http://www4.law.cornell.edu/uscode/5/552.html">http://www4.law.cornell.edu/uscode/5/552.html</a></td>
+</tr>
+<tr class="odd">
+<td>ISO9594-8</td>
+<td>ITU-T Recommendation X.509 (2005) | ISO/IEC 9594-8:2005, Information technology - Open Systems Interconnection - The Directory: Public-key and attribute certificate frameworks.</td>
+</tr>
+</tbody>
+</table>
 
-+----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| ITMRA          | 40 U.S.C. 1452, Information Technology Management Reform Act of 1996. <http://www4.law.cornell.edu/uscode/40/1452.html>                                                                                                                                         |
-+----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| NAG69C         | Information System Security Policy and Certification Practice Statement for Certification Authorities, rev C, November 1999.                                                                                                                                    |
-+----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| NSD42          | National Policy for the Security of National Security Telecom and Information Systems, 5 Jul 1990. <http://snyside.sunnyside.com/cpsr/privacy/computer_security/nsd_42.txt> (redacted version)                                                                  |
-+----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| NS4005         | NSTISSI 4005, Safeguarding COMSEC Facilities and Material, August 1997.                                                                                                                                                                                         |
-+----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| NS4009         | NSTISSI 4009, National Information Systems Security Glossary, January 1999.                                                                                                                                                                                     |
-+----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| PACS           | *Technical Implementation Guidance: Smart Card Enabled Physical Access Control Systems*, Version 2.2, The Government Smart Card Interagency Advisory Board's Physical Security Interagency Interoperability Working Group, July 30, 2004.\                      |
-|                | <http://www.idmanagement.gov/smartcard/information/TIG_SCEPACS_v2.2.pdf>                                                                                                                                                                                        |
-+----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| PKCS\#1        | Jakob Jonsson and Burt Kaliski, Public-Key Cryptography Standards (PKCS) \#1: RSA Cryptography Specifications Version 2.1, RFC 3447, February 2003.\                                                                                                            |
-|                | <http://www.ietf.org/rfc/rfc3447.txt>                                                                                                                                                                                                                           |
-+----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| PKCS\#12       | PKCS 12 v1.0: Personal Information Exchange Syntax June 24, 1999. ftp://ftp.rsasecurity.com/pub/pkcs/pkcs-12/pkcs-12v1.pdf                                                                                                                                      |
-+----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| RFC 2510       | Certificate Management Protocol, Adams and Farrell, March 1999.\                                                                                                                                                                                                |
-|                | <http://www.ietf.org/rfc/rfc2510.txt>                                                                                                                                                                                                                           |
-+----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| RFC 2560       | X.509 Internet Public Key Infrastructure: Online Certificate Status Protocol -- OCSP, Michael Myers, Rich Ankney, Ambarish Malpani, Slava Galperin, and Carlisle Adams, June 1999.[\                                                                            |
-|                | ]{.underline}<http://www.ietf.org/rfc/rfc2560.txt>                                                                                                                                                                                                              |
-+----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| RFC 2822       | Internet Message Format, Peter W. Resnick, April 2001.\                                                                                                                                                                                                         |
-|                | <http://www.ietf.org/rfc/rfc2822.txt>                                                                                                                                                                                                                           |
-+----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| RFC 3647       | Certificate Policy and Certification Practices Framework, Chokhani and Ford, Sabett, Merrill, and Wu, November 2003.\                                                                                                                                           |
-|                | <http://www.ietf.org/rfc/rfc3647.txt>                                                                                                                                                                                                                           |
-+----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| RFC 4122       | A Universally Unique IDentifier (UUID) URN Namespace, Paul J. Leach, Michael Mealling, and Rich Salz, July 2005.\                                                                                                                                               |
-|                | <http://www.ietf.org/rfc/rfc4122.txt>                                                                                                                                                                                                                           |
-+----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| SP 800-37      | Guide for Applying the Risk Management Framework to Federal Information Systems: A Security Life Cycle Approach, NIST Special Publication 800-37, Revision 1, February 2010.\                                                                                   |
-|                | <http://csrc.nist.gov/publications/nistpubs/800-37-rev1/sp800-37-rev1-final.pdf>                                                                                                                                                                                |
-+----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| SP 800-56A     | Recommendation for Pair-Wise Key Establishment Schemes Using Discrete Logarithm Cryptography, NIST Special Publication 800-56A                                                                                                                                  |
-|                |                                                                                                                                                                                                                                                                 |
-|                | <http://csrc.nist.gov/publications/nistpubs/>                                                                                                                                                                                                                   |
-+----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| SP 800-63      | Electronic Authentication Guideline, NIST Special Publication 800-63-2, August 2013.\                                                                                                                                                                           |
-|                | <http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63-2.pdf>                                                                                                                                                                                     |
-+----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| SP 800-73-3(1) | Interfaces for Personal Identity Verification -- Part 1: End-Point PIV Card Application Namespace, Data Model and Representation, NIST Special Publication 800-73-3, February 2010.\                                                                            |
-|                | <http://csrc.nist.gov/publications/nistpubs/800-73-3/sp800-73-3_PART1_piv-card-applic-namespace-date-model-rep.pdf>                                                                                                                                             |
-+----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| SP 800-76      | Biometric Specifications for Personal Identity Verification, NIST Special Publication 800-76-2, July 2013.\                                                                                                                                                     |
-|                | <http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-76-2.pdf>                                                                                                                                                                                     |
-+----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| SP 800-79      | Guidelines for the Accreditation of Personal Identity Verification Card Issuers, NIST Special Publication 800-79                                                                                                                                                |
-|                |                                                                                                                                                                                                                                                                 |
-|                | <http://csrc.nist.gov/publications/nistpubs/>                                                                                                                                                                                                                   |
-+----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| SP 800-89      | Recommendation for Obtaining Assurances for Digital Signature Applications, NIST Special Publication 800-89                                                                                                                                                     |
-|                |                                                                                                                                                                                                                                                                 |
-|                | <http://csrc.nist.gov/publications/nistpubs/>                                                                                                                                                                                                                   |
-+----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| SP 800-157     | Guidelines for Derived Personal Identity Verification (PIV) Credentials, NIST Special Publication 800-157. <http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-157.pdf> or <http://csrc.nist.gov/publications/drafts/800-157/sp800_157_draft.pdf> |
-+----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+<table>
+<tbody>
+<tr class="odd">
+<td>ITMRA</td>
+<td>40 U.S.C. 1452, Information Technology Management Reform Act of 1996. <a href="http://www4.law.cornell.edu/uscode/40/1452.html">http://www4.law.cornell.edu/uscode/40/1452.html</a></td>
+</tr>
+<tr class="even">
+<td>NAG69C</td>
+<td>Information System Security Policy and Certification Practice Statement for Certification Authorities, rev C, November 1999.</td>
+</tr>
+<tr class="odd">
+<td>NSD42</td>
+<td>National Policy for the Security of National Security Telecom and Information Systems, 5 Jul 1990. <a href="http://snyside.sunnyside.com/cpsr/privacy/computer_security/nsd_42.txt">http://snyside.sunnyside.com/cpsr/privacy/computer_security/nsd_42.txt</a> (redacted version)</td>
+</tr>
+<tr class="even">
+<td>NS4005</td>
+<td>NSTISSI 4005, Safeguarding COMSEC Facilities and Material, August 1997.</td>
+</tr>
+<tr class="odd">
+<td>NS4009</td>
+<td>NSTISSI 4009, National Information Systems Security Glossary, January 1999.</td>
+</tr>
+<tr class="even">
+<td>PACS</td>
+<td><em>Technical Implementation Guidance: Smart Card Enabled Physical Access Control Systems</em>, Version 2.2, The Government Smart Card Interagency Advisory Board’s Physical Security Interagency Interoperability Working Group, July 30, 2004.<br />
+<a href="http://www.idmanagement.gov/smartcard/information/TIG_SCEPACS_v2.2.pdf">http://www.idmanagement.gov/smartcard/information/TIG_SCEPACS_v2.2.pdf</a></td>
+</tr>
+<tr class="odd">
+<td>PKCS#1</td>
+<td>Jakob Jonsson and Burt Kaliski, Public-Key Cryptography Standards (PKCS) #1: RSA Cryptography Specifications Version 2.1, RFC 3447, February 2003.<br />
+<a href="http://www.ietf.org/rfc/rfc3447.txt">http://www.ietf.org/rfc/rfc3447.txt</a></td>
+</tr>
+<tr class="even">
+<td>PKCS#12</td>
+<td>PKCS 12 v1.0: Personal Information Exchange Syntax June 24, 1999. ftp://ftp.rsasecurity.com/pub/pkcs/pkcs-12/pkcs-12v1.pdf</td>
+</tr>
+<tr class="odd">
+<td>RFC 2510</td>
+<td>Certificate Management Protocol, Adams and Farrell, March 1999.<br />
+<a href="http://www.ietf.org/rfc/rfc2510.txt">http://www.ietf.org/rfc/rfc2510.txt</a></td>
+</tr>
+<tr class="even">
+<td>RFC 2560</td>
+<td>X.509 Internet Public Key Infrastructure: Online Certificate Status Protocol – OCSP, Michael Myers, Rich Ankney, Ambarish Malpani, Slava Galperin, and Carlisle Adams, June 1999.<span class="underline"><br />
+</span><a href="http://www.ietf.org/rfc/rfc2560.txt">http://www.ietf.org/rfc/rfc2560.txt</a></td>
+</tr>
+<tr class="odd">
+<td>RFC 2822</td>
+<td>Internet Message Format, Peter W. Resnick, April 2001.<br />
+<a href="http://www.ietf.org/rfc/rfc2822.txt">http://www.ietf.org/rfc/rfc2822.txt</a></td>
+</tr>
+<tr class="even">
+<td>RFC 3647</td>
+<td>Certificate Policy and Certification Practices Framework, Chokhani and Ford, Sabett, Merrill, and Wu, November 2003.<br />
+<a href="http://www.ietf.org/rfc/rfc3647.txt">http://www.ietf.org/rfc/rfc3647.txt</a></td>
+</tr>
+<tr class="odd">
+<td>RFC 4122</td>
+<td>A Universally Unique IDentifier (UUID) URN Namespace, Paul J. Leach, Michael Mealling, and Rich Salz, July 2005.<br />
+<a href="http://www.ietf.org/rfc/rfc4122.txt">http://www.ietf.org/rfc/rfc4122.txt</a></td>
+</tr>
+<tr class="even">
+<td>SP 800-37</td>
+<td>Guide for Applying the Risk Management Framework to Federal Information Systems: A Security Life Cycle Approach, NIST Special Publication 800-37, Revision 1, February 2010.<br />
+<a href="http://csrc.nist.gov/publications/nistpubs/800-37-rev1/sp800-37-rev1-final.pdf">http://csrc.nist.gov/publications/nistpubs/800-37-rev1/sp800-37-rev1-final.pdf</a></td>
+</tr>
+<tr class="odd">
+<td>SP 800-56A</td>
+<td><p>Recommendation for Pair-Wise Key Establishment Schemes Using Discrete Logarithm Cryptography, NIST Special Publication 800-56A</p>
+<p><a href="http://csrc.nist.gov/publications/nistpubs/">http://csrc.nist.gov/publications/nistpubs/</a></p></td>
+</tr>
+<tr class="even">
+<td>SP 800-63</td>
+<td>Electronic Authentication Guideline, NIST Special Publication 800-63-2, August 2013.<br />
+<a href="http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63-2.pdf">http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63-2.pdf</a></td>
+</tr>
+<tr class="odd">
+<td>SP 800-73-3(1)</td>
+<td>Interfaces for Personal Identity Verification – Part 1: End-Point PIV Card Application Namespace, Data Model and Representation, NIST Special Publication 800-73-3, February 2010.<br />
+<a href="http://csrc.nist.gov/publications/nistpubs/800-73-3/sp800-73-3_PART1_piv-card-applic-namespace-date-model-rep.pdf">http://csrc.nist.gov/publications/nistpubs/800-73-3/sp800-73-3_PART1_piv-card-applic-namespace-date-model-rep.pdf</a></td>
+</tr>
+<tr class="even">
+<td>SP 800-76</td>
+<td>Biometric Specifications for Personal Identity Verification, NIST Special Publication 800-76-2, July 2013.<br />
+<a href="http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-76-2.pdf">http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-76-2.pdf</a></td>
+</tr>
+<tr class="odd">
+<td>SP 800-79</td>
+<td><p>Guidelines for the Accreditation of Personal Identity Verification Card Issuers, NIST Special Publication 800-79</p>
+<p><a href="http://csrc.nist.gov/publications/nistpubs/">http://csrc.nist.gov/publications/nistpubs/</a></p></td>
+</tr>
+<tr class="even">
+<td>SP 800-89</td>
+<td><p>Recommendation for Obtaining Assurances for Digital Signature Applications, NIST Special Publication 800-89</p>
+<p><a href="http://csrc.nist.gov/publications/nistpubs/">http://csrc.nist.gov/publications/nistpubs/</a></p></td>
+</tr>
+<tr class="odd">
+<td>SP 800-157</td>
+<td>Guidelines for Derived Personal Identity Verification (PIV) Credentials, NIST Special Publication 800-157. <a href="http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-157.pdf">http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-157.pdf</a> or <a href="http://csrc.nist.gov/publications/drafts/800-157/sp800_157_draft.pdf">http://csrc.nist.gov/publications/drafts/800-157/sp800_157_draft.pdf</a></td>
+</tr>
+</tbody>
+</table>
 
-#  {#section .list-paragraph}
+# 
 
-#  Acronyms and Abbreviations
+#   
+Acronyms and Abbreviations
 
-  ---------- -----------------------------------------------------------------------------------
-  CA         Certification Authority
-  CAA        Certification Authority Authorization
-  C&A        Certification and Accreditation
-  CHUID      Card Holder Unique Identifier
-  COMSEC     Communications Security
-  CMS        Card Management System
-  CP         Certificate Policy
-  CPS        Certification Practice Statement
-  CRL        Certificate Revocation List
-  CSOR       Computer Security Objects Registry
-  DN         Distinguished Name
-  DPCI       Derived PIV Credential Issuer
-  ECDSA      Elliptic Curve Digital Signature Algorithm
-  EKU        Extended Key Usage
-  FPKIMA     Federal Public Key Infrastructure Management Authority
-  FIPS PUB   (US) Federal Information Processing Standards Publication
-  FPKI       Federal Public Key Infrastructure
-  FPKIA      Federal PKI Architecture
-  FPKIPA     Federal PKI Policy Authority
-  FQDN       Fully Qualified Domain Name
-  HTTP       Hypertext Transfer Protocol
-  IEC        International Electrotechnical Commission
-  IETF       Internet Engineering Task Force
-  IP         Internet Protocol
-  LDAP       Lightweight Directory Access Protocol
-  ISO        International Organization for Standardization
-  ISSO       Information Systems Security Officer
-  ITU        International Telecommunications Union
-  ITU-T      International Telecommunications Union -- Telecommunications Sector
-  NARA       U.S. National Archives and Records Administration
-  NIST       National Institute of Standards and Technology
-  NSA        National Security Agency
-  NSTISSI    National Security Telecommunications and Information Systems Security Instruction
-  OCSP       Online Certificate Status Protocol
-  OID        Object Identifier
-  PCI        PIV Card Issuer
-  PIN        Personal Identification Number
-  PIV        Personal Identity Verification
-  PKCS       Public Key Cryptography Standards
-  PKI        Public Key Infrastructure
-  PKIX       Public Key Infrastructure X.509
-  PSS        Probabilistic Signature Scheme
-  RA         Registration Authority
-  RDN        Relative Distinguished Name
-  RFC        Request For Comments
-  RSA        Rivest-Shamir-Adleman (encryption algorithm)
-  RSASSA     RSA Signature Scheme with Appendix
-  SHA        Secure Hash Algorithm
-  S/MIME     Secure/Multipurpose Internet Mail Extensions
-  SP         Special Publication
-  SSL        Secure Sockets Layer
-  SSP-REP    Shared Service Provider Repository Service Requirements
-  TSA        Time Stamp Authority
-  UPS        Uninterrupted Power Supply
-  URL        Uniform Resource Locator
-  U.S.C.     United States Code
-  UUID       Universal Unique Identifier
-  WWW        World Wide Web
-  ---------- -----------------------------------------------------------------------------------
+|          |                                                                                   |
+| -------- | --------------------------------------------------------------------------------- |
+| CA       | Certification Authority                                                           |
+| CAA      | Certification Authority Authorization                                             |
+| C\&A     | Certification and Accreditation                                                   |
+| CHUID    | Card Holder Unique Identifier                                                     |
+| COMSEC   | Communications Security                                                           |
+| CMS      | Card Management System                                                            |
+| CP       | Certificate Policy                                                                |
+| CPS      | Certification Practice Statement                                                  |
+| CRL      | Certificate Revocation List                                                       |
+| CSOR     | Computer Security Objects Registry                                                |
+| DN       | Distinguished Name                                                                |
+| DPCI     | Derived PIV Credential Issuer                                                     |
+| ECDSA    | Elliptic Curve Digital Signature Algorithm                                        |
+| EKU      | Extended Key Usage                                                                |
+| FPKIMA   | Federal Public Key Infrastructure Management Authority                            |
+| FIPS PUB | (US) Federal Information Processing Standards Publication                         |
+| FPKI     | Federal Public Key Infrastructure                                                 |
+| FPKIA    | Federal PKI Architecture                                                          |
+| FPKIPA   | Federal PKI Policy Authority                                                      |
+| FQDN     | Fully Qualified Domain Name                                                       |
+| HTTP     | Hypertext Transfer Protocol                                                       |
+| IEC      | International Electrotechnical Commission                                         |
+| IETF     | Internet Engineering Task Force                                                   |
+| IP       | Internet Protocol                                                                 |
+| LDAP     | Lightweight Directory Access Protocol                                             |
+| ISO      | International Organization for Standardization                                    |
+| ISSO     | Information Systems Security Officer                                              |
+| ITU      | International Telecommunications Union                                            |
+| ITU-T    | International Telecommunications Union – Telecommunications Sector                |
+| NARA     | U.S. National Archives and Records Administration                                 |
+| NIST     | National Institute of Standards and Technology                                    |
+| NSA      | National Security Agency                                                          |
+| NSTISSI  | National Security Telecommunications and Information Systems Security Instruction |
+| OCSP     | Online Certificate Status Protocol                                                |
+| OID      | Object Identifier                                                                 |
+| PCI      | PIV Card Issuer                                                                   |
+| PIN      | Personal Identification Number                                                    |
+| PIV      | Personal Identity Verification                                                    |
+| PKCS     | Public Key Cryptography Standards                                                 |
+| PKI      | Public Key Infrastructure                                                         |
+| PKIX     | Public Key Infrastructure X.509                                                   |
+| PSS      | Probabilistic Signature Scheme                                                    |
+| RA       | Registration Authority                                                            |
+| RDN      | Relative Distinguished Name                                                       |
+| RFC      | Request For Comments                                                              |
+| RSA      | Rivest-Shamir-Adleman (encryption algorithm)                                      |
+| RSASSA   | RSA Signature Scheme with Appendix                                                |
+| SHA      | Secure Hash Algorithm                                                             |
+| S/MIME   | Secure/Multipurpose Internet Mail Extensions                                      |
+| SP       | Special Publication                                                               |
+| SSL      | Secure Sockets Layer                                                              |
+| SSP-REP  | Shared Service Provider Repository Service Requirements                           |
+| TSA      | Time Stamp Authority                                                              |
+| UPS      | Uninterrupted Power Supply                                                        |
+| URL      | Uniform Resource Locator                                                          |
+| U.S.C.   | United States Code                                                                |
+| UUID     | Universal Unique Identifier                                                       |
+| WWW      | World Wide Web                                                                    |
 
-#  {#section-1 .list-paragraph}
+# 
 
-#  Glossary
+#   
+Glossary
 
-  ------------------------------------------------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  Access                                                        Ability to make use of any information system (IS) resource. \[NS4009\]
-  Access Control                                                Process of granting access to information system resources only to authorized users, programs, processes, or other systems. \[NS4009\]
-  Accreditation                                                 Formal declaration by a Designated Approving Authority that an Information System is approved to operate in a particular security mode using a prescribed set of safeguards at an acceptable level of risk. \[NS4009\]
-  Activation Data                                               Private data, other than keys, that are required to access cryptographic modules (i.e., unlock private keys for signing or decryption events).
-  Applicant                                                     The subscriber is sometimes also called an \"applicant\" after applying to a certification authority for a certificate, but before the certificate issuance procedure is completed. \[ABADSG footnote 32\]
-  Archive                                                       Long-term, physically separate storage.
-  Attribute Authority                                           An entity, recognized by the FPKIPA or comparable body as having the authority to verify the association of attributes to an identity.
-  Audit                                                         Independent review and examination of records and activities to assess the adequacy of system controls, to ensure compliance with established policies and operational procedures, and to recommend necessary changes in controls, policies, or procedures. \[NS4009\]
-  Audit Data                                                    Chronological record of system activities to enable the reconstruction and examination of the sequence of events and changes in an event. \[NS4009, \"audit trail\"\]
-  Authenticate                                                  To confirm the identity of an entity when that identity is presented.
-  Authentication                                                Security measure designed to establish the validity of a transmission, message, or originator, or a means of verifying an individual\'s authorization to receive specific categories of information. \[NS4009\]
-  Backup                                                        Copy of files and programs made to facilitate recovery if necessary. \[NS4009\]
-  Binding                                                       Process of associating two related elements of information. \[NS4009\]
-  Biometric                                                     A physical or behavioral characteristic of a human being.
-  Certificate                                                   A digital representation of information which at least (1) identifies the certification authority issuing it, (2) names or identifies its subscriber, (3) contains the subscriber\'s public key, (4) identifies its operational period, and (5) is digitally signed by the certification authority issuing it. \[ABADSG\]. As used in this CP, the term "certificate" refers to X.509 certificates that expressly reference the OID of this CP in the certificatePolicies extension.
-  Certification Authority (CA)                                  An authority trusted by one or more users to issue and manage X.509 public key certificates and CRLs.
-  CA Facility                                                   The collection of equipment, personnel, procedures and structures that are used by a certification authority to perform certificate issuance and revocation.
-  Certification Authority Software                              Key management and cryptographic software used to manage certificates issued to subscribers.
-  Certificate Policy (CP)                                       A certificate policy is a specialized form of administrative policy tuned to electronic transactions performed during certificate management. A certificate policy addresses all aspects associated with the generation, production, distribution, accounting, compromise recovery and administration of digital certificates. Indirectly, a certificate policy can also govern the transactions conducted using a communications system protected by a certificate-based security system. By controlling critical certificate extensions, such policies and associated enforcement technology can support provision of the security services required by particular applications.
-  Certification Practice Statement (CPS)                        A statement of the practices that a CA employs in issuing, suspending, revoking, and renewing certificates and providing access to them, in accordance with specific requirements (i.e., requirements specified in this CP, or requirements specified in a contract for services).
-  Certificate-Related Information                               Information, such as a subscriber\'s postal address, that is not included in a certificate. May be used by a CA managing certificates.
-  Certificate Revocation List (CRL)                             A list maintained by a certification authority of the certificates that it has issued that are revoked prior to their stated expiration date.
-  Certificate Status Server (CSS)                               A trusted entity that provides on-line verification to a relying party of a subject certificate\'s revocation status, and may also provide additional attribute information for the subject certificate.
-  Client (application)                                          A system entity, usually a computer process acting on behalf of a human user that makes use of a service provided by a server.
-  Common Criteria                                               A set of internationally accepted semantic tools and constructs for describing the security needs of customers and the security attributes of products.
-  Compromise                                                    Disclosure of information to unauthorized persons, or a violation of the security policy of a system in which unauthorized intentional or unintentional disclosure, modification, destruction, or loss of an object may have occurred. \[NS4009\]
-  Computer Security Objects Registry (CSOR)                     Computer Security Objects Registry operated by the National Institute of Standards and Technology.
-  Confidentiality                                               Assurance that information is not disclosed to unauthorized entities or processes. \[NS4009\]
-  Cross-Certificate                                             A certificate used to establish a trust relationship between two certification authorities.
-  Cryptographic Module                                          The set of hardware, software, firmware, or some combination thereof that implements cryptographic logic or processes, including cryptographic algorithms, and is contained within the cryptographic boundary of the module. \[FIPS 140-2\]
-  Data Integrity                                                Assurance that the data are unchanged from creation to reception.
-  Digital Signature                                             The result of a transformation of a message by means of a cryptographic system using keys such that a relying party can determine: (1) whether the transformation was created using the private key that corresponds to the public key in the signer's digital certificate; and (2) whether the message has been altered since the transformation was made.
-  Dual Use Certificate                                          A certificate that is intended for use with both digital signature and data encryption services.
-  Encryption Certificate                                        A certificate containing a public key that is used to encrypt electronic messages, files, documents, or data transmissions, or to establish or exchange a session key for these same purposes.
-  End Entity Certificate                                        A certificate in which the subject is not a CA.
-  FPKI Management Authority (FPKIMA)                            The Federal Public Key Infrastructure Management Authority is the organization responsible for operating the Common Policy Root Certification Authority.
-  Federal Public Key Infrastructure Policy Authority (FPKIPA)   The FPKIPA is a Federal Government body responsible for setting, implementing, and administering policy decisions regarding the Federal PKI Architecture.
-  Firewall                                                      Gateway that limits access between networks in accordance with local security policy. \[NS4009\]
-  High Assurance Guard (HAG)                                    An enclave boundary protection device that controls access between a local area network that an enterprise system has a requirement to protect, and an external network that is outside the control of the enterprise system, with a high degree of assurance.
-  Information Systems Security Officer (ISSO)                   Person responsible to the Designated Approving Authority for ensuring the security of an information system throughout its life-cycle, from design through disposal. \[NS4009\]
-  Inside Threat                                                 An entity with authorized access that has the potential to harm an information system through destruction, disclosure, modification of data, and/or denial of service.
-  Integrity                                                     Protection against unauthorized modification or destruction of information. \[NS4009\]. A state in which information has remained unaltered from the point it was produced by a source, during transmission, storage, and eventual receipt by the destination.
-  Intellectual Property                                         Useful artistic, technical, and/or industrial information, knowledge or ideas that convey ownership and control of tangible or virtual usage and/or representation.
-  Intermediate CA                                               A CA that is subordinate to another CA, and has a CA subordinate to itself.
-  Key Escrow                                                    A deposit of the private key of a subscriber and other pertinent information pursuant to an escrow agreement or similar contract binding upon the subscriber, the terms of which require one or more agents to hold the subscriber\'s private key for the benefit of the subscriber, an employer, or other party, upon provisions set forth in the agreement. \[adapted from ABADSG, \"Commercial key escrow service\"\]
-  Key Exchange                                                  The process of exchanging public keys in order to establish secure communications.
-  Key Generation Material                                       Random numbers, pseudo-random numbers, and cryptographic parameters used in generating cryptographic keys.
-  Key Pair                                                      Two mathematically related keys having the properties that (1) one (public) key can be used to encrypt a message that can only be decrypted using the other (private) key, and (2) even knowing the public key, it is computationally infeasible to discover the private key.
-  Legacy Federal PKI                                            A PKI Implementation owned and managed by a Federal Agency and cross-certified with the Federal Bridge prior to 12/31/2005.
-  Modification (of a certificate)                               The act or process by which data items bound in an existing public key certificate, especially authorizations granted to the subject, are changed by issuing a new certificate.
-  Mutual Authentication                                         Occurs when parties at both ends of a communication activity authenticate each other (see authentication).
-  Naming Authority                                              An organizational entity responsible for assigning distinguished names (DNs) and for assuring that each DN is meaningful and unique within its domain.
-  National Security System                                      Any telecommunications or information system operated by the United States Government, the function, operation, or use of which involves intelligence activities; involves cryptologic activities related to national security; involves command and control of military forces; involves equipment that is an integral part of a weapon or weapons system; or is critical to the direct fulfillment of military or intelligence missions, but does not include a system that is to be used for routine administrative and business applications (including payroll, finance, logistics, and personnel management applications). \[ITMRA\]
-  Non-Repudiation                                               Assurance that the sender is provided with proof of delivery and that the recipient is provided with proof of the sender\'s identity so that neither can later deny having processed the data. \[NS4009\] Technical non-repudiation refers to the assurance a relying party has that if a public key is used to validate a digital signature, that signature had to have been made by the corresponding private signature key.
-  Object Identifier (OID)                                       A specialized formatted number that is registered with an internationally recognized standards organization, the unique alphanumeric/numeric identifier registered under the ISO registration standard to reference a specific object or object class. In the Federal PKI, OIDS are used to uniquely identify certificate policies and cryptographic algorithms.
-  Out-of-Band                                                   Communication between parties utilizing a means or method that differs from the current method of communication (e.g., one party uses U.S. Postal Service mail to communicate with another party where current communication is occurring on-line).
-  Outside Threat                                                An unauthorized entity from outside the domain perimeter that has the potential to harm an information system through destruction, disclosure, modification of data, and/or denial of service.
-  Physically Isolated Network                                   A network that is not connected to entities or systems outside a physically controlled space.
-  PKI Sponsor                                                   Fills the role of a subscriber for non-human system components that are named as public key certificate subjects, and is responsible for meeting the obligations of subscribers as defined throughout this CP.
-  Policy Management Authority (PMA)                             The individual or group that is responsible for the creation and maintenance of Certificate Policies and Certification Practice Statements, and for ensuring that all Entity PKI components (e.g., CAs, CSSs, CMSs, RAs) are audited and operated in compliance with the entity PKI CP. The PMA evaluates non-domain policies for acceptance within the domain, and generally oversees and manages the PKI certificate policies.  For the Common Policy, the PMA is the FPKIPA.
-  Privacy                                                       Restricting access to subscriber or relying party information in accordance with Federal law.
-  Private Key                                                   \(1\) The key of a signature key pair used to create a digital signature. (2) The key of an encryption key pair that is used to decrypt confidential information. In both cases, this key must be kept secret.
-  Public Key                                                    \(1\) The key of a signature key pair used to validate a digital signature. (2) The key of an encryption key pair that is used to encrypt confidential information. In both cases, this key is normally made publicly available in the form of a digital certificate.
-  Public Key Infrastructure (PKI)                               A set of policies, processes, server platforms, software, and workstations used for the purpose of administering certificates and public/private key pairs, including the ability to issue, maintain, and revoke public key certificates.
-  Registration Authority (RA)                                   An entity that is responsible for identification and authentication of certificate subjects, but that does not sign or issue certificates (i.e., a registration authority is delegated certain tasks on behalf of an authorized CA).
-  Re-key (a certificate)                                        To change the value of a cryptographic key that is being used in a cryptographic system application; this normally entails issuing a new certificate that contains the new public key.
-  Relying Party                                                 A person or entity who has received information that includes a certificate and a digital signature verifiable with reference to a public key listed in the certificate, and is in a position to rely on them.
-  Renew (a certificate)                                         The act or process of extending the validity of the data binding asserted by a public key certificate by issuing a new certificate.
-  Repository                                                    A database containing information and data relating to certificates as specified in this CP; may also be referred to as a directory.
-  Revoke a Certificate                                          To prematurely end the operational period of a certificate effective at a specific date and time.
-  Risk                                                          An expectation of loss expressed as the probability that a particular threat will exploit a particular vulnerability with a particular harmful result.
-  Risk Tolerance                                                The level of risk an entity is willing to assume in order to achieve a potential desired result.
-  Root CA                                                       In a hierarchical PKI, the CA whose public key serves as the most trusted datum (i.e., the beginning of trust paths) for a security domain.
-  Server                                                        A system entity that provides a service in response to requests from clients.
-  Signature Certificate                                         A public key certificate that contains a public key intended for verifying digital signatures rather than encrypting data or performing any other cryptographic functions.
-  Structural Container                                          An organizational unit attribute included in a distinguished name solely to support local directory requirements, such as differentiation between human subscribers and devices.
-  Subordinate CA                                                In a hierarchical PKI, a CA whose certificate signature key is certified by another CA, and whose activities are constrained by that other CA. (See superior CA).
-  Subscriber                                                    A subscriber is an entity that (1) is the subject named or identified in a certificate issued to that entity, (2) holds a private key that corresponds to the public key listed in the certificate, and (3) does not itself issue certificates to another party. This includes, but is not limited to, an individual, an application or network device.
-  Superior CA                                                   In a hierarchical PKI, a CA that has certified the certificate signature key of another CA, and that constrains the activities of that CA. (See subordinate CA).
-  System Equipment Configuration                                A comprehensive accounting of all system hardware and software types and settings.
-  System High                                                   The highest security level supported by an information system. \[NS4009\]
-  Threat                                                        Any circumstance or event with the potential to cause harm to an information system in the form of destruction, disclosure, adverse modification of data, and/or denial of service. \[NS4009\]
-  Time Stamp Authority                                          An independent, reliable service that issues and verifies electronic time stamps.
-  Trust List                                                    Collection of Trusted Certificates used by relying parties to authenticate other certificates.
-  Trusted Agent                                                 Entity authorized to act as a representative of a CA in confirming subscriber identification during the registration process. Trusted agents do not have automated interfaces with certification authorities.
-  Trusted Certificate                                           A certificate that is trusted by the relying party on the basis of secure and authenticated delivery. The public keys included in trusted certificates are used to start certification paths. Also known as a \"trust anchor\".
-  Trusted Timestamp                                             A digitally signed assertion by a trusted authority that a specific digital object existed at a particular time.
-  Trustworthy System                                            Computer hardware, software, and procedures that: (1) are reasonably secure from intrusion and misuse; (2) provide a reasonable level of availability, reliability, and correct operation; (3) are reasonably suited to performing their intended functions; and (4) adhere to generally accepted security procedures.
-  Two-Person Control                                            Continuous surveillance and control of positive control material at all times by a minimum of two authorized individuals, each capable of detecting incorrect and/or unauthorized procedures with respect to the task being performed and each familiar with established security and safety requirements. \[NS4009\]
-  Zeroize                                                       A method of erasing electronically stored data by altering the contents of the data storage so as to prevent the recovery of the data. \[FIPS 140-2\]
-  ------------------------------------------------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|                                                             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Access                                                      | Ability to make use of any information system (IS) resource. \[NS4009\]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| Access Control                                              | Process of granting access to information system resources only to authorized users, programs, processes, or other systems. \[NS4009\]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Accreditation                                               | Formal declaration by a Designated Approving Authority that an Information System is approved to operate in a particular security mode using a prescribed set of safeguards at an acceptable level of risk. \[NS4009\]                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Activation Data                                             | Private data, other than keys, that are required to access cryptographic modules (i.e., unlock private keys for signing or decryption events).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| Applicant                                                   | The subscriber is sometimes also called an "applicant" after applying to a certification authority for a certificate, but before the certificate issuance procedure is completed. \[ABADSG footnote 32\]                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| Archive                                                     | Long-term, physically separate storage.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| Attribute Authority                                         | An entity, recognized by the FPKIPA or comparable body as having the authority to verify the association of attributes to an identity.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Audit                                                       | Independent review and examination of records and activities to assess the adequacy of system controls, to ensure compliance with established policies and operational procedures, and to recommend necessary changes in controls, policies, or procedures. \[NS4009\]                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Audit Data                                                  | Chronological record of system activities to enable the reconstruction and examination of the sequence of events and changes in an event. \[NS4009, "audit trail"\]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| Authenticate                                                | To confirm the identity of an entity when that identity is presented.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| Authentication                                              | Security measure designed to establish the validity of a transmission, message, or originator, or a means of verifying an individual's authorization to receive specific categories of information. \[NS4009\]                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| Backup                                                      | Copy of files and programs made to facilitate recovery if necessary. \[NS4009\]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| Binding                                                     | Process of associating two related elements of information. \[NS4009\]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Biometric                                                   | A physical or behavioral characteristic of a human being.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| Certificate                                                 | A digital representation of information which at least (1) identifies the certification authority issuing it, (2) names or identifies its subscriber, (3) contains the subscriber's public key, (4) identifies its operational period, and (5) is digitally signed by the certification authority issuing it. \[ABADSG\]. As used in this CP, the term “certificate” refers to X.509 certificates that expressly reference the OID of this CP in the certificatePolicies extension.                                                                                                                                                                                                |
+| Certification Authority (CA)                                | An authority trusted by one or more users to issue and manage X.509 public key certificates and CRLs.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| CA Facility                                                 | The collection of equipment, personnel, procedures and structures that are used by a certification authority to perform certificate issuance and revocation.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| Certification Authority Software                            | Key management and cryptographic software used to manage certificates issued to subscribers.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| Certificate Policy (CP)                                     | A certificate policy is a specialized form of administrative policy tuned to electronic transactions performed during certificate management. A certificate policy addresses all aspects associated with the generation, production, distribution, accounting, compromise recovery and administration of digital certificates. Indirectly, a certificate policy can also govern the transactions conducted using a communications system protected by a certificate-based security system. By controlling critical certificate extensions, such policies and associated enforcement technology can support provision of the security services required by particular applications. |
+| Certification Practice Statement (CPS)                      | A statement of the practices that a CA employs in issuing, suspending, revoking, and renewing certificates and providing access to them, in accordance with specific requirements (i.e., requirements specified in this CP, or requirements specified in a contract for services).                                                                                                                                                                                                                                                                                                                                                                                                 |
+| Certificate-Related Information                             | Information, such as a subscriber's postal address, that is not included in a certificate. May be used by a CA managing certificates.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| Certificate Revocation List (CRL)                           | A list maintained by a certification authority of the certificates that it has issued that are revoked prior to their stated expiration date.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Certificate Status Server (CSS)                             | A trusted entity that provides on-line verification to a relying party of a subject certificate's revocation status, and may also provide additional attribute information for the subject certificate.                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| Client (application)                                        | A system entity, usually a computer process acting on behalf of a human user that makes use of a service provided by a server.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| Common Criteria                                             | A set of internationally accepted semantic tools and constructs for describing the security needs of customers and the security attributes of products.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| Compromise                                                  | Disclosure of information to unauthorized persons, or a violation of the security policy of a system in which unauthorized intentional or unintentional disclosure, modification, destruction, or loss of an object may have occurred. \[NS4009\]                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| Computer Security Objects Registry (CSOR)                   | Computer Security Objects Registry operated by the National Institute of Standards and Technology.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| Confidentiality                                             | Assurance that information is not disclosed to unauthorized entities or processes. \[NS4009\]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Cross-Certificate                                           | A certificate used to establish a trust relationship between two certification authorities.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| Cryptographic Module                                        | The set of hardware, software, firmware, or some combination thereof that implements cryptographic logic or processes, including cryptographic algorithms, and is contained within the cryptographic boundary of the module. \[FIPS 140-2\]                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| Data Integrity                                              | Assurance that the data are unchanged from creation to reception.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| Digital Signature                                           | The result of a transformation of a message by means of a cryptographic system using keys such that a relying party can determine: (1) whether the transformation was created using the private key that corresponds to the public key in the signer’s digital certificate; and (2) whether the message has been altered since the transformation was made.                                                                                                                                                                                                                                                                                                                        |
+| Dual Use Certificate                                        | A certificate that is intended for use with both digital signature and data encryption services.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Encryption Certificate                                      | A certificate containing a public key that is used to encrypt electronic messages, files, documents, or data transmissions, or to establish or exchange a session key for these same purposes.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| End Entity Certificate                                      | A certificate in which the subject is not a CA.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| FPKI Management Authority (FPKIMA)                          | The Federal Public Key Infrastructure Management Authority is the organization responsible for operating the Common Policy Root Certification Authority.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| Federal Public Key Infrastructure Policy Authority (FPKIPA) | The FPKIPA is a Federal Government body responsible for setting, implementing, and administering policy decisions regarding the Federal PKI Architecture.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| Firewall                                                    | Gateway that limits access between networks in accordance with local security policy. \[NS4009\]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| High Assurance Guard (HAG)                                  | An enclave boundary protection device that controls access between a local area network that an enterprise system has a requirement to protect, and an external network that is outside the control of the enterprise system, with a high degree of assurance.                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| Information Systems Security Officer (ISSO)                 | Person responsible to the Designated Approving Authority for ensuring the security of an information system throughout its life-cycle, from design through disposal. \[NS4009\]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| Inside Threat                                               | An entity with authorized access that has the potential to harm an information system through destruction, disclosure, modification of data, and/or denial of service.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Integrity                                                   | Protection against unauthorized modification or destruction of information. \[NS4009\]. A state in which information has remained unaltered from the point it was produced by a source, during transmission, storage, and eventual receipt by the destination.                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| Intellectual Property                                       | Useful artistic, technical, and/or industrial information, knowledge or ideas that convey ownership and control of tangible or virtual usage and/or representation.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| Intermediate CA                                             | A CA that is subordinate to another CA, and has a CA subordinate to itself.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| Key Escrow                                                  | A deposit of the private key of a subscriber and other pertinent information pursuant to an escrow agreement or similar contract binding upon the subscriber, the terms of which require one or more agents to hold the subscriber's private key for the benefit of the subscriber, an employer, or other party, upon provisions set forth in the agreement. \[adapted from ABADSG, "Commercial key escrow service"\]                                                                                                                                                                                                                                                              |
+| Key Exchange                                                | The process of exchanging public keys in order to establish secure communications.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| Key Generation Material                                     | Random numbers, pseudo-random numbers, and cryptographic parameters used in generating cryptographic keys.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| Key Pair                                                    | Two mathematically related keys having the properties that (1) one (public) key can be used to encrypt a message that can only be decrypted using the other (private) key, and (2) even knowing the public key, it is computationally infeasible to discover the private key.                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Legacy Federal PKI                                          | A PKI Implementation owned and managed by a Federal Agency and cross-certified with the Federal Bridge prior to 12/31/2005.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| Modification (of a certificate)                             | The act or process by which data items bound in an existing public key certificate, especially authorizations granted to the subject, are changed by issuing a new certificate.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| Mutual Authentication                                       | Occurs when parties at both ends of a communication activity authenticate each other (see authentication).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| Naming Authority                                            | An organizational entity responsible for assigning distinguished names (DNs) and for assuring that each DN is meaningful and unique within its domain.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| National Security System                                    | Any telecommunications or information system operated by the United States Government, the function, operation, or use of which involves intelligence activities; involves cryptologic activities related to national security; involves command and control of military forces; involves equipment that is an integral part of a weapon or weapons system; or is critical to the direct fulfillment of military or intelligence missions, but does not include a system that is to be used for routine administrative and business applications (including payroll, finance, logistics, and personnel management applications). \[ITMRA\]                                         |
+| Non-Repudiation                                             | Assurance that the sender is provided with proof of delivery and that the recipient is provided with proof of the sender's identity so that neither can later deny having processed the data. \[NS4009\] Technical non-repudiation refers to the assurance a relying party has that if a public key is used to validate a digital signature, that signature had to have been made by the corresponding private signature key.                                                                                                                                                                                                                                                      |
+| Object Identifier (OID)                                     | A specialized formatted number that is registered with an internationally recognized standards organization, the unique alphanumeric/numeric identifier registered under the ISO registration standard to reference a specific object or object class. In the Federal PKI, OIDS are used to uniquely identify certificate policies and cryptographic algorithms.                                                                                                                                                                                                                                                                                                                   |
+| Out-of-Band                                                 | Communication between parties utilizing a means or method that differs from the current method of communication (e.g., one party uses U.S. Postal Service mail to communicate with another party where current communication is occurring on-line).                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| Outside Threat                                              | An unauthorized entity from outside the domain perimeter that has the potential to harm an information system through destruction, disclosure, modification of data, and/or denial of service.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| Physically Isolated Network                                 | A network that is not connected to entities or systems outside a physically controlled space.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| PKI Sponsor                                                 | Fills the role of a subscriber for non-human system components that are named as public key certificate subjects, and is responsible for meeting the obligations of subscribers as defined throughout this CP.                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| Policy Management Authority (PMA)                           | The individual or group that is responsible for the creation and maintenance of Certificate Policies and Certification Practice Statements, and for ensuring that all Entity PKI components (e.g., CAs, CSSs, CMSs, RAs) are audited and operated in compliance with the entity PKI CP. The PMA evaluates non-domain policies for acceptance within the domain, and generally oversees and manages the PKI certificate policies.  For the Common Policy, the PMA is the FPKIPA.                                                                                                                                                                                                    |
+| Privacy                                                     | Restricting access to subscriber or relying party information in accordance with Federal law.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Private Key                                                 | (1) The key of a signature key pair used to create a digital signature. (2) The key of an encryption key pair that is used to decrypt confidential information. In both cases, this key must be kept secret.                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| Public Key                                                  | (1) The key of a signature key pair used to validate a digital signature. (2) The key of an encryption key pair that is used to encrypt confidential information. In both cases, this key is normally made publicly available in the form of a digital certificate.                                                                                                                                                                                                                                                                                                                                                                                                                |
+| Public Key Infrastructure (PKI)                             | A set of policies, processes, server platforms, software, and workstations used for the purpose of administering certificates and public/private key pairs, including the ability to issue, maintain, and revoke public key certificates.                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| Registration Authority (RA)                                 | An entity that is responsible for identification and authentication of certificate subjects, but that does not sign or issue certificates (i.e., a registration authority is delegated certain tasks on behalf of an authorized CA).                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| Re-key (a certificate)                                      | To change the value of a cryptographic key that is being used in a cryptographic system application; this normally entails issuing a new certificate that contains the new public key.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Relying Party                                               | A person or entity who has received information that includes a certificate and a digital signature verifiable with reference to a public key listed in the certificate, and is in a position to rely on them.                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| Renew (a certificate)                                       | The act or process of extending the validity of the data binding asserted by a public key certificate by issuing a new certificate.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| Repository                                                  | A database containing information and data relating to certificates as specified in this CP; may also be referred to as a directory.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| Revoke a Certificate                                        | To prematurely end the operational period of a certificate effective at a specific date and time.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| Risk                                                        | An expectation of loss expressed as the probability that a particular threat will exploit a particular vulnerability with a particular harmful result.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Risk Tolerance                                              | The level of risk an entity is willing to assume in order to achieve a potential desired result.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Root CA                                                     | In a hierarchical PKI, the CA whose public key serves as the most trusted datum (i.e., the beginning of trust paths) for a security domain.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| Server                                                      | A system entity that provides a service in response to requests from clients.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Signature Certificate                                       | A public key certificate that contains a public key intended for verifying digital signatures rather than encrypting data or performing any other cryptographic functions.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| Structural Container                                        | An organizational unit attribute included in a distinguished name solely to support local directory requirements, such as differentiation between human subscribers and devices.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Subordinate CA                                              | In a hierarchical PKI, a CA whose certificate signature key is certified by another CA, and whose activities are constrained by that other CA. (See superior CA).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| Subscriber                                                  | A subscriber is an entity that (1) is the subject named or identified in a certificate issued to that entity, (2) holds a private key that corresponds to the public key listed in the certificate, and (3) does not itself issue certificates to another party. This includes, but is not limited to, an individual, an application or network device.                                                                                                                                                                                                                                                                                                                            |
+| Superior CA                                                 | In a hierarchical PKI, a CA that has certified the certificate signature key of another CA, and that constrains the activities of that CA. (See subordinate CA).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| System Equipment Configuration                              | A comprehensive accounting of all system hardware and software types and settings.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| System High                                                 | The highest security level supported by an information system. \[NS4009\]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| Threat                                                      | Any circumstance or event with the potential to cause harm to an information system in the form of destruction, disclosure, adverse modification of data, and/or denial of service. \[NS4009\]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| Time Stamp Authority                                        | An independent, reliable service that issues and verifies electronic time stamps.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| Trust List                                                  | Collection of Trusted Certificates used by relying parties to authenticate other certificates.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| Trusted Agent                                               | Entity authorized to act as a representative of a CA in confirming subscriber identification during the registration process. Trusted agents do not have automated interfaces with certification authorities.                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Trusted Certificate                                         | A certificate that is trusted by the relying party on the basis of secure and authenticated delivery. The public keys included in trusted certificates are used to start certification paths. Also known as a "trust anchor".                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Trusted Timestamp                                           | A digitally signed assertion by a trusted authority that a specific digital object existed at a particular time.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Trustworthy System                                          | Computer hardware, software, and procedures that: (1) are reasonably secure from intrusion and misuse; (2) provide a reasonable level of availability, reliability, and correct operation; (3) are reasonably suited to performing their intended functions; and (4) adhere to generally accepted security procedures.                                                                                                                                                                                                                                                                                                                                                             |
+| Two-Person Control                                          | Continuous surveillance and control of positive control material at all times by a minimum of two authorized individuals, each capable of detecting incorrect and/or unauthorized procedures with respect to the task being performed and each familiar with established security and safety requirements. \[NS4009\]                                                                                                                                                                                                                                                                                                                                                              |
+| Zeroize                                                     | A method of erasing electronically stored data by altering the contents of the data storage so as to prevent the recovery of the data. \[FIPS 140-2\]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 
-#  {#section-2 .list-paragraph}
+# 
 
-#  Acknowledgments
+#   
+Acknowledgments
 
 The Certificate Policy Working Group developed this CP based on RFC 3647 and the original U.S. Federal PKI Common Policy Framework Certificate Policy.

@@ -41,8 +41,7 @@ Chair, Federal Public Key Infrastructure Policy Authority DATE
 
 [2.2.1. Publication of Certificates and Certificate Status 2](#publication-of-certificates-and-certificate-status)
 
-#   
-Introduction
+# Introduction
 
 This certificate policy (CP) includes seven distinct certificate policies: a policy for users with software cryptographic modules, a policy for users with hardware cryptographic modules, a policy for devices with software cryptographic modules, a policy for devices with hardware cryptographic modules, a high assurance user policy, a user authentication policy, and a card authentication policy. In this document, the term “device” means a non-person entity, i.e., a hardware device or software application. Where a specific policy is not stated, the policies and procedures in this specification apply equally to all seven policies.
 
