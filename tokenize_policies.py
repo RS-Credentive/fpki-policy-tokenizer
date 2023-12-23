@@ -13,7 +13,7 @@ def get_sentences(input: str) -> list[str]:
     return sentences
 
 
-for markdown_doc in glob.glob("converted_markdown/minimal_test.md"):
+for markdown_doc in glob.glob("converted_markdown/*.md"):
     # Calculate the target filename from the source filename
     target_doc = pathlib.Path.joinpath(pathlib.Path.cwd(), pathlib.Path("tokenized_markdown"), pathlib.Path(markdown_doc).name)
 
