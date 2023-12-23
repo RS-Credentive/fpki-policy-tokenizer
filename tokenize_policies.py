@@ -35,9 +35,10 @@ for markdown_doc in glob.glob("converted_markdown/*.md"):
         # Skip the rest of the processing for these lines
         if len(line) == 1:
             processed_lines.append("")
+            continue
 
         # strip trailing newline from line
-        elif line[-1] == "\n":
+        if line[-1] == "\n":
             line = line[:-1]
 
         # Don't process section headers
