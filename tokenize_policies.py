@@ -42,7 +42,7 @@ for markdown_doc in glob.glob("converted_markdown/*.md"):
             line = line[:-1]
 
         # Don't process section headers
-        elif line[0] == "#":
+        if line[0] == "#":
             processed_lines.append(line)
 
         #Don't process image links if they are on their own line
