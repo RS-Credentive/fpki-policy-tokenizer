@@ -3,7 +3,7 @@ import glob
 import pathlib
 import re
 
-nlp = stanza.Pipeline('en', download_method=stanza.DownloadMethod.REUSE_RESOURCES)
+nlp = stanza.Pipeline('en', download_method=stanza.DownloadMethod.REUSE_RESOURCES, processors='tokenize')
 
 def get_sentences(input: str) -> list[str]:
     sentences: list[str] = []
