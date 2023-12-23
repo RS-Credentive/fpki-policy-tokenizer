@@ -22,40 +22,27 @@ Chair, Federal Public Key Infrastructure Policy Authority DATE
 **Revision History**
 
 | **Document Version** | **Document Date** | **Revision Details**                                               |
-
 |----------------------|-------------------|--------------------------------------------------------------------|
-
 | 1.0                  | May 7, 2007       | Revised Common Policy (RFC 3647 format)                            |
-
 | 1.1                  | July 17, 2007     | Alignment of Cryptographic Algorithm Requirements with SP 800-78-1 |
-
 
 # Table of Contents
 
-
 [1. Introduction [1](#introduction)](#introduction)
-
 
 [1.1 Overview [2](#overview)](#overview)
 
-
 [1.1.1. Certificate Policy (CP) [2](#certificate-policy-cp)](#certificate-policy-cp)
-
 
 [2. Publication and Repository Responsibilities [2](#publication-and-repository-responsibilities)](#publication-and-repository-responsibilities)
 
-
 [2.1. Repositories [2](#repositories)](#repositories)
-
 
 [2.2. Publication of Certification Information [2](#publication-of-certification-information)](#publication-of-certification-information)
 
-
 [2.2.1. Publication of Certificates and Certificate Status [2](#publication-of-certificates-and-certificate-status)](#publication-of-certificates-and-certificate-status)
 
-
 #  Introduction
-
 
 This certificate policy (CP) includes seven distinct certificate policies: a policy for users with software cryptographic modules, a policy for users with hardware cryptographic modules, a policy for devices with software cryptographic modules, a policy for devices with hardware cryptographic modules, a high assurance user policy, a user authentication policy, and a card authentication policy.
 In this document, the term “device” means a non-person entity, i.e., a hardware device or software application.
@@ -103,18 +90,14 @@ This CP is consistent with request for comments (RFC) 3647, the Internet Enginee
 
 ## 1.1 Overview
 
-
 ### Certificate Policy (CP)
-
 
 Certificates issued under this policy contain a registered certificate policy object identifier (OID), which may be used by a relying party to decide whether a certificate is trusted for a particular purpose.
 This CP applies only to CAs owned by or operated on behalf of the Federal government that issue certificates according to this policy.
 
 # Publication and Repository Responsibilities
 
-
 ## Repositories
-
 
 All CAs that issue certificates under this policy are obligated to post all CA certificates issued by or to the CA and CRLs issued by the CA in a repository that is publicly accessible through all Uniform Resource Identifier (URI) references asserted in valid certificates issued by that CA.
 Specific requirements are found in *Shared Service Provider Repository Service Requirements* \[SSP REP\].
@@ -126,9 +109,7 @@ Such repositories may be operated by the CA or other parties (e.g., Federal agen
 
 ## Publication of Certification Information
 
-
 ### Publication of Certificates and Certificate Status
-
 
 The publicly accessible repository system shall be designed and implemented so as to provide 99% availability overall and limit scheduled down-time to 0.5% annually.
 Where applicable, the certificate status server (CSS) shall be designed and implemented so as to provide 99% availability overall and limit scheduled down-time to 0.5% annually.
