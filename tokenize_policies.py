@@ -31,16 +31,17 @@ for markdown_doc in glob.glob("converted_markdown/*.md"):
     for index, line in enumerate(policy_lines):
         print(f"Processing line {index} of {line_count} from {markdown_doc}.")
 
-        # Check for blank lines and just add them to the processed_lines list
+        # Check for blank lines (lines with only '\n') and just add them to the processed_lines list
+        # Skip the rest of the processing for these lines
         if len(line) == 1:
             processed_lines.append("")
 
         # strip trailing newline from line
-        elif len(line) > 1 and line[-1] == "\n":
+        elif line[-1] == "\n":
             line = line[:-1]
 
         # Don't process section headers
-        if line[0] == "#":
+        elif line[0] == "#":
             processed_lines.append(line)
 
         #Don't process image links if they are on their own line
