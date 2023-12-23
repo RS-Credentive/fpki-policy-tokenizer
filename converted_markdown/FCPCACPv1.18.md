@@ -1,4 +1,4 @@
-![FPKIPA Federal Public Key Infrastructure Policy Authority ](media/image1.emf)
+<img src="media/image1.emf" style="width:3.76042in;height:0.75208in" alt="FPKIPA Federal Public Key Infrastructure Policy Authority " />
 
 **X.509 Certificate Policy**
 
@@ -20,7 +20,119 @@ Chair, Federal Public Key Infrastructure Policy Authority DATE
 
 **Revision History**
 
-[TABLE]
+<table>
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 28%" />
+<col style="width: 47%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Document Version</strong></th>
+<th><strong>Document Date</strong></th>
+<th><strong>Revision Details</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1.0</td>
+<td>May 7, 2007</td>
+<td>Revised Common Policy (RFC 3647 format)</td>
+</tr>
+<tr class="even">
+<td>1.1</td>
+<td>July 17, 2007</td>
+<td>Alignment of Cryptographic Algorithm Requirements with SP 800-78-1</td>
+</tr>
+<tr class="odd">
+<td>1.2</td>
+<td>September 12, 2007</td>
+<td>Requiring the inclusion of a subject DN in PIV Authentication Certificates</td>
+</tr>
+<tr class="even">
+<td>1.3</td>
+<td>October 16, 2007</td>
+<td>Accommodating legacy PKIs for PIV Authentication</td>
+</tr>
+<tr class="odd">
+<td>1.4</td>
+<td>April 3, 2008</td>
+<td>§ 8.3 Assessor’s Relationship to Assessed Entity</td>
+</tr>
+<tr class="even">
+<td>1.5</td>
+<td>November 20, 2008</td>
+<td>Include a provision for a role-based signature certificate</td>
+</tr>
+<tr class="odd">
+<td>1.6</td>
+<td>February 11, 2009</td>
+<td>nextUpdate in Certificate Revocation Lists (CRL) published by legacy Federal PKIs</td>
+</tr>
+<tr class="even">
+<td>1.7</td>
+<td>April 15, 2009</td>
+<td>Allow the use of the PIV Authentication certificate as proof of identity and employment</td>
+</tr>
+<tr class="odd">
+<td>1.8</td>
+<td>January 21, 2010</td>
+<td>Align key length requirements w/ SP 800-57<br />
+<br />
+Remote Administration of Certification Authorities</td>
+</tr>
+<tr class="even">
+<td>1.9</td>
+<td>March 15, 2010</td>
+<td>Allowing inclusion of UUIDs in Card Authentication Certificates</td>
+</tr>
+<tr class="odd">
+<td>1.10</td>
+<td>April 8, 2010</td>
+<td>§ 8.1 &amp; 8.4</td>
+</tr>
+<tr class="even">
+<td>1.11</td>
+<td>August 16, 2010</td>
+<td>Clarify the archive definition and how its records are intended to be used</td>
+</tr>
+<tr class="odd">
+<td>1.12</td>
+<td>October 15, 2010</td>
+<td>Allow Federal Legacy PKIs to Directly Cross Certify with Common Policy CA</td>
+</tr>
+<tr class="even">
+<td>1.13</td>
+<td>November 18, 2010</td>
+<td>Legacy use of SHA-1 during transition period Jan 1, 2011 to Dec 31, 2013</td>
+</tr>
+<tr class="odd">
+<td>1.14</td>
+<td>December 17, 2010</td>
+<td>Clarify requirement to support CA Key Rollover</td>
+</tr>
+<tr class="even">
+<td>1.15</td>
+<td>January 24, 2011</td>
+<td><strong>2011-01</strong>, CAs to assert policy OIDs in OCSP responder certificates for which the OCSP responder is authoritative</td>
+</tr>
+<tr class="odd">
+<td>1.16</td>
+<td>September 23, 2011</td>
+<td><strong>2011-02</strong>, Clarify requirements for device subscribers and certificates</td>
+</tr>
+<tr class="even">
+<td>1.17</td>
+<td>December 13, 2011</td>
+<td><strong>2011-03</strong>, Remove Requirements for LDAP References in Certificates</td>
+</tr>
+<tr class="odd">
+<td>1.18</td>
+<td>April 26, 2012</td>
+<td><strong>2012-01.</strong> Clarify RA audit requirements: revise section 1.3.1.5, add new last sentence to first paragraph of section 8, revise first paragraph of section 8.1, revise sections 8.4, 8.5, and 8.6, revise "Policy Management Authority (PMA)" glossary definition.</td>
+</tr>
+</tbody>
+</table>
 
 FOREWORD
 
@@ -730,7 +842,49 @@ Additionally, this CP provides moderate assurance concerning identity of certifi
 
 *Table 2 - id-fpki-SHA1 Policy OIDs*
 
-[TABLE]
+<table>
+<colgroup>
+<col style="width: 24%" />
+<col style="width: 33%" />
+<col style="width: 41%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>SHA1 Policy</td>
+<td>OID</td>
+<td>Corresponding id-fpki-common policy</td>
+</tr>
+<tr class="even">
+<td>id-fpki-SHA1-policy</td>
+<td>::= {2 16 840 1 101 3 2 1 3 23}</td>
+<td>id-fpki-common-policy<br />
+id-fpki-certpcy-mediumAssurance</td>
+</tr>
+<tr class="odd">
+<td>id-fpki-SHA1-hardware</td>
+<td>::= {2 16 840 1 101 3 2 1 3 24}</td>
+<td>id-fpki-common-hardware<br />
+id-fpki-certpcy-mediumHardware</td>
+</tr>
+<tr class="even">
+<td>id-fpki-SHA1-devices</td>
+<td>::= {2 16 840 1 101 3 2 1 3 25}</td>
+<td>id-fpki-common-devices<br />
+id-fpki-certpcy-mediumAssurance</td>
+</tr>
+<tr class="odd">
+<td>id-fpki-SHA1-authentication</td>
+<td>::= {2 16 840 1 101 3 2 1 3 26}</td>
+<td>id-fpki-common-authentication<br />
+id-fpki-certpcy-mediumHardware</td>
+</tr>
+<tr class="even">
+<td>id-fpki-SHA1-cardAuth</td>
+<td>::= {2 16 840 1 101 3 2 1 3 27}</td>
+<td>id-fpki-common-cardAuth</td>
+</tr>
+</tbody>
+</table>
 
 Certificates issued to CAs may contain any or all of these OIDs. Certificates issued to users, other than devices, to support digitally signed documents or key management may contain either id-fpki-common-policy, id-fpki-common-hardware, or id-fpki-common-High. Subscriber certificates issued to devices under this policy that use FIPS 140 Level 2 or higher cryptographic modules shall include either id-fpki-common-deviceHardware, id-fpki-common-devices, or both. Subscriber certificates issued to devices under this policy using software cryptographic modules shall include id-fpki-common-devices.
 
@@ -960,7 +1114,7 @@ The distinguished name of the federal contractors and affiliated subscribers sha
 
 - dc=gov, dc=*org0*, \[dc=*org1*\], …, \[dc=*orgN*\], \[ou=*structural_container*\], cn=*nickname lastname* (affiliate)
 
-&nbsp;
+<!-- -->
 
 - dc=gov, dc=*org0*, \[dc=*org1*\], …, \[dc=*orgN*\], \[ou=*structural_container*\], cn=*firstname initial. lastname* (affiliate)
 
@@ -970,7 +1124,7 @@ The distinguished name of the federal employee subscriber shall take one of the 
 
 - dc=mil, dc=*org0*, \[dc=*org1*\], …, \[dc=*orgN*\], \[ou=*structural_container*\], cn=*nickname lastname*
 
-&nbsp;
+<!-- -->
 
 - dc=mil, dc=*org0*, \[dc=*org1*\], …, \[dc=*orgN*\], \[ou=*structural_container*\], cn=*firstname initial. lastname*
 
@@ -980,7 +1134,7 @@ The distinguished name of the federal contractors and affiliated subscribers sha
 
 - dc=mil, dc=*org0*, \[dc=*org1*\], …, \[dc=*orgN*\], \[ou=*structural_container*\], cn=*nickname lastname* (affiliate)
 
-&nbsp;
+<!-- -->
 
 - dc=mil, dc=*org0*, \[dc=*org1*\], …, \[dc=*orgN*\], \[ou=*structural_container*\], cn=*firstname initial. lastname* (affiliate)
 
@@ -992,7 +1146,7 @@ Signature certificates issued under id-fpki-common-hardware or id-fpki-common-Hi
 
 - C=US, o=U.S. Government, \[ou=*department*\], \[ou=*agency*\], \[ou=*structural_container*\], cn=*role* \[*, department/agency*\]
 
-&nbsp;
+<!-- -->
 
 - dc=gov, dc=…, \[ou=*structural_container*\], cn=*role* \[, *department/agency*\]
 
@@ -1006,7 +1160,7 @@ Devices that are the subject of certificates issued under this policy shall be a
 
 - C=US, o=U.S. Government, \[ou=department\], \[ou=agency\], \[ou=*structural_container*\], cn=*device name*
 
-&nbsp;
+<!-- -->
 
 - dc=gov, dc=*org0*, \[*dc=org1*\], …, \[dc=*orgN*\], \[ou=*structural_container*\], \[cn=*device name*\]
 
@@ -1024,7 +1178,7 @@ Certificates issued under id-fpki-common-cardAuth shall include a subject altern
 
 - C=US, o=U.S. Government, \[ou=*department*\], \[ou=*agency*\], \[ou=*structural_container*\], serialNumber=*FASC-N*
 
-&nbsp;
+<!-- -->
 
 - dc=gov, dc=*org0*, \[*dc=org1*\], …, \[dc=*orgN*\], \[ou=*structural_container*\], serialNumber=*FASC-N*
 
@@ -1714,7 +1868,7 @@ The administrator role shall be responsible for:
 
 - Installation, configuration, and maintenance of the CA and CSS (where applicable);
 
-&nbsp;
+<!-- -->
 
 - Establishing and maintaining CA and CSS system accounts;
 
@@ -1734,7 +1888,7 @@ The officer role shall be responsible for issuing certificates, that is:
 
 - Registering new subscribers and requesting the issuance of certificates;
 
-&nbsp;
+<!-- -->
 
 - Verifying the identity of subscribers and accuracy of information included in certificates;
 
@@ -1748,7 +1902,7 @@ The auditor role shall be responsible for:
 
 - Reviewing, maintaining, and archiving audit logs; and
 
-&nbsp;
+<!-- -->
 
 - Performing or overseeing internal compliance audits to ensure that the CA, associated RAs, and CSS (where applicable) are operating in accordance with its CPS.
 
@@ -1762,7 +1916,7 @@ Two or more persons are required for the following tasks:
 
 - CA key generation;
 
-&nbsp;
+<!-- -->
 
 - CA signing key activation;
 
@@ -1790,7 +1944,7 @@ CA personnel shall, at a minimum, pass a background investigation covering the f
 
 - Employment;
 
-&nbsp;
+<!-- -->
 
 - Education;
 
@@ -2088,7 +2242,7 @@ CA archive records shall be sufficiently detailed to determine the proper operat
 
 - CA accreditation (if applicable)
 
-&nbsp;
+<!-- -->
 
 - Certificate policy
 
@@ -2216,7 +2370,7 @@ When computing resources, software, and/or data are corrupted, CAs operating und
 
 - Before returning to operation, ensure that the system’s integrity has been restored.
 
-&nbsp;
+<!-- -->
 
 - If the CA signature keys are not destroyed**,** CA operation shall be reestablished, giving priority to the ability to generate certificate status information within the CRL issuance schedule specified in section 4.9.7.
 
@@ -2230,7 +2384,7 @@ In the event of a CA private key compromise, the following operations must be pe
 
 - The FPKIPA shall be immediately informed, as well as any superior or cross-certified CAs and any entities known to be distributing the CA certificate (e.g., in a root store).
 
-&nbsp;
+<!-- -->
 
 - The CA must generate new keys in accordance with section 6.1.1.1.
 
@@ -2238,7 +2392,7 @@ If the CA distributed the private key in a Trusted Certificate, the CA shall per
 
 - Generate a new Trusted Certificate.
 
-&nbsp;
+<!-- -->
 
 - Securely distribute the new Trusted Certificate as specified in section 6.1.4.
 
@@ -2304,7 +2458,7 @@ When CAs or RAs generate keys on behalf of the subscriber, then the private key 
 
 - Delivery shall be accomplished in a way that ensures that the correct tokens and activation data are provided to the correct subscribers.
 
-&nbsp;
+<!-- -->
 
 - For hardware modules, accountability for the location and state of the module must be maintained until the subscriber accepts possession of it.
 
@@ -2324,13 +2478,13 @@ Self-signed certificates shall be conveyed to relying parties in a secure fashio
 
 - Loading a self-signed certificate onto tokens delivered to relying parties via secure mechanisms; such as
 
-&nbsp;
+<!-- -->
 
 - The Trusted Certificate is loaded onto the token during the subscriber’s appearance at the RA.
 
 - The Trusted Certificate is loaded onto the token when the RA generates the subscriber’s key pair and loads the private key onto the token, which is then delivered to the subscriber in accordance with section 6.1.2.
 
-&nbsp;
+<!-- -->
 
 - Secure distribution of self-signed certificates through secure out-of-band mechanisms;
 
@@ -2357,7 +2511,7 @@ CAs that generate certificates and CRLs under this policy shall use signature ke
 | Practice Note: Where certificates are issued to satisfy FIPS 201 requirements, CAs shall use signature keys of 2048 or 3072 bits for RSA and 256 or 384 bits for elliptic curve algorithms to sign certificates issued on or after January 1, 2008. CAs may continue to use 1024 bit RSA keys to sign CRLs that only cover certificates that were signed using 1024 bit RSA keys. CAs may also use 1024 bit RSA keys to sign OCSP responder certificates that expire before December 31, 2010. |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
-CAs that generate certificates and CRLs under this policy shall use the SHA-1, SHA‑256, or SHA-384 hash algorithm when generating digital signatures. RSA signatures on certificates and CRLs that are issued after December 31, 2010 shall be generated using SHA‑256*,* however, RSA signatures on CRLs that are issued before January 1, 2012, and that include status information for certificates that were generated using SHA-1 may be generated using SHA-1. RSA signatures on CRLs that are issued on or after January 1, 2012, but before January 1, 2014 that only provide status information for certificates that were generated using SHA-1 may continue to be generated using SHA-1. ECDSA signatures on certificates and CRLs shall be generated using SHA-256 or SHA-384, as appropriate for the key length.
+CAs that generate certificates and CRLs under this policy shall use the SHA-1, SHA‑256, or SHA-384 hash algorithm when generating digital signatures. RSA signatures on certificates and CRLs that are issued after December 31, 2010 shall be generated using SHA‑256<u>,</u> however, RSA signatures on CRLs that are issued before January 1, 2012, and that include status information for certificates that were generated using SHA-1 may be generated using SHA-1. RSA signatures on CRLs that are issued on or after January 1, 2012, but before January 1, 2014 that only provide status information for certificates that were generated using SHA-1 may continue to be generated using SHA-1. ECDSA signatures on certificates and CRLs shall be generated using SHA-256 or SHA-384, as appropriate for the key length.
 
 RSA signatures on certificates that are issued after December 31, 2010 and before January 1, 2014, to CAs that issued certificates prior to December 31, 2010 may be generated using SHA-1 provided that CA issues no additional end entity certificates. Additionally, certificates issued to OCSP responders that include SHA-1 certificates may be signed using SHA-1 until December 31, 2013. CAs that issue certificates signed with SHA-224 or SHA-256 after December 31, 2010 must not issue certificates signed with SHA-1.
 
@@ -2666,7 +2820,26 @@ Certificates issued under this CP shall use the following OIDs to identify the a
 
 Where the certificate contains an elliptic curve public key, the parameters shall be specified as one of the following named curves:
 
-[TABLE]
+<table>
+<colgroup>
+<col style="width: 31%" />
+<col style="width: 68%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>ansip256r1</td>
+<td><blockquote>
+<p>{iso(1) member-body(2) us(840) 10045 curves(3) prime(1) 7}</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td>ansip384r1</td>
+<td><blockquote>
+<p>{ iso(1) identified-organization(3) certicom(132) curve(0) 34 }</p>
+</blockquote></td>
+</tr>
+</tbody>
+</table>
 
 ### Name Forms
 
@@ -2698,8 +2871,8 @@ Certificates issued under this CP shall assert at least one of the following OID
 >
 > id-fpki-common-cardAuth ::= {2 16 840 1 101 3 2 1 3 17}
 
-*  
-*Certificates generated with SHA-1 after December 31, 2010 shall assert at least one of the following OIDs in the certificate policies extension, as appropriate:
+<u>  
+</u>Certificates generated with SHA-1 after December 31, 2010 shall assert at least one of the following OIDs in the certificate policies extension, as appropriate:
 
 > id-fpki-SHA1-policy ::= {2 16 840 1 101 3 2 1 3 23}
 >
@@ -3049,11 +3222,132 @@ No stipulation.
 
 The following documents were used in part to develop this CP:
 
-[TABLE]
+<table>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 83%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>ABADSG</td>
+<td>Digital Signature Guidelines, 1996-08-01. <a href="http://www.abanet.org/scitech/ec/isc/dsgfree.html">http://www.abanet.org/scitech/ec/isc/dsgfree.html</a></td>
+</tr>
+<tr class="even">
+<td>AUDIT</td>
+<td>FPKI Compliance Audit Requirements <a href="http://www.idmanagement.gov/fpkipa/documents/FPKI%20Compliance%20Audit%20Requirements.doc">http://www.idmanagement.gov/fpkipa/documents/FPKI%20Compliance%20Audit%20Requirements.doc</a></td>
+</tr>
+<tr class="odd">
+<td>CCP-PROF</td>
+<td>X.509 Certificate and Certificate Revocation List (CRL) Extensions Profile for the Shared Service Providers (SSP) Program. <a href="http://www.idmanagement.gov/fpkipa/documents/CertCRLprofileForCP.pdf">http://www.idmanagement.gov/fpkipa/documents/CertCRLprofileForCP.pdf</a></td>
+</tr>
+<tr class="even">
+<td>CIMC</td>
+<td>Certificate Issuing and Management Components Family of Protection Profiles, version 1.0, October 31, 2001.<br />
+<a href="http://csrc.nist.gov/pki/documents/CIMC_PP_20011031.pdf">http://csrc.nist.gov/pki/documents/CIMC_PP_20011031.pdf</a></td>
+</tr>
+<tr class="odd">
+<td>E-Auth</td>
+<td>E-Authentication Guidance for Federal Agencies, M-04-04, December 16, 2003.<br />
+<a href="http://www.whitehouse.gov/omb/memoranda/fy04/m04-04.pdf">http://www.whitehouse.gov/omb/memoranda/fy04/m04-04.pdf</a></td>
+</tr>
+<tr class="even">
+<td>FIPS 140-2</td>
+<td>Security Requirements for Cryptographic Modules, FIPS 140-2, May 25, 2001.<br />
+<a href="http://csrc.nist.gov/publications/fips/fips140-2/fips1402.pdf">http://csrc.nist.gov/publications/fips/fips140-2/fips1402.pdf</a></td>
+</tr>
+<tr class="odd">
+<td>FIPS 186-2</td>
+<td>Digital Signature Standard (DSS), FIPS 186-2, January 27, 2000.<br />
+<a href="http://csrc.nist.gov/publications/fips/fips186-2/fips186-2-change1.pdf">http://csrc.nist.gov/publications/fips/fips186-2/fips186-2-change1.pdf</a></td>
+</tr>
+<tr class="even">
+<td>FIPS 201-1</td>
+<td>Personal Identity Verification (PIV) of Federal Employees and Contractors, FIPS 201-1, March 2006.<br />
+<a href="http://csrc.nist.gov/publications/fips/fips201-1/FIPS-201-1-chng1.pdf">http://csrc.nist.gov/publications/fips/fips201-1/FIPS-201-1-chng1.pdf</a></td>
+</tr>
+<tr class="odd">
+<td>FOIACT</td>
+<td>5 U.S.C. 552, Freedom of Information Act. <a href="http://www4.law.cornell.edu/uscode/5/552.html">http://www4.law.cornell.edu/uscode/5/552.html</a></td>
+</tr>
+<tr class="even">
+<td>ISO9594-8</td>
+<td>ITU-T Recommendation X.509 (2005) | ISO/IEC 9594-8:2005, Information technology - Open Systems Interconnection - The Directory: Public-key and attribute certificate frameworks.</td>
+</tr>
+<tr class="odd">
+<td>ITMRA</td>
+<td>40 U.S.C. 1452, Information Technology Management Reform Act of 1996. <a href="http://www4.law.cornell.edu/uscode/40/1452.html">http://www4.law.cornell.edu/uscode/40/1452.html</a></td>
+</tr>
+<tr class="even">
+<td>NAG69C</td>
+<td>Information System Security Policy and Certification Practice Statement for Certification Authorities, rev C, November 1999.</td>
+</tr>
+<tr class="odd">
+<td>NSD42</td>
+<td>National Policy for the Security of National Security Telecom and Information Systems, 5 Jul 1990. <a href="http://snyside.sunnyside.com/cpsr/privacy/computer_security/nsd_42.txt">http://snyside.sunnyside.com/cpsr/privacy/computer_security/nsd_42.txt</a> (redacted version)</td>
+</tr>
+<tr class="even">
+<td>NS4005</td>
+<td>NSTISSI 4005, Safeguarding COMSEC Facilities and Material, August 1997.</td>
+</tr>
+<tr class="odd">
+<td>NS4009</td>
+<td>NSTISSI 4009, National Information Systems Security Glossary, January 1999.</td>
+</tr>
+<tr class="even">
+<td>PACS</td>
+<td><em>Technical Implementation Guidance: Smart Card Enabled Physical Access Control Systems</em>, Version 2.2, The Government Smart Card Interagency Advisory Board’s Physical Security Interagency Interoperability Working Group, July 30, 2004.<br />
+<a href="http://www.idmanagement.gov/smartcard/information/TIG_SCEPACS_v2.2.pdf">http://www.idmanagement.gov/smartcard/information/TIG_SCEPACS_v2.2.pdf</a></td>
+</tr>
+<tr class="odd">
+<td>PKCS#1</td>
+<td>Jakob Jonsson and Burt Kaliski, Public-Key Cryptography Standards (PKCS) #1: RSA Cryptography Specifications Version 2.1, RFC 3447, February 2003.<br />
+<a href="http://www.ietf.org/rfc/rfc3447.txt">http://www.ietf.org/rfc/rfc3447.txt</a></td>
+</tr>
+<tr class="even">
+<td>PKCS#12</td>
+<td>PKCS 12 v1.0: Personal Information Exchange Syntax June 24, 1999. ftp://ftp.rsasecurity.com/pub/pkcs/pkcs-12/pkcs-12v1.pdf</td>
+</tr>
+<tr class="odd">
+<td>RFC 2510</td>
+<td>Certificate Management Protocol, Adams and Farrell, March 1999.<br />
+<a href="http://www.ietf.org/rfc/rfc2510.txt">http://www.ietf.org/rfc/rfc2510.txt</a></td>
+</tr>
+<tr class="even">
+<td>RFC 2560</td>
+<td>X.509 Internet Public Key Infrastructure: Online Certificate Status Protocol – OCSP, Michael Myers, Rich Ankney, Ambarish Malpani, Slava Galperin, and Carlisle Adams, June 1999.<u><br />
+</u><a href="http://www.ietf.org/rfc/rfc2560.txt">http://www.ietf.org/rfc/rfc2560.txt</a></td>
+</tr>
+<tr class="odd">
+<td>RFC 2822</td>
+<td>Internet Message Format, Peter W. Resnick, April 2001.<br />
+<a href="http://www.ietf.org/rfc/rfc2822.txt">http://www.ietf.org/rfc/rfc2822.txt</a></td>
+</tr>
+<tr class="even">
+<td>RFC 3647</td>
+<td>Certificate Policy and Certification Practices Framework, Chokhani and Ford, Sabett, Merrill, and Wu, November 2003.<br />
+<a href="http://www.ietf.org/rfc/rfc3647.txt">http://www.ietf.org/rfc/rfc3647.txt</a></td>
+</tr>
+<tr class="odd">
+<td>RFC 4122</td>
+<td>A Universally Unique IDentifier (UUID) URN Namespace, Paul J. Leach, Michael Mealling, and Rich Salz, July 2005.<br />
+<a href="http://www.ietf.org/rfc/rfc4122.txt">http://www.ietf.org/rfc/rfc4122.txt</a></td>
+</tr>
+<tr class="even">
+<td>SP 800-37</td>
+<td>Guide for the Security Certification and Accreditation of Federal Information Systems, NIST Special Publication 800-37, May 2004.<br />
+<a href="http://csrc.nist.gov/publications/nistpubs/800-37/SP800-37-final.pdf">http://csrc.nist.gov/publications/nistpubs/800-37/SP800-37-final.pdf</a></td>
+</tr>
+<tr class="odd">
+<td>SP 800-73-3(1)</td>
+<td>Interfaces for Personal Identity Verification – Part 1: End-Point PIV Card Application Namespace, Data Model and Representation, NIST Special Publication 800-73-3, February 2010.<br />
+<a href="http://csrc.nist.gov/publications/nistpubs/800-73-3/sp800-73-3_PART1_piv-card-applic-namespace-date-model-rep.pdf">http://csrc.nist.gov/publications/nistpubs/800-73-3/sp800-73-3_PART1_piv-card-applic-namespace-date-model-rep.pdf</a></td>
+</tr>
+</tbody>
+</table>
 
 # 
 
-#  Acronyms and Abbreviations
+# <span class="mark"> </span>Acronyms and Abbreviations
 
 |          |                                                                                   |
 |----------|-----------------------------------------------------------------------------------|

@@ -4,5 +4,5 @@ do
     originaldoc=${file#original_docx\/}
     filename=${originaldoc%.docx}
     echo converting $file
-    pandoc-3.1.11/bin/pandoc $file -o "converted_markdown/$filename.md" --wrap=none --to=gfm-raw_html
+    pandoc-3.1.11/bin/pandoc $file -o "converted_markdown/$filename.md" --wrap=none --to=gfm
 done
