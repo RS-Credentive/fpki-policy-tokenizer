@@ -31,6 +31,10 @@ for markdown_doc in glob.glob("converted_markdown/*.md"):
     for index, line in enumerate(policy_lines):
         print(f"Processing line {index} of {line_count} from {markdown_doc}.")
 
+        # strip trailing newline from line
+        if line[-1] == "\n":
+            line = line[:-1]
+
         # Don't process section headers
         if line[0] == "#":
             processed_lines.append(line)
