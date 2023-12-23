@@ -31,8 +31,12 @@ for markdown_doc in glob.glob("converted_markdown/*.md"):
     for index, line in enumerate(policy_lines):
         print(f"Processing line {index} of {line_count} from {markdown_doc}.")
 
+        # Check for blank lines and just add them to the processed_lines list
+        if len(line) == 1:
+            processed_lines.append("")
+
         # strip trailing newline from line
-        if line[-1] == "\n":
+        elif len(line) > 1 and line[-1] == "\n":
             line = line[:-1]
 
         # Don't process section headers
@@ -91,5 +95,5 @@ for markdown_doc in glob.glob("converted_markdown/*.md"):
         else:
             processed_lines.extend(get_sentences(input=line))
 
-    # Write out the tokenized file, with each string on it's own line
+    # Write out the tokenized file, terminating each string with a newline
     target_doc.write_text("\n".join(processed_lines), encoding="utf-8")
