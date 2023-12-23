@@ -13,7 +13,7 @@ def get_sentences(input: str) -> list[str]:
     return sentences
 
 
-for markdown_doc in glob.glob("converted_markdown/*.md"):
+for markdown_doc in glob.glob("converted_markdown/minimal_test.md"):
     # Calculate the target filename from the source filename
     target_doc = pathlib.Path.joinpath(pathlib.Path.cwd(), pathlib.Path("tokenized_markdown"), pathlib.Path(markdown_doc).name)
 
@@ -36,7 +36,7 @@ for markdown_doc in glob.glob("converted_markdown/*.md"):
             processed_lines.append(line)
 
         #Don't process image links if they are on their own line
-        if line[0] == "!" and line[-1] in [")","}"]:
+        elif line[0] == "!" and line[-1] in [")","}"]:
             processed_lines.append(line)
 
         # Process lines starting with links "[" separately
