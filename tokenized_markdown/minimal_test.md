@@ -1,4 +1,4 @@
-![FPKIPA Federal Public Key Infrastructure Policy Authority ](media/image1.emf)
+<img src="media/image1.emf" style="width:3.76042in;height:0.75in" alt="FPKIPA Federal Public Key Infrastructure Policy Authority " />
 
 **X.509 Certificate Policy**
 
