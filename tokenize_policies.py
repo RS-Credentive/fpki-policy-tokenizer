@@ -52,7 +52,7 @@ for markdown_doc in glob.glob("converted_markdown/*.md"):
         # Process lines starting with links "[" separately
         elif line[0] == "[":
             processed_lines.append(line)
-            # **This code isn't quite ready yet**
+            # **This code isn't quite ready yet** - Based on manual review, we can skip the links.
             # line_matches = md_link_re.match(line)
             # if line_matches is not None:
             #     first_line = ""
@@ -73,7 +73,7 @@ for markdown_doc in glob.glob("converted_markdown/*.md"):
                 
         # if the line looks like a table
         elif line[0] == "|":
-            # TODO: Implement html tables for this
+            # TODO: Implement html tables for this - Turns out there's nothing interesting in the tables. Just skipping
             processed_lines.append(line)
             # This doesn't quite work - need to implement as html table
             # split the line into columns
